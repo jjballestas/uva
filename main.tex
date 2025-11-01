@@ -1,0 +1,458 @@
+%! Author = nataly
+%! Date = 10/31/25
+
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{datetime}
+\usepackage{multirow}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[spanish]{cleveref}
+
+% Configuración para bloques de código Scala
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+\lstdefinestyle{scalastyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=2pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    language=Scala
+}
+
+\lstset{style=scalastyle}
+
+% Definición de comandos personalizados para figuras y tablas estilo APA
+\newcounter{apafig}
+\newcounter{apatable}
+
+\newenvironment{apa_fig}[4]{%
+    \refstepcounter{apafig}%
+    \begin{figure}[htbp]
+    \centering
+    \textbf{Figura \theapafig}\\
+    \textit{#1}\\[0.5cm]
+    #2\\[0.3cm]
+    \small #3\\
+    \small #4
+    \end{figure}
+}{}
+
+\newenvironment{apa_table}[4]{%
+    \refstepcounter{apatable}%
+    \begin{table}[htbp]
+    \centering
+    \textbf{Tabla \theapatable}\\
+    \textit{#1}\\[0.5cm]
+    #2\\[0.3cm]
+    \small #3\\
+    \small #4
+    \end{table}
+}{}
+
+\begin{document}
+
+% First Page - Centered
+    \begin{titlepage}
+        \centering
+        \vspace*{1cm}
+
+        \includegraphics[width=0.2\textwidth]{./assets/uva-logo}\\[3cm]
+
+        {\Huge Selección sencilla de un modelo de clasificación }\\[1.5ex]
+        {\LARGE Entregable Individual}\\[4cm]
+
+        {\Large Nataly Rocha}\\[5cm]
+
+        \textbf{    {\Large Escuela de Ingeniería Informática, Universidad de Valladolid }\\[0.5cm] }
+        \textbf{    {\Large Técnicas Escalables de Análisis de Datos en entornos Big Data: Clasificadores }\\[0.5cm]}
+
+        \newdate{hoy}{\the\day}{\the\month}{\the\year}
+        \newcommand{\nextyear}{\the\numexpr\the\year+1\relax}
+        \textbf{    {\Large \the\year{} - \nextyear }\\[0.5cm]}
+
+    \end{titlepage}
+
+% % % % % INTRODUCCIÓN % % % % %
+    \begin{tabular}{p{0.2\textwidth}p{0.7\textwidth}}
+        &
+    \section{Introducción}
+
+    El presente trabajo forma parte del Proyecto Software: Construcción y validación de un modelo de clasificación
+    usando la metodología CRISP-DM y Spark.
+    Tiene como objetivo desarrollar un modelo de clasificación, aplicando técnicas de aprendizaje automático sobre
+    el conjunto de datos Census Income (KDD). Este dataset, proveniente de encuestas
+    de la Oficina del Censo de Estados Unidos (1994–1995), contiene información demográfica, educativa y laboral
+    que permite estudiar y predecir patrones socioeconómicos.
+    \newline
+    \newline
+    En este entregable se realiza la exploración de los parámetros maxDepth y maxBins con el objetivo de identificar
+    la configuración que genere el mejor desempeño del modelo de clasificación basado exclusivamente en un árbol de
+    decisión.
+    El proceso incluye la creación de particiones de entrenamiento y validación, la evaluación de distintas
+    combinaciones de parámetros y la construcción del modelo final utilizando los valores óptimos obtenidos.
+
+    \end{tabular}
+    \newpage
+% % % % % FIN INTRODUCCIÓN % % % % %
+
+% % % % % METODOLOGÍA % % % % %
+
+    \section{Resumen Ejecutivo}
+
+    \subsection{Resumen ejecutivo del conjunto de datos}
+    El conjunto de datos Census Income (KDD) contiene información censal ponderada
+    obtenida de las Encuestas de Población Actual (Current Population Survey) de los años 1994
+    y 1995, realizadas por la Oficina de Censo de los Estados Unidos.
+    El dataset está compuesto por 299.285 registros y 41 tributos tanto categóricos como
+    numéricos, que incluyen variables como la edad, el sexo, nivel educativo, ocupación, estado
+    civil, tamaño del empleador, número de horas trabajadas por semana y nacionalidad, entre
+    otras.
+    \subsection{Origen de los datos}
+    UCI Machine Learning Repository – Census Income (KDD) Data Set
+    \url{https://archive.ics.uci.edu/dataset/117/census+income+kdd}
+    \subsection{Propósito y uso de los datos.}
+    El objetivo principal de este conjunto de datos es predecir si el ingreso anual de una
+    persona supera los 50.000 dólares, a partir del análisis de variables demográficas, educativas,
+    familiares y laborales.
+    El problema se formula como una clasificación binaria, donde la variable objetivo refleja el nivel de ingresos
+    de cada individuo.
+    \subsection{Tamaño del conjunto de datos.}
+    El dataset se divide en dos subconjuntos.
+    Data (entrenamiento): 199.523 instancias y Test (prueba): 99.762 instancias.
+    En total, cuenta con 299.285 registros, cada uno correspondiente a una persona.
+    \subsection{Número total y tipo de atributos.}
+    El conjunto incluye 41 atributos, aunque uno de ellos (“instance weight”) se utiliza
+    únicamente como peso de muestra y debe ser ignorado para el entrenamiento de clasificadores.
+    Por tanto, el análisis se realiza sobre 40 atributos distribuidos en: 6 atributos continuos
+    (numéricos) y 34 atributos nominales (categóricos)
+    Las variables describen características como edad, nivel educativo, ocupación, estado
+    civil, relación familiar, nacionalidad, horas trabajadas por semana, entre otras.
+    \subsection{Descripción de la Clase.}
+    La clase, denominada “PTOTVAL” (total person income), representa el rango de
+    ingresos totales de cada individuo.
+    Es una variable binaria con las siguientes categorías:
+    “-50000”: ingresos menores o iguales a 50.000 USD (93,8% de los casos)
+    “+50000”: ingresos superiores a 50.000 USD (6,2% de los casos)
+    Esta distribución altamente desbalanceada plantea un desafío adicional para los
+    modelos de clasificación, que deberán ser evaluados teniendo en cuenta este desequilibrio de
+    clases.
+    \subsection{Selección del mejor modelo}
+    Para esta exploración se emplearon exclusivamente árboles de decisión, evaluando diversas combinaciones de los
+    parámetros \textit{maxDepth} y \textit{maxBins} con el objetivo de identificar la configuración que genera el
+    mejor desempeño del modelo.
+    Dado el desbalance existente entre clases, se consideró fundamental analizar no solo la métrica de
+    \textit{accuracy}, sino también el \textit{AUC-PR}, la matriz de confusión y el \textit{recall} por clase, a fin
+    de evaluar adecuadamente la capacidad del modelo para predecir la clase minoritaria, que representa el mayor
+    desafío en este contexto.
+
+    \newpage
+
+
+    \section{Proceso de exploración}\\
+
+    \subsection{Creación de sub conjuntos de entrenamiento y validación}
+
+    Para evitar usar el mismo conjunto de entrenamiento para entrenar y validar el modelo, se realizó una
+    división del conjunto de entrenamiento.
+    Resultando en un conjunto sub entrenamiento \textit{(subTrain)} y otro de validación \textit{(validation)} con una
+    división del
+    75\% y 25\%
+    respectivamente.
+
+    \begin{lstlisting}[label={lst:divisionConjunto}]
+        /**
+         * Dividir el conjunto de entrenamiento:
+         * NOTA IMPORTANTE: El conjunto de test NO se utiliza para selección de parámetros
+         */
+        def createTrainingSubsets(originalDF: DataFrame, trainingPercentage: Double = 0.75, seed: Long): Array[Dataset[Row]] =
+          originalDF.randomSplit(Array(trainingPercentage, 1 - trainingPercentage), seed)
+
+    \end{lstlisting}
+
+    Igualmente, se agregó un seed y se verificó que los subconjuntos creados tengan una distribución parecída para
+    evitar
+    afectar al rendimiento del modelo.
+    Obteniendo los siguientes resultados:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{./assets/subconjuntos}
+        \caption{Resultados de las combinaciones de parámetros exploradas}
+        \label{fig:subconjuntos}
+    \end{figure}
+
+    \subsection{Creación de combinaciones:}
+
+    Para la elección de las combinaciones se tomó en cuenta lo siguiente:\\
+
+    \textbf{maxDepth} controla la profundidad del árbol de decisión.
+    A mayor profundidad, mayor complejidad tiene el árbol, esto generalmente permite que el árbol tenga un mayor
+    performance.
+    Pero también es muy probable que a mayor profundidad el modelo se ajuste en exceso al conjunto de datos~\cite{machineLearningSpark}.
+
+    El desbalance de la clase es importante a tomar en cuenta, porque valores poco profundos puedan ignorar la
+    clase minoritaria.
+    Se decidió empezar con el valor por defecto y continuar aumentando hasta 15 para evitar overfit.\\
+
+    \textbf{maxBins} es el número máximo de particiones que el árbol de decisión usa para discretizar
+    cada atributo y determinar puntos de división óptimos en cada nodo del árbol.
+    Como su mínimo es el número máximo de valores de un atributo categórico empezamos con 52 debido al atributo ADTIND.
+
+    La razón de considerar combinaciones desde 52 hasta 100 se debe a que al igual que con la profundidad del árbol,
+    un mayor número de compartimentos debería permitir que el modelo se vuelva más complejo y podría ayudar al
+    rendimiento con dimensiones de características más grandes.
+    Pero después de un cierto punto, es poco probable que ayude más y, de hecho, podría obstaculizar el rendimiento
+    en el conjunto de pruebas debido al overfit~\cite{machineLearningSpark}.\\
+
+
+    Se exploraron 12 combinaciones (ver~\cref{fig:combinaciones}) generadas con el siguiente código:\\
+    \begin{lstlisting}[label={lst:combinaciones}]
+        val maxDepthValues = Array(5, 10, 15, 20)
+        val maxBinsValues = Array(52, 60, 80, 100)
+        val combinations = maxDepthValues.flatMap(maxDepth => maxBinsValues.map(maxBins => (maxDepth, maxBins)))
+    \end{lstlisting}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{./assets/combinaciones}
+        \caption{Resultados de las combinaciones de parámetros exploradas}
+        \label{fig:combinaciones}
+    \end{figure}
+
+    \subsection{Observación sobre clase positiva y negativa}
+
+    Las métricas empleadas evalúan la capacidad del modelo para distinguir la clase positiva (\textbf{1.0}) de la
+    negativa (\textbf{0.0}). Tanto \texttt{BinaryClassificationEvaluator} como \texttt{MulticlassMetrics} asumen
+    que la clase con valor más alto (\textbf{1.0}) es la positiva y la utilizan para calcular el AUC, la matriz de
+    confusión, el recall, entre otros.
+
+    Esta distinción es relevante, porque depende de la indexación de la clase, el análisis que se quiera dar al
+    desempeño del modelo para la clase minoritaria y su coste.
+    En este caso, se está trabajando con stringOrderType alphabetDesc que asigna
+    minoritaria (\textbf{-50000}) se etiqueta como \textbf{0.0} y la
+    mayoritaria (\textbf{+50000}) como \textbf{1.0}.
+
+    \subsection{Entrenamiento y evaluación de modelos}
+
+    Para evaluar el rendimiento de los árboles de decisión según las combinaciones de parámetros, se utilizaron las
+    métricas de \textbf{MulticlassMetrics} y \textbf{BinaryClassificationMetrics}.\\
+
+    \textit{MulticlassMetrics} permitió calcular la \textit{accuracy}, a partir de la cual se obtiene la tasa de
+    error requerida en este entregable.
+    Además, proporciona la matriz de confusión, así como los valores de \textit{recall} y \textit{precision} por
+    clase, lo que facilita un análisis más detallado del rendimiento del modelo y de cómo se comporta frente a cada
+    categoría de la variable objetivo.
+
+    Dado el desbalance de clases, BinaryClassificationMetrics permitió analizar el desempeño mediante las
+    áreas
+    AUC-ROC y especialmente AUC-PR, más relevante por reflejar el equilibrio entre precisión y recall, y
+    evidenciar si el modelo realmente identifica la clase minoritaria (-50000) o simplemente predice la mayoritaria.
+
+
+    \begin{lstlisting}[label={lst:evaluateBinary}]
+        // ModelAucEvaluationMetrics es una case class creada para los resultados
+        def evaluateModelAuc(predictionsAndLabels: DataFrame): ModelAucEvaluationMetrics = {
+          val probabilitiesAndLabelsRDD = predictionsAndLabels.select("label", "probability").rdd
+            .map{row => (row.getAs[Vector](1).toArray, row.getDouble(0))}
+            .map{r => (r._1(1), r._2)}
+
+          val binaryMetrics = new BinaryClassificationMetrics(probabilitiesAndLabelsRDD)
+
+          // AUC-ROC y AUC-PR
+          val aucROC = binaryMetrics.areaUnderROC()
+          val aucPR = binaryMetrics.areaUnderPR()
+
+          ModelAucEvaluationMetrics(aucROC, aucPR)
+        }
+    \end{lstlisting}
+
+    \begin{lstlisting}[label={lst:evaluateMetris}]
+        def evaluateMulticlassMetrics(predictions: DataFrame): MulticlassMetrics = {
+            val predictionAndLabels = predictions.select("prediction", "label").rdd.map(row =>
+                (row.getDouble(0), row.getDouble(1))
+            )
+            new MulticlassMetrics(predictionAndLabels)
+        }
+    \end{lstlisting}
+
+    \subsection{Procesando la evaluación de combinaciones de parámetros}
+
+    Para cada una de las combinaciones se realizó la creación del modelo y su respectiva evaluación tanto para el
+    conjunto subTrain y validation.
+    Finalmente, se obtuvo los valores de las características del modelo para tenerlas
+    presentes en la comparación.
+
+    \begin{lstlisting}[label={lst:modelEvaluation}]
+        val results = combinations.map { case (maxDepth, maxBins) =>
+          printTitle(s"Modelo: maxDepth=$maxDepth, maxBins=$maxBins")
+
+          // Crear y entrenar el árbol de decision
+          val dt = new DecisionTreeClassifier()
+            .setMaxDepth(maxDepth)
+            .setMaxBins(maxBins)
+
+          val model = dt.fit(subTrainDF)
+          val numNodes = model.numNodes
+
+          println(f"  Número de nodos del árbol: $numNodes")
+
+          // Evaluación en conjunto de entrenamiento
+          val (subTrainMetrics, subTrainAuc) = evaluateModelWithSubset("ENTRENAMIENTO", model, subTrainDF)
+
+          // Evaluación en conjunto de validación
+          val (validationMetrics, validationAuc) = evaluateModelWithSubset("VALIDACIÓN", model, validationDF)
+
+          val modelCharacteristics = ModelCharacteristics(maxDepth, maxBins, model, numNodes)
+
+          // Retornar resultado completo en el case class de resultados
+          ModelResult(
+            modelCharacteristics,
+            subTrainMetrics, subTrainAuc,
+            validationMetrics, validationAuc
+          )
+        }
+    \end{lstlisting}
+
+    \subsubsection{Conjunto de sub entrenamiento}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{./assets/resultadosTraining}
+        \caption{Resultados de las combinaciones exploradas en el conjunto subTrain}
+        \label{fig:trainingEvals}
+    \end{figure}
+
+    \subsubsection{Conjunto de validación}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{./assets/resultadosTraining}
+        \caption{Resultados de las combinaciones exploradas en el conjunto validation}
+        \label{fig:validationEvals}
+    \end{figure}
+
+    \subsection{Resultados de la evaluación}
+
+    En las tablas de resumen de las evaluaciones obtenidas se puede verificar que los valores con maxBins menores
+    tienen una taza de error mayor.
+    Desde los valores maxDepth 10 y maxBins 100 se puede ver una mejoría, pero pasando de la profundidad 15 ya se
+    puede empezar a notar el overfitting, si nos fijamos entre los valores obtenidos de la tabla de validación vs. la de
+    entrenamiento, se puede ver que desde cuando se empieza a usar 15 de profundidad la diferencia entre
+    entrenamiento y validacion es mas grande lo cual hace notar que el conjunto se basa tanto en lo entrenado que no
+    funciona bien con validacion, lo que nos hace quedarnos con valores de profundidad menores a 15.
+
+    En los valores de profundidad 10 en la tabla de validación vemos que la menor tasa de error es con 100 Bins y el
+    valor es similar a la de entrenamiento por lo que no se encuentra un posible overfit. Resultando en el modelo
+    seleccionado:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{./assets/mejorModelo}
+        \caption{Modelo seleccionado con base a la menor tasa de error.}
+        \label{fig:selectedModel}
+    \end{figure}
+
+    Ahora respecto a los valores de precision, recall, auc roc y auc pr. Quisiera realizar varios puntos que se
+    destacan en los resultados.
+
+    Se dividio la presentacion del Recall y precision por clase para poder verificar los resultados especialmente en
+    la clase minoritaria representada por el label 0.0. Se puede ver que el recall es bastante bajo para todos los
+    modelos, peor que aleatoreo especialmente para los que tienen menos particiones. Y si subimos mas aun los bins y
+    profundidad ya caemos en overfit, lo cual nos hace analizar que si queremos continuar con arboles de decision
+    talvez tendriamos que aplicar tecnicas como Smote o tratar de balancear la cantidad de instancias antes del
+    entrenamiento para cada clase y poder tener una prediccion mejor.
+
+    Aunque la tasa de error no es mala, al tener una clase tan desbalanceada si deberíamos preguntarnos el costo de
+    predecir mal el resultado. El proposito de los datos es predecir si el ingreso anual de una
+    persona supera los 50.000 dólares por lo que esto es un problema grave dependiendo del contexto en el cual se lo
+    este utilizando y no podriamos basarnos solo en la tasa de error sino usar métricas como recall y AUC-PR para la
+    clase +50 000 ya son más informativas.
+
+    Si nos fijamos en la matriz de confusion para validacion \ref{fig:confusionMatrix} se
+    puede evidenciar que el modelo tiene dificultad para identificar correctamente los negativos (clase 0) que
+    serian las personas que ganan más de 50000 que es la clase minoritaria, solo detecta el 36\% de estos casos.
+
+    Con todo los valores del AUC ROC son bastante buenos en el cual se toma en cuenta a las dos clase, son mejores
+    que aleatoreo.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{./assets/confusionMatrix}
+        \caption{Matriz de confusion del mejor modelo con base en tasa de error.}
+        \label{fig:confusionMatrix}
+    \end{figure}
+
+    \subsection{Entrenamiento del modelo final}
+
+    \begin{lstlisting}[label={lst:evaluateMetris}]
+        def evaluateMulticlassMetrics(predictions: DataFrame): MulticlassMetrics = {
+            val predictionAndLabels = predictions.select("prediction", "label").rdd.map(row =>
+                (row.getDouble(0), row.getDouble(1))
+            )
+            new MulticlassMetrics(predictionAndLabels)
+        }
+    \end{lstlisting}
+
+
+
+    En este caso se puede visualizar lo analizado en la exploración de datos, al haber tanto desbalance en la clase,
+el modelo predice de manera excelente para la clase mayoritaria, pero para la minoritaria tiene un comportamiento
+bastante pobre en algunas combinaciones peor que aleatoreo.
+
+
+
+    TODO: AGREGRAR TABLA
+
+    TODO: AGREGAR GRAFICO DE SER POSIBLE
+
+
+
+
+
+
+    \newpage
+
+    \section{Tiempo empleado}
+
+
+
+    \section{Conclusiones}
+
+    Text Conclusiones
+
+    \newpage
+
+% % % % % CONTENIDO % % % % %
+
+    \bibliographystyle{apalike}
+    \bibliography{main}
+
+\end{document}
