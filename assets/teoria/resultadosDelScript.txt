@@ -1,0 +1,603 @@
+======================================================================
+DIVISIÓN TRAIN/VALIDATION
+======================================================================
+createTrainingSubsets: (originalDF: org.apache.spark.sql.DataFrame, trainingPercentage: Double, seed: Long)Array[org.apache.spark.sql.Dataset[org.apache.spark.sql.Row]]
+verifyClassDistribution: (subTrainingDataSet: org.apache.spark.sql.DataFrame)Unit
+evaluateMulticlassMetrics: (predictions: org.apache.spark.sql.DataFrame)org.apache.spark.mllib.evaluation.MulticlassMetrics
+evaluateModelAuc: (predictionsAndLabels: org.apache.spark.sql.DataFrame)ModelAucEvaluationMetrics
+printModelMetrics: (metrics: org.apache.spark.mllib.evaluation.MulticlassMetrics, aucEval: ModelAucEvaluationMetrics)Unit
+printModelValidationMetris: (results: Array[ModelResult])Unit
+printModelTrainingResults: (results: Array[ModelResult])Unit
+evaluateModelWithSubset: (subsetName: String, model: org.apache.spark.ml.classification.DecisionTreeClassificationModel, subSetDF: org.apache.spark.sql.DataFrame)(org.apache.spark.mllib.evaluation.MulticlassMetrics, ModelAucEvaluationMetrics)
+
+
+ *** Creando subconjuntos de entrenamiento (75% entrenamiento, 25% validation):
+subTrainDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [features: vector, label: double]
+validationDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [features: vector, label: double]
+75% Subconjunto entrenamiento :124173 - 25% Validacion: 41575                   
+
+ *** Distribución de clases en sub-train:
++-----+------+----------+                                                       
+|label| count|porcentaje|
++-----+------+----------+
+|  0.0|  9230|      7.43|
+|  1.0|114943|     92.57|
++-----+------+----------+
+
+
+ *** Distribución de clases en validation:
++-----+-----+----------+                                                        
+|label|count|porcentaje|
++-----+-----+----------+
+|  0.0| 3129|      7.53|
+|  1.0|38446|     92.47|
++-----+-----+----------+
+
+
+
+
+
+======================================================================
+EXPLORACIÓN DE COMBINACIONES CON PARAMETROS maxDepth y maxBins
+======================================================================
+maxDepthValues: Array[Int] = Array(5, 10, 15)
+maxBinsValues: Array[Int] = Array(52, 60, 80, 100)
+combinations: Array[(Int, Int)] = Array((5,52), (5,60), (5,80), (5,100), (10,52), (10,60), (10,80), (10,100), (15,52), (15,60), (15,80), (15,100))
+** Combinaciones a explorar:
+maxDepth: 5 - maxBins: 52
+maxDepth: 5 - maxBins: 60
+maxDepth: 5 - maxBins: 80
+maxDepth: 5 - maxBins: 100
+maxDepth: 10 - maxBins: 52
+maxDepth: 10 - maxBins: 60
+maxDepth: 10 - maxBins: 80
+maxDepth: 10 - maxBins: 100
+maxDepth: 15 - maxBins: 52
+maxDepth: 15 - maxBins: 60
+maxDepth: 15 - maxBins: 80
+maxDepth: 15 - maxBins: 100
+res82: Array[Unit] = Array((), (), (), (), (), (), (), (), (), (), (), ())
+
+
+
+
+======================================================================
+EVALUACIÓN DE MODELOS
+======================================================================
+
+ *** Entrenando y evaluando 12 árboles de decisión...
+
+
+
+
+
+======================================================================
+Modelo: maxDepth=5, maxBins=52
+======================================================================
+  Número de nodos del árbol: 45                                                 
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0650                                                             
+    - AUC-ROC: 0,8364
+    - AUC-PR: 0,9847
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1860         7370        
+  Real: 1         704          114239      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0659                                                             
+    - AUC-ROC: 0,8408
+    - AUC-PR: 0,8509
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         601          2528        
+  Real: 1         213          38233       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=5, maxBins=60
+======================================================================
+  Número de nodos del árbol: 31                                                 
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0642                                                             
+    - AUC-ROC: 0,7188
+    - AUC-PR: 0,9624
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1672         7558        
+  Real: 1         414          114529      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0656                                                             
+    - AUC-ROC: 0,7181
+    - AUC-PR: 0,9051
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         541          2588        
+  Real: 1         138          38308       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=5, maxBins=80
+======================================================================
+  Número de nodos del árbol: 33                                                 
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0646                                                             
+    - AUC-ROC: 0,7231
+    - AUC-PR: 0,9580
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1792         7438        
+  Real: 1         580          114363      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0654                                                             
+    - AUC-ROC: 0,7237
+    - AUC-PR: 0,9575
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         586          2543        
+  Real: 1         178          38268       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=5, maxBins=100
+======================================================================
+  Número de nodos del árbol: 33                                                 
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0635                                                             
+    - AUC-ROC: 0,7197
+    - AUC-PR: 0,9616
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1728         7502        
+  Real: 1         378          114565      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0646                                                             
+    - AUC-ROC: 0,7192
+    - AUC-PR: 0,9364
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         570          2559        
+  Real: 1         128          38318       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=10, maxBins=52
+======================================================================
+  Número de nodos del árbol: 669                                                
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0548                                                             
+    - AUC-ROC: 0,9113
+    - AUC-PR: 0,9916
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         3572         5658        
+  Real: 1         1146         113797      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0626                                                             
+    - AUC-ROC: 0,8933
+    - AUC-PR: 0,9724
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1029         2100        
+  Real: 1         501          37945       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=10, maxBins=60
+======================================================================
+  Número de nodos del árbol: 717                                                
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0544                                                             
+    - AUC-ROC: 0,9140
+    - AUC-PR: 0,9914
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         3374         5856        
+  Real: 1         899          114044      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0623                                                             
+    - AUC-ROC: 0,8948
+    - AUC-PR: 0,9705
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         987          2142        
+  Real: 1         450          37996       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=10, maxBins=80
+======================================================================
+  Número de nodos del árbol: 663                                                
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0542                                                             
+    - AUC-ROC: 0,9090
+    - AUC-PR: 0,9911
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         3811         5419        
+  Real: 1         1308         113635      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0626                                                             
+    - AUC-ROC: 0,8904
+    - AUC-PR: 0,9503
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1095         2034        
+  Real: 1         567          37879       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=10, maxBins=100
+======================================================================
+  Número de nodos del árbol: 619                                                
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0536                                                             
+    - AUC-ROC: 0,9144
+    - AUC-PR: 0,9914
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         3695         5535        
+  Real: 1         1116         113827      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0599                                                             
+    - AUC-ROC: 0,8992
+    - AUC-PR: 0,9760
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1125         2004        
+  Real: 1         488          37958       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=15, maxBins=52
+======================================================================
+  Número de nodos del árbol: 3463                                               
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0388                                                             
+    - AUC-ROC: 0,9551
+    - AUC-PR: 0,9959
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         5492         3738        
+  Real: 1         1085         113858      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0653                                                             
+    - AUC-ROC: 0,8452
+    - AUC-PR: 0,9753
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1271         1858        
+  Real: 1         855          37591       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=15, maxBins=60
+======================================================================
+  Número de nodos del árbol: 3261                                               
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0389                                                             
+    - AUC-ROC: 0,9530
+    - AUC-PR: 0,9957
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         5251         3979        
+  Real: 1         856          114087      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0651                                                             
+    - AUC-ROC: 0,8498
+    - AUC-PR: 0,9761
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1232         1897        
+  Real: 1         811          37635       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=15, maxBins=80
+======================================================================
+  Número de nodos del árbol: 3299                                               
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0381                                                             
+    - AUC-ROC: 0,9551
+    - AUC-PR: 0,9959
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         5366         3864        
+  Real: 1         867          114076      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0643                                                             
+    - AUC-ROC: 0,8549
+    - AUC-PR: 0,9773
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1238         1891        
+  Real: 1         783          37663       
+  ----------------------------------------
+
+
+
+
+======================================================================
+Modelo: maxDepth=15, maxBins=100
+======================================================================
+  Número de nodos del árbol: 3083                                               
+
+  Procesando Evaluación en :ENTRENAMIENTO
+    - Error: 0,0387                                                             
+    - AUC-ROC: 0,9531
+    - AUC-PR: 0,9957
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         5118         4112        
+  Real: 1         698          114245      
+  ----------------------------------------
+
+  Procesando Evaluación en :VALIDACIÓN
+    - Error: 0,0632                                                             
+    - AUC-ROC: 0,8582
+    - AUC-PR: 0,9775
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         1213         1916        
+  Real: 1         713          37733       
+  ----------------------------------------
+results: Array[ModelResult] = Array(ModelResult(ModelCharacteristics(5,52,DecisionTreeClassificationModel: uid=dtc_5e26e14632ac, depth=5, numNodes=45, numClasses=2, numFeatures=25,45),org.apache.spark.mllib.evaluation.MulticlassMetrics@24d8f40d,ModelAucEvaluationMetrics(0.8364016663815534,0.9847004096403676),org.apache.spark.mllib.evaluation.MulticlassMetrics@737f994,ModelAucEvaluationMetrics(0.8408397922770386,0.8509067889906972)), ModelResult(ModelCharacteristics(5,60,DecisionTreeClassificationModel: uid=dtc_84a450f15101, depth=5, numNodes=31, numClasses=2, numFeatures=25,31),org.apache.spark.mllib.evaluation.MulticlassMetrics@774e417,ModelAucEvaluationMetrics(0.7187742770124632,0.9624047486795058),org.apache.spark.mllib.evaluation.MulticlassMetrics@5752fb36,...
+
+
+
+
+======================================================================
+RESUMEN DE RESULTADOS Y SELECCIÓN DEL MEJOR MODELO
+======================================================================
+
+ *** TABLA RESUMEN - Métricas de Validación:
+
+========================================================================================================================
+Depth    Bins     Nodos    Error        Recall 0.0   Recall 1.0   Precision 0.0 Precision 1.0 AUC-ROC      AUC-PR      
+========================================================================================================================
+5        52       45       0,0659        0,1921       0,9945        0,7383       0,9380        0,8408       0,8509      
+5        60       31       0,0656        0,1729       0,9964        0,7968       0,9367        0,7181       0,9051      
+5        80       33       0,0654        0,1873       0,9954        0,7670       0,9377        0,7237       0,9575      
+5        100      33       0,0646        0,1822       0,9967        0,8166       0,9374        0,7192       0,9364      
+10       52       669      0,0626        0,3289       0,9870        0,6725       0,9476        0,8933       0,9724      
+10       60       717      0,0623        0,3154       0,9883        0,6868       0,9466        0,8948       0,9705      
+10       80       663      0,0626        0,3500       0,9853        0,6588       0,9490        0,8904       0,9503      
+10       100      619      0,0599        0,3595       0,9873        0,6975       0,9499        0,8992       0,9760      
+15       52       3463     0,0653        0,4062       0,9778        0,5978       0,9529        0,8452       0,9753      
+15       60       3261     0,0651        0,3937       0,9789        0,6030       0,9520        0,8498       0,9761      
+15       80       3299     0,0643        0,3957       0,9796        0,6126       0,9522        0,8549       0,9773      
+15       100      3083     0,0632        0,3877       0,9815        0,6298       0,9517        0,8582       0,9775      
+========================================================================================================================
+
+ *** TABLA RESUMEN - Métricas de Training:
+
+========================================================================================================================
+Depth    Bins     Nodos    Error        Recall 0.0   Recall 1.0   Precision 0.0 Precision 1.0 AUC-ROC      AUC-PR      
+========================================================================================================================
+5        52       45       0,0650        0,2015       0,9939        0,7254       0,9394        0,8364       0,9847      
+5        60       31       0,0642        0,1811       0,9964        0,8015       0,9381        0,7188       0,9624      
+5        80       33       0,0646        0,1941       0,9950        0,7555       0,9389        0,7231       0,9580      
+5        100      33       0,0635        0,1872       0,9967        0,8205       0,9385        0,7197       0,9616      
+10       52       669      0,0548        0,3870       0,9900        0,7571       0,9526        0,9113       0,9916      
+10       60       717      0,0544        0,3655       0,9922        0,7896       0,9512        0,9140       0,9914      
+10       80       663      0,0542        0,4129       0,9886        0,7445       0,9545        0,9090       0,9911      
+10       100      619      0,0536        0,4003       0,9903        0,7680       0,9536        0,9144       0,9914      
+15       52       3463     0,0388        0,5950       0,9906        0,8350       0,9682        0,9551       0,9959      
+15       60       3261     0,0389        0,5689       0,9926        0,8598       0,9663        0,9530       0,9957      
+15       80       3299     0,0381        0,5814       0,9925        0,8609       0,9672        0,9551       0,9959      
+15       100      3083     0,0387        0,5545       0,9939        0,8800       0,9653        0,9531       0,9957      
+========================================================================================================================
+bestModel: ModelResult = ModelResult(ModelCharacteristics(10,100,DecisionTreeClassificationModel: uid=dtc_10de07a881df, depth=10, numNodes=619, numClasses=2, numFeatures=25,619),org.apache.spark.mllib.evaluation.MulticlassMetrics@45ac255c,ModelAucEvaluationMetrics(0.9143617097735446,0.9914023576586551),org.apache.spark.mllib.evaluation.MulticlassMetrics@4b462c65,ModelAucEvaluationMetrics(0.8992325769537387,0.9759958896194051))
+
+
+
+
+======================================================================
+MEJOR MODELO SELECCIONADO (Menor Tasa de Error en Validación)
+======================================================================
+
+  Parámetros seleccionados:
+    - maxDepth: 10
+    - maxBins: 100
+    - Número de nodos: 619
+    - Tasa de error: 5,99%
+
+
+
+
+======================================================================
+ENTRENAMIENTO DEL MODELO FINAL
+======================================================================
+finalDT: org.apache.spark.ml.classification.DecisionTreeClassifier = dtc_d0c077541f8c
+res96: finalDT.type = dtc_d0c077541f8c
+res97: res96.type = dtc_d0c077541f8c
+finalModel: org.apache.spark.ml.classification.DecisionTreeClassificationModel = DecisionTreeClassificationModel: uid=dtc_d0c077541f8c, depth=10, numNodes=721, numClasses=2, numFeatures=25
+
+ Modelo final entrenado
+   - Número de nodos: 721
+   - Max Bins: 100
+   - Max Depth: 10
+
+
+
+
+======================================================================
+EVALUACIÓN FINAL EN CONJUNTO DE TEST
+======================================================================
+   Pipeline de transformacion para Test:
+testCensusFeaturesLabelDF: org.apache.spark.sql.DataFrame = [features: vector, label: double]
+testPredictions: org.apache.spark.sql.DataFrame = [features: vector, label: double ... 3 more fields]
+testMetrics: org.apache.spark.mllib.evaluation.MulticlassMetrics = org.apache.spark.mllib.evaluation.MulticlassMetrics@2dbc3dbb
+testAuc: ModelAucEvaluationMetrics = ModelAucEvaluationMetrics(0.8962768675095312,0.9614034435505889)
+
+
+
+
+======================================================================
+MÉTRICAS DEL MODELO FINAL EN TEST:
+======================================================================
+    - Error: 0,0586                                                             
+    - AUC-ROC: 0,8963
+    - AUC-PR: 0,9614
+
+  Matriz de Confusión - :
+  ----------------------------------------
+                  Pred: 0      Pred: 1     
+  ----------------------------------------
+  Real: 0         2203         3979        
+  Real: 1         907          76307       
+  ----------------------------------------
+
+
+ *** RESUMEN COMPARATIVO:
+======================================================================
+Métrica              Validación      Test            Diferencia     
+======================================================================
+Tasa de Error        0,0599          0,0586          0,0014         
+AUC-ROC              0,8992          0,8963          0,0030         
+AUC-PR               0,9760          0,9614          0,0146         
+======================================================================
+
+
+
+
+======================================================================
+GUARDANDO MODELO FINAL
+======================================================================
+modelPath: String = ./Modelo
+                                                                                
+ Modelo final guardado exitosamente en: ./Modelo

@@ -422,16 +422,29 @@
     \end{lstlisting}
 
 
+    \subsection{Evalucion del modelo con el conjunto de pruebas}
+    Para el conjunto de pruebas primero procesamos el conjunto con el pipeline de transformación, para crear los
+    vectores indexados de features y labels listos para el modelo.
+    Y finalmente se aplica transform con el modelo
+    final para el conjunto de pruebas.
 
-    En este caso se puede visualizar lo analizado en la exploración de datos, al haber tanto desbalance en la clase,
-el modelo predice de manera excelente para la clase mayoritaria, pero para la minoritaria tiene un comportamiento
-bastante pobre en algunas combinaciones peor que aleatoreo.
+    \begin{lstlisting}[label={lst:evaluateMetris}]
+        val testCensusFeaturesLabelDF = fittedPipeline.transform(selectedTestCensusDataDF).select("features", "label")
 
+        // Evaluar el modelo final en test
+        val testPredictions = finalModel.transform(testCensusFeaturesLabelDF)
+        val testMetrics = evaluateMulticlassMetrics(testPredictions)
+        val testAuc = evaluateModelAuc(testPredictions)
+    \end{lstlisting}
 
+    \subsection{Resultados del modelo seleccionado en el conjunto de pruebas}
 
-    TODO: AGREGRAR TABLA
+    Se puede evidenciar un comportamiento bastante similar al encontrado en el conjunto de validation. En donde la
+    tasa de error se mantiene en el 5.6\% pero de igual forma el mal rendimiento en la clase minoritaria debido al
+    desbalance continúa.
 
-    TODO: AGREGAR GRAFICO DE SER POSIBLE
+    Las curvas AUC ROC y PR tienen una minima diferencia en compararcion a lo evaluado con validation.
+
 
 
 
@@ -441,6 +454,12 @@ bastante pobre en algunas combinaciones peor que aleatoreo.
     \newpage
 
     \section{Tiempo empleado}
+
+    Horas: 10 horas
+    Actividades: Creacion de los scripts de scala para la evaluacion de modelos basados en arboles de decision,
+    analisis de las metricas obtenidas en los modelos, exploracion de soluciones respecto a balanceo de datos,
+    investigacion sobre la seleccion de combinaciones, redaccion de la memoria a traves de los datos obtenidos con
+    los scripts y analisis.
 
 
 
