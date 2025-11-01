@@ -18,6 +18,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{amsmath}
 \usepackage[spanish]{cleveref}
 
 % Configuración para bloques de código Scala
@@ -105,19 +106,17 @@
         &
     \section{Introducción}
 
-    El presente trabajo forma parte del Proyecto Software: Construcción y validación de un modelo de clasificación
-    usando la metodología CRISP-DM y Spark.
-    Tiene como objetivo desarrollar un modelo de clasificación, aplicando técnicas de aprendizaje automático sobre
-    el conjunto de datos Census Income (KDD). Este dataset, proveniente de encuestas
-    de la Oficina del Censo de Estados Unidos (1994–1995), contiene información demográfica, educativa y laboral
-    que permite estudiar y predecir patrones socioeconómicos.
+    El presente trabajo constituye el entregable individual que tiene como objetivo seleccionar el mejor modelo de
+    clasificación basado en árboles de decisión, mediante la exploración de los parámetros
+    \textit{maxDepth} y \textit{maxBins}.
+    Se utiliza el conjunto de datos Census Income (KDD), proveniente de las encuestas de la Oficina del Censo de
+    Estados Unidos (1994–1995), para predecir si el ingreso anual de una persona supera los 50.000 dólares.
     \newline
     \newline
-    En este entregable se realiza la exploración de los parámetros maxDepth y maxBins con el objetivo de identificar
-    la configuración que genere el mejor desempeño del modelo de clasificación basado exclusivamente en un árbol de
-    decisión.
-    El proceso incluye la creación de particiones de entrenamiento y validación, la evaluación de distintas
-    combinaciones de parámetros y la construcción del modelo final utilizando los valores óptimos obtenidos.
+    El proceso implementado incluye: (1) la división del conjunto de entrenamiento original en subconjuntos de
+    entrenamiento y validación, (2) la evaluación de múltiples combinaciones de parámetros mediante métricas
+    apropiadas para datos desbalanceados, (3) la selección del mejor modelo con base en el error de validación, y
+    (4) la construcción y evaluación del modelo final sobre el conjunto de prueba.
 
     \end{tabular}
     \newpage
@@ -144,17 +143,12 @@
     familiares y laborales.
     El problema se formula como una clasificación binaria, donde la variable objetivo refleja el nivel de ingresos
     de cada individuo.
-    \subsection{Tamaño del conjunto de datos.}
-    El dataset se divide en dos subconjuntos.
-    Data (entrenamiento): 199.523 instancias y Test (prueba): 99.762 instancias.
-    En total, cuenta con 299.285 registros, cada uno correspondiente a una persona.
-    \subsection{Número total y tipo de atributos.}
-    El conjunto incluye 41 atributos, aunque uno de ellos (“instance weight”) se utiliza
-    únicamente como peso de muestra y debe ser ignorado para el entrenamiento de clasificadores.
-    Por tanto, el análisis se realiza sobre 40 atributos distribuidos en: 6 atributos continuos
-    (numéricos) y 34 atributos nominales (categóricos)
-    Las variables describen características como edad, nivel educativo, ocupación, estado
-    civil, relación familiar, nacionalidad, horas trabajadas por semana, entre otras.
+    \subsection{Tamaño y estructura del conjunto de datos}
+    El dataset contiene 299.285 registros divididos en entrenamiento (199.523 instancias) y prueba (99.762 instancias).
+    Incluye 40 atributos relevantes para clasificación (6 numéricos y 34 categóricos), excluyendo el atributo
+    "instance weight" que solo se utiliza como peso de muestra.
+    Las variables describen características demográficas, educativas y laborales como edad, nivel educativo,
+    ocupación, estado civil, relación familiar, nacionalidad y horas trabajadas por semana.
     \subsection{Descripción de la Clase.}
     La clase, denominada “PTOTVAL” (total person income), representa el rango de
     ingresos totales de cada individuo.
@@ -164,28 +158,28 @@
     Esta distribución altamente desbalanceada plantea un desafío adicional para los
     modelos de clasificación, que deberán ser evaluados teniendo en cuenta este desequilibrio de
     clases.
-    \subsection{Selección del mejor modelo}
-    Para esta exploración se emplearon exclusivamente árboles de decisión, evaluando diversas combinaciones de los
-    parámetros \textit{maxDepth} y \textit{maxBins} con el objetivo de identificar la configuración que genera el
-    mejor desempeño del modelo.
-    Dado el desbalance existente entre clases, se consideró fundamental analizar no solo la métrica de
-    \textit{accuracy}, sino también el \textit{AUC-PR}, la matriz de confusión y el \textit{recall} por clase, a fin
-    de evaluar adecuadamente la capacidad del modelo para predecir la clase minoritaria, que representa el mayor
-    desafío en este contexto.
+    \subsection{Estrategia de selección del mejor modelo}
+    Para este entregable se emplearon exclusivamente árboles de decisión, evaluando diversas combinaciones de los
+    parámetros \textit{maxDepth} y \textit{maxBins} con el objetivo de identificar la configuración que minimice
+    la tasa de error en el conjunto de validación.
+
+    Dado el desbalance existente entre clases (93,8\% vs 6,2\%), aunque el criterio principal de selección es la
+    tasa de error según los requisitos del entregable, también se calcularon y analizaron métricas complementarias
+    como \textit{AUC-PR}, matriz de confusión y \textit{recall} por clase.
+    Estas métricas adicionales permiten realizar un análisis crítico más profundo del rendimiento del modelo,
+    especialmente en su capacidad para identificar la clase minoritaria, información valiosa para trabajos futuros.
 
     \newpage
 
 
     \section{Proceso de exploración}\\
 
-    \subsection{Creación de sub conjuntos de entrenamiento y validación}
+    \subsection{Creación de subconjuntos de entrenamiento y validación}
 
-    Para evitar usar el mismo conjunto de entrenamiento para entrenar y validar el modelo, se realizó una
-    división del conjunto de entrenamiento.
-    Resultando en un conjunto sub entrenamiento \textit{(subTrain)} y otro de validación \textit{(validation)} con una
-    división del
-    75\% y 25\%
-    respectivamente.
+    Para evitar el sesgo del error de resustitución y cumplir con la restricción de no utilizar el conjunto de
+    prueba para la selección de parámetros, se dividió el conjunto de entrenamiento original en dos subconjuntos:
+    \textit{subTrain} (75\%) para entrenar los modelos y \textit{validation} (25\%) para estimar la tasa de error y
+    seleccionar el mejor modelo.
 
     \begin{lstlisting}[label={lst:divisionConjunto}]
         /**
@@ -197,84 +191,85 @@
 
     \end{lstlisting}
 
-    Igualmente, se agregó un seed y se verificó que los subconjuntos creados tengan una distribución parecída para
-    evitar
-    afectar al rendimiento del modelo.
-    Obteniendo los siguientes resultados:
+    Se utilizó una semilla aleatoria (\textit{seed}) para garantizar la reproducibilidad de la partición.
+    Adicionalmente, se verificó que ambos subconjuntos mantuvieran una distribución de clases similar a la del
+    conjunto original, evitando así sesgos que pudieran afectar negativamente el rendimiento del modelo
+    (ver~\cref{fig:subconjuntos}).
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\textwidth]{./assets/subconjuntos}
-        \caption{Resultados de las combinaciones de parámetros exploradas}
+        \caption{Distribución de clases en los subconjuntos de entrenamiento y validación}
         \label{fig:subconjuntos}
     \end{figure}
 
-    \subsection{Creación de combinaciones:}
+    \subsection{Selección y justificación de combinaciones de parámetros}
 
-    Para la elección de las combinaciones se tomó en cuenta lo siguiente:\\
+    Se exploraron 12 combinaciones de los parámetros \textit{maxDepth} y \textit{maxBins}, cuya selección se
+    fundamenta en los siguientes criterios:\\
 
-    \textbf{maxDepth} controla la profundidad del árbol de decisión.
-    A mayor profundidad, mayor complejidad tiene el árbol, esto generalmente permite que el árbol tenga un mayor
-    performance.
-    Pero también es muy probable que a mayor profundidad el modelo se ajuste en exceso al conjunto de datos~\cite{machineLearningSpark}.
+    \textbf{maxDepth (profundidad máxima del árbol):}
+    Este parámetro controla la complejidad del modelo.
+    A mayor profundidad, el árbol puede capturar patrones más complejos, mejorando potencialmente el rendimiento.
+    Sin embargo, valores excesivos incrementan el riesgo de sobreajustar el modelo~\cite{machineLearningSpark}.
 
-    El desbalance de la clase es importante a tomar en cuenta, porque valores poco profundos puedan ignorar la
-    clase minoritaria.
-    Se decidió empezar con el valor por defecto y continuar aumentando hasta 15 para evitar overfit.\\
+    Dado el desbalance de clases (93,8\% vs 6,2\%), árboles demasiado superficiales tienden a ignorar la clase
+    minoritaria.
+    Se exploraron valores de 5, 10, 15, comenzando por el valor por defecto (5) y aumentando progresivamente
+    para encontrar el equilibrio entre la complejidad y evitar overfit.\\
 
-    \textbf{maxBins} es el número máximo de particiones que el árbol de decisión usa para discretizar
-    cada atributo y determinar puntos de división óptimos en cada nodo del árbol.
-    Como su mínimo es el número máximo de valores de un atributo categórico empezamos con 52 debido al atributo ADTIND.
+    \textbf{maxBins (número máximo de bins):}
+    Determina cómo se discretizan los atributos continuos y el número de divisiones posibles para atributos
+    categóricos.
+    El valor mínimo debe ser al menos igual al número de categorías del atributo categórico con mayor
+    cardinalidad; en este dataset, el atributo ADTIND requiere 52 bins.
+    Se evaluaron valores de 52, 60, 80 y 100. Valores más altos permiten mayor granularidad en las divisiones,
+    pero más allá de cierto umbral pueden provocar sobreajuste sin mejorar el rendimiento~\cite{machineLearningSpark}.\\
 
-    La razón de considerar combinaciones desde 52 hasta 100 se debe a que al igual que con la profundidad del árbol,
-    un mayor número de compartimentos debería permitir que el modelo se vuelva más complejo y podría ayudar al
-    rendimiento con dimensiones de características más grandes.
-    Pero después de un cierto punto, es poco probable que ayude más y, de hecho, podría obstaculizar el rendimiento
-    en el conjunto de pruebas debido al overfit~\cite{machineLearningSpark}.\\
-
-
-    Se exploraron 12 combinaciones (ver~\cref{fig:combinaciones}) generadas con el siguiente código:\\
+    Las 12 combinaciones se generaron mediante el producto cartesiano de ambos conjuntos de valores:
     \begin{lstlisting}[label={lst:combinaciones}]
-        val maxDepthValues = Array(5, 10, 15, 20)
+        val maxDepthValues = Array(5, 10, 15)
         val maxBinsValues = Array(52, 60, 80, 100)
         val combinations = maxDepthValues.flatMap(maxDepth => maxBinsValues.map(maxBins => (maxDepth, maxBins)))
     \end{lstlisting}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\textwidth]{./assets/combinaciones}
-        \caption{Resultados de las combinaciones de parámetros exploradas}
+        \includegraphics[width=0.5\textwidth]{./assets/combinaciones}
+        \caption{Combinaciones de parámetros exploradas}
         \label{fig:combinaciones}
     \end{figure}
 
-    \subsection{Observación sobre clase positiva y negativa}
+    \subsection{Consideraciones sobre la indexación de clases}
 
-    Las métricas empleadas evalúan la capacidad del modelo para distinguir la clase positiva (\textbf{1.0}) de la
-    negativa (\textbf{0.0}). Tanto \texttt{BinaryClassificationEvaluator} como \texttt{MulticlassMetrics} asumen
-    que la clase con valor más alto (\textbf{1.0}) es la positiva y la utilizan para calcular el AUC, la matriz de
-    confusión, el recall, entre otros.
+    Es importante aclarar cómo se codificaron las clases, ya que esto afecta la interpretación de las métricas.
+    Se utilizó \texttt{StringIndexer} con \texttt{stringOrderType = \"alphabetDesc\"}, lo que resulta en:
+    \begin{itemize}
+        \item Clase \textbf{0.0}: corresponde a ``50000+.'' (ingresos $>$ 50.000 USD) --- clase minoritaria (6,2\%)
+        \item Clase \textbf{1.0}: corresponde a ``- 50000.'' (ingresos $\leq$ 50.000 USD) --- clase mayoritaria (93,8\%)
+    \end{itemize}
 
-    Esta distinción es relevante, porque depende de la indexación de la clase, el análisis que se quiera dar al
-    desempeño del modelo para la clase minoritaria y su coste.
-    En este caso, se está trabajando con stringOrderType alphabetDesc que asigna
-    minoritaria (\textbf{-50000}) se etiqueta como \textbf{0.0} y la
-    mayoritaria (\textbf{+50000}) como \textbf{1.0}.
+    Esta codificación es relevante para la interpretación de métricas binarias como \textit{AUC-ROC} y
+    \textit{AUC-PR}, que consideran la clase \textbf{1.0} como la positiva.
+    En este contexto, el modelo intenta identificar a las personas con ingresos superiores a 50.000 dólares.
 
-    \subsection{Entrenamiento y evaluación de modelos}
+    \subsection{Métricas de evaluación}
 
-    Para evaluar el rendimiento de los árboles de decisión según las combinaciones de parámetros, se utilizaron las
-    métricas de \textbf{MulticlassMetrics} y \textbf{BinaryClassificationMetrics}.\\
+    Dada la naturaleza desbalanceada del problema, se utilizaron múltiples métricas para obtener
+    una evaluación comprehensiva del rendimiento de cada modelo:\\
 
-    \textit{MulticlassMetrics} permitió calcular la \textit{accuracy}, a partir de la cual se obtiene la tasa de
-    error requerida en este entregable.
-    Además, proporciona la matriz de confusión, así como los valores de \textit{recall} y \textit{precision} por
-    clase, lo que facilita un análisis más detallado del rendimiento del modelo y de cómo se comporta frente a cada
-    categoría de la variable objetivo.
+    \textbf{Tasa de error:} Calculada como $1 - \text{accuracy}$ utilizando \texttt{MulticlassMetrics}.
+    Este entregable se basa en la evaluación de los modelos mediante esta métrica,
+    pero debido a que puede ser engañosa en problemas desbalanceados, se utilizarán métricas adicionales para
+    realizar un análisis adicional que permitirá evaluar mejor en trabajos futuros.\\
 
-    Dado el desbalance de clases, BinaryClassificationMetrics permitió analizar el desempeño mediante las
-    áreas
-    AUC-ROC y especialmente AUC-PR, más relevante por reflejar el equilibrio entre precisión y recall, y
-    evidenciar si el modelo realmente identifica la clase minoritaria (-50000) o simplemente predice la mayoritaria.
+    \textbf{Matriz de confusión, recall y precision por clase:} Proporcionadas por \texttt{MulticlassMetrics},
+    permiten analizar el comportamiento del modelo para cada clase individualmente, revelando si el modelo
+    realmente identifica la clase minoritaria o simplemente predice la mayoritaria.\\
+
+    \textbf{AUC-ROC y AUC-PR:} Calculadas mediante \texttt{BinaryClassificationMetrics}.
+    El \textit{AUC-PR} es especialmente relevante en este contexto, ya que es más sensible al desbalance de clases
+    y refleja mejor la capacidad del modelo para identificar correctamente la clase minoritaria (+50000).
 
 
     \begin{lstlisting}[label={lst:evaluateBinary}]
@@ -345,7 +340,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\textwidth]{./assets/resultadosTraining}
+        \includegraphics[width=1\textwidth]{./assets/resultadosTraining}
         \caption{Resultados de las combinaciones exploradas en el conjunto subTrain}
         \label{fig:trainingEvals}
     \end{figure}
@@ -354,96 +349,135 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\textwidth]{./assets/resultadosTraining}
+        \includegraphics[width=1\textwidth]{./assets/resultadosValidacion}
         \caption{Resultados de las combinaciones exploradas en el conjunto validation}
         \label{fig:validationEvals}
     \end{figure}
 
-    \subsection{Resultados de la evaluación}
+    \subsection{Análisis de resultados y selección del mejor modelo}
 
-    En las tablas de resumen de las evaluaciones obtenidas se puede verificar que los valores con maxBins menores
-    tienen una taza de error mayor.
-    Desde los valores maxDepth 10 y maxBins 100 se puede ver una mejoría, pero pasando de la profundidad 15 ya se
-    puede empezar a notar el overfitting, si nos fijamos entre los valores obtenidos de la tabla de validación vs. la de
-    entrenamiento, se puede ver que desde cuando se empieza a usar 15 de profundidad la diferencia entre
-    entrenamiento y validacion es mas grande lo cual hace notar que el conjunto se basa tanto en lo entrenado que no
-    funciona bien con validacion, lo que nos hace quedarnos con valores de profundidad menores a 15.
+    \subsubsection{Comparación de combinaciones de parámetros}
 
-    En los valores de profundidad 10 en la tabla de validación vemos que la menor tasa de error es con 100 Bins y el
-    valor es similar a la de entrenamiento por lo que no se encuentra un posible overfit. Resultando en el modelo
-    seleccionado:
+    Del análisis de las 12 combinaciones evaluadas se observan los siguientes patrones:\\
+
+    \textbf{Efecto de maxBins:}
+    Los modelos con valores bajos de \textit{maxBins} (52) presentan tasas de error superiores comparadas con
+    valores más altos (80, 100), independientemente de la profundidad del árbol.
+    Esto indica que una mayor granularidad en la discretización de atributos mejora la capacidad predictiva del
+    modelo.\\
+
+    \textbf{Detección de sobreajuste:}
+    Al comparar las métricas entre los conjuntos de subentrenamiento y validación, se observa que a partir de
+    \textit{maxDepth} = 15, la diferencia en la tasa de error entre ambos conjuntos aumenta significativamente.
+    Este comportamiento es indicativo de sobreajuste: el modelo se ajusta excesivamente a los datos de
+    entrenamiento y pierde capacidad de generalización.\\
+
+    \textbf{Selección del modelo óptimo:}
+    Con base en el criterio de minimizar la tasa de error en validación evitando el sobreajuste, se seleccionó
+    el modelo con \textit{maxDepth} = 10 y \textit{maxBins} = 100.
+    Esta configuración presenta:
+    \begin{itemize}
+        \item La menor tasa de error en el conjunto de validación para profundidades $\leq$ 10
+        \item Tasas de error similares entre subentrenamiento y validación, descartando sobreajuste
+        \item Un balance adecuado entre complejidad del modelo y capacidad de generalización
+    \end{itemize}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\textwidth]{./assets/mejorModelo}
-        \caption{Modelo seleccionado con base a la menor tasa de error.}
+        \includegraphics[width=0.8\textwidth]{./assets/mejorModelo}
+        \caption{Configuración del modelo seleccionado: maxDepth=10, maxBins=100}
         \label{fig:selectedModel}
     \end{figure}
 
-    Ahora respecto a los valores de precision, recall, auc roc y auc pr. Quisiera realizar varios puntos que se
-    destacan en los resultados.
+    \subsubsection{Análisis crítico del rendimiento}
 
-    Se dividio la presentacion del Recall y precision por clase para poder verificar los resultados especialmente en
-    la clase minoritaria representada por el label 0.0. Se puede ver que el recall es bastante bajo para todos los
-    modelos, peor que aleatoreo especialmente para los que tienen menos particiones. Y si subimos mas aun los bins y
-    profundidad ya caemos en overfit, lo cual nos hace analizar que si queremos continuar con arboles de decision
-    talvez tendriamos que aplicar tecnicas como Smote o tratar de balancear la cantidad de instancias antes del
-    entrenamiento para cada clase y poder tener una prediccion mejor.
+    \textbf{Limitaciones del modelo seleccionado:}
+    Aunque la tasa de error general es baja (5,9\%), el análisis desagregado por clase revela
+    limitaciones importantes.
+    El \textit{recall} para la clase minoritaria (ingresos $>$ 50.000, label 0.0) es significativamente bajo
+    (aproximadamente 36\%), indicando que el modelo tiene dificultades para identificar correctamente estos casos.\\
 
-    Aunque la tasa de error no es mala, al tener una clase tan desbalanceada si deberíamos preguntarnos el costo de
-    predecir mal el resultado. El proposito de los datos es predecir si el ingreso anual de una
-    persona supera los 50.000 dólares por lo que esto es un problema grave dependiendo del contexto en el cual se lo
-    este utilizando y no podriamos basarnos solo en la tasa de error sino usar métricas como recall y AUC-PR para la
-    clase +50 000 ya son más informativas.
+    Como se observa en la matriz de confusión (ver~\cref{fig:confusionMatrix}), el modelo tiende a clasificar
+    erróneamente muchas instancias de la clase minoritaria como pertenecientes a la clase mayoritaria.
+    Este comportamiento es típico en problemas desbalanceados y subraya la importancia de no basarse únicamente en
+    la tasa de error.\\
 
-    Si nos fijamos en la matriz de confusion para validacion \ref{fig:confusionMatrix} se
-    puede evidenciar que el modelo tiene dificultad para identificar correctamente los negativos (clase 0) que
-    serian las personas que ganan más de 50000 que es la clase minoritaria, solo detecta el 36\% de estos casos.
+    \textbf{Implicaciones prácticas:}
+    Dependiendo del contexto de aplicación, la baja tasa de detección de la clase minoritaria podría tener
+    consecuencias importantes.
+    Para mejorar el rendimiento en esta clase, sería necesario explorar técnicas de balanceo de datos (SMOTE,
+    undersampling, etc.) o considerar modelos más complejos como Random Forest, Gradient Boosting u otros.\\
 
-    Con todo los valores del AUC ROC son bastante buenos en el cual se toma en cuenta a las dos clase, son mejores
-    que aleatoreo.
+    \textbf{Métricas complementarias:}
+    Los valores de \textit{AUC-ROC} obtenidos ($>$ 0.70) indican que el modelo tiene capacidad discriminativa
+    superior a un clasificador aleatorio.
+    Sin embargo, el \textit{AUC-PR} proporciona una evaluación más realista en este contexto desbalanceado.
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\textwidth]{./assets/confusionMatrix}
-        \caption{Matriz de confusion del mejor modelo con base en tasa de error.}
+        \includegraphics[width=0.5\textwidth]{./assets/confusionMatrix}
+        \caption{Matriz de confusión del modelo seleccionado en el conjunto de validación}
         \label{fig:confusionMatrix}
     \end{figure}
 
-    \subsection{Entrenamiento del modelo final}
+    \subsection{Construcción del modelo final}
 
-    \begin{lstlisting}[label={lst:evaluateMetris}]
-        def evaluateMulticlassMetrics(predictions: DataFrame): MulticlassMetrics = {
-            val predictionAndLabels = predictions.select("prediction", "label").rdd.map(row =>
-                (row.getDouble(0), row.getDouble(1))
-            )
-            new MulticlassMetrics(predictionAndLabels)
-        }
+    Una vez identificada la configuración óptima (\textit{maxDepth} = 10, \textit{maxBins} = 100), se procedió a
+    entrenar el modelo final utilizando todo el conjunto de entrenamiento original (sin dividir en subconjuntos).
+    Este modelo final fue entrenado con los parámetros seleccionados y todos los demás parámetros en sus valores
+    por defecto, según lo especificado en el entregable.
+
+    \begin{lstlisting}[label={lst:finalModel}]
+        // Entrenar el modelo final con todo el conjunto de entrenamiento
+        val finalDT = new DecisionTreeClassifier()
+          .setMaxDepth(10)
+          .setMaxBins(100)
+
+        val finalModel = finalDT.fit(trainingFeaturesLabelDF)
     \end{lstlisting}
 
 
-    \subsection{Evalucion del modelo con el conjunto de pruebas}
-    Para el conjunto de pruebas primero procesamos el conjunto con el pipeline de transformación, para crear los
-    vectores indexados de features y labels listos para el modelo.
-    Y finalmente se aplica transform con el modelo
-    final para el conjunto de pruebas.
+    \subsection{Evaluación en el conjunto de prueba}
 
-    \begin{lstlisting}[label={lst:evaluateMetris}]
-        val testCensusFeaturesLabelDF = fittedPipeline.transform(selectedTestCensusDataDF).select("features", "label")
+    El modelo final se evaluó sobre el conjunto de prueba, que no había sido utilizado en ninguna etapa previa del
+    proceso de selección de parámetros.
+    Para ello, se aplicó el mismo pipeline de transformación utilizado en el entrenamiento para generar los
+    vectores de características (\textit{features}) y las etiquetas (\textit{label}).
 
-        // Evaluar el modelo final en test
+    \begin{lstlisting}[label={lst:testEvaluation}]
+        // Transformar el conjunto de prueba
+        val testCensusFeaturesLabelDF = transformationPipeline.transform(selectedTestCensusDataDF)
+          .select("features", "label")
+
+        // Realizar predicciones y calcular métricas
         val testPredictions = finalModel.transform(testCensusFeaturesLabelDF)
         val testMetrics = evaluateMulticlassMetrics(testPredictions)
         val testAuc = evaluateModelAuc(testPredictions)
     \end{lstlisting}
 
-    \subsection{Resultados del modelo seleccionado en el conjunto de pruebas}
+    \subsection{Resultados finales en el conjunto de prueba}
 
-    Se puede evidenciar un comportamiento bastante similar al encontrado en el conjunto de validation. En donde la
-    tasa de error se mantiene en el 5.6\% pero de igual forma el mal rendimiento en la clase minoritaria debido al
-    desbalance continúa.
+    El modelo final presentó un comportamiento consistente con los resultados observados en el conjunto de
+    validación~\ref{fig:testsResults}
 
-    Las curvas AUC ROC y PR tienen una minima diferencia en compararcion a lo evaluado con validation.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{./assets/modelFinalResultados}
+        \caption{Resultados del modelo final utilizando el conjunto de pruebas.}
+        \label{fig:testsResults}
+    \end{figure}
+
+    La consistencia entre las métricas de validación y prueba confirma que el modelo no presenta sobreajuste y que
+    la metodología de selección de parámetros fue apropiada~\ref{fig:comparisonResults}.
+    Sin embargo, persisten las limitaciones inherentes al desbalance de clases, con bajo \textit{recall} para la
+    clase minoritaria.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{./assets/comparacionTestValidation}
+        \caption{Comparacion de resultados usando validation y test.}
+        \label{fig:comparisonResults}
+    \end{figure}
 
 
 
@@ -453,19 +487,48 @@
 
     \newpage
 
-    \section{Tiempo empleado}
-
-    Horas: 10 horas
-    Actividades: Creacion de los scripts de scala para la evaluacion de modelos basados en arboles de decision,
-    analisis de las metricas obtenidas en los modelos, exploracion de soluciones respecto a balanceo de datos,
-    investigacion sobre la seleccion de combinaciones, redaccion de la memoria a traves de los datos obtenidos con
-    los scripts y analisis.
-
-
-
     \section{Conclusiones}
 
-    Text Conclusiones
+    En este trabajo se llevó a cabo la selección de un modelo de clasificación basado en árboles de decisión para
+    predecir el nivel de ingresos en el conjunto de datos Census Income (KDD), explorando 12
+    combinaciones de los parámetros \textit{maxDepth} y \textit{maxBins}.\\
+
+    \textbf{Metodología aplicada:}
+    Se implementó una estrategia de validación apropiada, dividiendo el conjunto de entrenamiento en subconjuntos
+    de entrenamiento (75\%) y validación (25\%), evitando el uso inadecuado del conjunto de prueba para la
+    selección de parámetros.
+    Esta metodología permitió identificar configuraciones con tendencia al sobreajuste y seleccionar el modelo que
+    mejor equilibra capacidad predictiva y generalización.\\
+
+    \textbf{Limitaciones identificadas:}
+    A pesar de una tasa de error general baja, el modelo presenta limitaciones significativas para identificar la
+    clase minoritaria (ingresos $>$ 50.000 USD), con un \textit{recall} de aproximadamente 36\%.
+    Este comportamiento se esperaba desde el análisis del conjunto de datos en el cual se evidenció el alto
+    desbalance de clases (93,8\% vs 6,2\%) y destaca la
+    importancia de no evaluar modelos únicamente mediante la tasa de error global.\\
+
+    \textbf{Trabajo futuro:}
+    Para mejorar el rendimiento en la clase minoritaria, sería necesario explorar:
+    (1) técnicas de balanceo de datos como SMOTE o undersampling,
+    (2) modelos de conjunto como Random Forest o Gradient Boosting Trees u otros, y
+    (3) ajuste de umbrales de decisión considerando los costos asociados a falsos negativos y falsos positivos.\\
+
+    \newpage
+
+    \section{Tiempo empleado}
+
+    \textbf{Horas totales:} 10 horas\\
+
+    \textbf{Actividades realizadas:}
+    \begin{itemize}
+        \item Desarrollo de scripts en Scala para la exploración de parámetros y evaluación de modelos
+        \item Implementación de métricas de evaluación (MulticlassMetrics, BinaryClassificationMetrics)
+        \item Análisis comparativo de las 12 combinaciones de parámetros
+        \item Generación de visualizaciones y tablas de resultados
+        \item Investigación sobre criterios de selección de parámetros en árboles de decisión
+        \item Redacción y estructuración de la memoria técnica
+        \item Análisis crítico de resultados y limitaciones del modelo
+    \end{itemize}
 
     \newpage
 

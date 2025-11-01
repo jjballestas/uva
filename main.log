@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.31)  1 NOV 2025 00:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.31)  1 NOV 2025 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,6 +545,69 @@ File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
 
+(/home/nataly/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip61
+
+For additional information on amsmath, use the `?' option.
+(/home/nataly/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen189
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count354
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count355
+\leftroot@=\count356
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count357
+\DOTSCASE@=\count358
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box105
+\strutbox@=\box106
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen190
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count359
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count360
+\dotsspace@=\muskip18
+\c@parentequation=\count361
+\dspbrk@lvl=\count362
+\tag@help=\toks29
+\row@=\count363
+\column@=\count364
+\maxfields@=\count365
+\andhelp@=\toks30
+\eqnshift@=\dimen191
+\alignsep@=\dimen192
+\tagshift@=\dimen193
+\tagwidth@=\dimen194
+\totwidth@=\dimen195
+\lineht@=\dimen196
+\@envbody=\toks31
+\multlinegap=\skip62
+\multlinetaggap=\skip63
+\mathdisplay@stack=\toks32
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+)
 (/home/nataly/.miktex/texmfs/install/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -570,10 +633,10 @@ File: lstlang2.sty 2024/09/23 1.10c listings language file
 (/home/nataly/.miktex/texmfs/install/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2024/09/23 1.10c listings language file
 )
-\c@apafig=\count354
-\c@apatable=\count355
+\c@apafig=\count366
+\c@apatable=\count367
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-0.
+1.
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -585,24 +648,24 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -640,17 +703,17 @@ LaTeX Font Info:    ... okay on input line 80.
 
 (/home/nataly/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count356
-\scratchdimen=\dimen189
-\scratchbox=\box105
-\nofMPsegments=\count357
-\nofMParguments=\count358
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count359
-\MPscratchDim=\dimen190
-\MPnumerator=\count360
-\makeMPintoPDFobject=\count361
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count368
+\scratchdimen=\dimen197
+\scratchbox=\box107
+\nofMPsegments=\count369
+\nofMParguments=\count370
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count371
+\MPscratchDim=\dimen198
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
+\everyMPtoPDFconversion=\toks34
 ) (/home/nataly/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 (/home/nataly/.miktex/texmfs/install/tex/latex/grfext/grfext.sty
@@ -666,23 +729,23 @@ G,.JBIG2,.JB2,.eps]
 (/home/nataly/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 80.
+Package hyperref Info: Link coloring OFF on input line 81.
 
 (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-\c@lstlisting=\count362
-<./assets/uva-logo.png, id=59, 349.305pt x 349.305pt>
+\c@lstlisting=\count374
+<./assets/uva-logo.png, id=103, 349.305pt x 349.305pt>
 File: ./assets/uva-logo.png Graphic file (type png)
 <use ./assets/uva-logo.png>
-Package pdftex.def Info: ./assets/uva-logo.png  used on input line 87.
+Package pdftex.def Info: ./assets/uva-logo.png  used on input line 88.
 (pdftex.def)             Requested size: 90.5922pt x 90.59329pt.
 
 
@@ -691,55 +754,54 @@ Package pdftex.def Info: ./assets/uva-logo.png  used on input line 87.
 {/home/nataly/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}{/home/nataly/.mi
 ktex/texmfs/install/fonts/enc/dvips/lm/lm-rm.enc} <./assets/uva-logo.png>]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-04.
+05.
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-104.
+105.
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-104.
+105.
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 104.
+(Font)              <10.95> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 104.
+(Font)              <8> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 104.
+(Font)              <6> on input line 105.
 
-Underfull \hbox (badness 7685) in paragraph at lines 108--120
-[]\OT1/lmr/m/n/10.95 El presente trabajo forma parte del Proyecto Software:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--120
+Underfull \hbox (badness 10000) in paragraph at lines 109--120
 
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 108--120
-\OT1/lmr/m/n/10.95 En este entregable se realiza la exploraci^^Son de par^^Same
-tros
+Underfull \hbox (badness 1596) in paragraph at lines 109--120
+\OT1/lmr/m/n/10.95 de entrenamiento original en subconjuntos de entrenamiento
  []
 
 
-Underfull \hbox (badness 2635) in paragraph at lines 108--120
-\OT1/lmr/m/n/10.95 la configuraci^^Son que cree el mejor modelo de clasificaci^
-^Son
+Underfull \hbox (badness 2961) in paragraph at lines 109--120
+\OT1/lmr/m/n/10.95 y validaci^^Son, (2) la evaluaci^^Son de m^^Sultiples combin
+aciones
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 108--120
-\OT1/lmr/m/n/10.95 distintas combinaciones de par^^Sametros y la construcci^^So
-n del
+Underfull \hbox (badness 10000) in paragraph at lines 109--120
+\OT1/lmr/m/n/10.95 de par^^Sametros mediante m^^Setricas apropiadas para datos
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 109--120
+\OT1/lmr/m/n/10.95 desbalanceados, (3) la selecci^^Son del mejor modelo con bas
+e
  []
 
 
@@ -749,21 +811,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.121     \newpage
+l.122     \newpage
                    [1]
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-138.
+139.
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (4.27898pt too wide) in paragraph at lines 150--156
-[]\OT1/lmr/m/n/10.95 El conjunto incluye 41 atributos, aunque uno de ellos (\in
-stance weight") se utiliza ^^Sunicamente
+Overfull \hbox (0.33554pt too wide) in paragraph at lines 147--152
+\OT1/lmr/m/n/10.95 educativo, ocupaci^^Son, estado civil, relaci^^Son familiar,
+ nacionalidad y horas trabajadas por semana. 
  []
 
 
-Overfull \hbox (13.66937pt too wide) in paragraph at lines 166--173
+Overfull \hbox (13.66937pt too wide) in paragraph at lines 162--165
 \OT1/lmr/m/n/10.95 combinaciones de los par^^Sametros \OT1/lmr/m/it/10.95 maxDe
 pth \OT1/lmr/m/n/10.95 y \OT1/lmr/m/it/10.95 maxBins \OT1/lmr/m/n/10.95 con el 
 objetivo de identificar la configuraci^^Son
@@ -779,15 +841,9 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.178 
+l.176 
       
 ? 
-
-Overfull \hbox (2.19281pt too wide) in paragraph at lines 181--187
-\OT1/lmr/m/n/10.95 realiz^^So una divisi^^Son del conjunto de entrenamiento. Re
-sultando en un conjunto sub entrenamiento
- []
-
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (肻expandafter).
 
@@ -795,7 +851,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 ...to de test NO se utiliza para selecci贸n 
+l.187 ...to de test NO se utiliza para selecci贸n 
                                                   de par谩metros
 ? 
 
@@ -805,7 +861,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 ...to de test NO se utiliza para selecci贸n 
+l.187 ...to de test NO se utiliza para selecci贸n 
                                                   de par谩metros
 ? 
 
@@ -815,7 +871,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 ...se utiliza para selecci贸n de par谩metros
+l.187 ...se utiliza para selecci贸n de par谩metros
                                                   
 ? 
 
@@ -825,60 +881,389 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 ...se utiliza para selecci贸n de par谩metros
+l.187 ...se utiliza para selecci贸n de par谩metros
                                                   
 ? 
-
-Overfull \hbox (9.63731pt too wide) in paragraph at lines 198--202
-[]\OT1/lmr/m/n/10.95 Igualmente, se agreg^^So un seed y se verific^^So que los 
-subconjuntos creados tengan una distribuci^^Son
- []
-
-<./assets/subconjuntos.png, id=82, 601.24625pt x 513.92pt>
+<./assets/subconjuntos.png, id=127, 601.24625pt x 513.92pt>
 File: ./assets/subconjuntos.png Graphic file (type png)
 <use ./assets/subconjuntos.png>
-Package pdftex.def Info: ./assets/subconjuntos.png  used on input line 205.
+Package pdftex.def Info: ./assets/subconjuntos.png  used on input line 201.
 (pdftex.def)             Requested size: 181.18439pt x 154.86726pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
+Overfull \hbox (83.65077pt too wide) in paragraph at lines 211--215
+\OT1/lmr/m/n/10.95 potencialmente el rendimiento. Sin embargo, valores excesivo
+s aumentan el riesgo de sobreajuste [[]]. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--233
+Underfull \hbox (badness 10000) in paragraph at lines 221--228
 
  []
 
 
 
 [3 <./assets/subconjuntos.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+<./assets/combinaciones.png, id=149, 487.8225pt x 491.8375pt>
+File: ./assets/combinaciones.png Graphic file (type png)
+<use ./assets/combinaciones.png>
+Package pdftex.def Info: ./assets/combinaciones.png  used on input line 238.
+(pdftex.def)             Requested size: 226.48395pt x 228.34933pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
-<./assets/combinaciones.png, id=105, 447.6725pt x 412.54124pt>
-File: ./assets/combinaciones.png Graphic file (type png)
-<use ./assets/combinaciones.png>
-Package pdftex.def Info: ./assets/combinaciones.png  used on input line 244.
-(pdftex.def)             Requested size: 181.18439pt x 166.97127pt.
-! Too many }'s.
-l.265 ...} y \textbf{}BinaryClassificationMetrics}
-                                                  .
+
+Overfull \hbox (1.6858pt too wide) in paragraph at lines 261--265
+[]\OT1/lmr/bx/n/10.95 Tasa de error: \OT1/lmr/m/n/10.95 Calculada como $1 \OMS/
+lmsy/m/n/10.95 ^^@ []$ \OT1/lmr/m/n/10.95 utilizando \OT1/lmtt/m/n/10.95 Multic
+lassMetrics\OT1/lmr/m/n/10.95 . Este entregable
+ []
+
+
+
+[4{/home/nataly/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-mathit.enc}{/home/
+nataly/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-mathsy.enc} <./assets/combi
+naciones.png>]
+Overfull \hbox (20.444pt too wide) in paragraph at lines 266--269
+[]\OT1/lmr/bx/n/10.95 Matriz de confusi[]on, recall y precision por clase: \OT1
+/lmr/m/n/10.95 Proporcionadas por \OT1/lmtt/m/n/10.95 MulticlassMetrics\OT1/lmr
+/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--269
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+310.
+(/home/nataly/.miktex/texmfs/install/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+! LaTeX Error: Invalid UTF-8 byte sequence (肻lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.312           // Crear y entrenar el 谩rbol 
+                                              de decision
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "A1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.312           // Crear y entrenar el 谩rbol 
+                                              de decision
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (肻expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320           println(f"  N煤mero 
+                                    de nodos del 谩rbol: $numNodes")
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "BA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320           println(f"  N煤mero 
+                                    de nodos del 谩rbol: $numNodes")
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (肻lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320 ... println(f"  N煤mero de nodos del 谩rbol:
+                                                   $numNodes")
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "A1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320 ... println(f"  N煤mero de nodos del 谩rbol:
+                                                   $numNodes")
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (肻expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.322           // Evaluaci贸n 
+                               en conjunto de entrenamiento
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "B3.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.322           // Evaluaci贸n 
+                               en conjunto de entrenamiento
 ? 
 
 
-[4 <./assets/combinaciones.png>]
+[5{/home/nataly/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ts1.enc}]
 
-[5]
+! LaTeX Error: Invalid UTF-8 byte sequence (肻expandafter).
 
-[6] (main.bbl)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.325           // Evaluaci贸n 
+                               en conjunto de validaci贸n
+? 
 
-[7] (main.aux
+! LaTeX Error: Invalid UTF-8 byte "B3.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.325           // Evaluaci贸n 
+                               en conjunto de validaci贸n
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (肻expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.325 ...// Evaluaci贸n en conjunto de validaci贸n
+                                                  
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "B3.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.325 ...// Evaluaci贸n en conjunto de validaci贸n
+                                                  
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (肻expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 ...) = evaluateModelWithSubset("VALIDACI脫N"
+                                                  , model, validationDF)
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "93.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 ...) = evaluateModelWithSubset("VALIDACI脫N"
+                                                  , model, validationDF)
+? 
+<./assets/resultadosTraining.png, id=208, 1733.47626pt x 596.2275pt>
+File: ./assets/resultadosTraining.png Graphic file (type png)
+<use ./assets/resultadosTraining.png>
+Package pdftex.def Info: ./assets/resultadosTraining.png  used on input line 34
+3.
+(pdftex.def)             Requested size: 407.66833pt x 140.21355pt.
+File: ./assets/resultadosTraining.png Graphic file (type png)
+<use ./assets/resultadosTraining.png>
+Package pdftex.def Info: ./assets/resultadosTraining.png  used on input line 35
+2.
+(pdftex.def)             Requested size: 407.66833pt x 140.21355pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+
+
+[6 <./assets/resultadosTraining.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 363--368
+
+ []
+
+
+Overfull \hbox (11.93797pt too wide) in paragraph at lines 369--374
+[]\OT1/lmr/bx/n/10.95 Detecci[]on de sobreajuste: \OT1/lmr/m/n/10.95 Al compara
+r las m^^Setricas entre los conjuntos de subentrenamiento
+ []
+
+
+Overfull \hbox (15.53987pt too wide) in paragraph at lines 369--374
+\OT1/lmr/m/n/10.95 el modelo se ajusta excesivamente a los datos de entrenamien
+to y pierde capacidad de generalizaci^^Son. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--374
+
+ []
+
+<./assets/mejorModelo.png, id=232, 1009.7725pt x 355.3275pt>
+File: ./assets/mejorModelo.png Graphic file (type png)
+<use ./assets/mejorModelo.png>
+Package pdftex.def Info: ./assets/mejorModelo.png  used on input line 387.
+(pdftex.def)             Requested size: 362.37569pt x 127.51657pt.
+
+Overfull \hbox (5.351pt too wide) in paragraph at lines 394--399
+\OT1/lmr/m/n/10.95 el an^^Salisis desagregado por clase revela limitaciones imp
+ortantes. El \OT1/lmr/m/it/10.95 recall \OT1/lmr/m/n/10.95 para la clase minori
+taria
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--399
+
+ []
+
+
+Overfull \hbox (5.68394pt too wide) in paragraph at lines 400--404
+\OT1/lmr/m/n/10.95 err^^Soneamente muchas instancias de la clase minoritaria co
+mo pertenecientes a la clase mayoritaria.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--404
+
+ []
+
+
+Overfull \hbox (0.22859pt too wide) in paragraph at lines 405--410
+[]\OT1/lmr/bx/n/10.95 Implicaciones pr[]acticas: \OT1/lmr/m/n/10.95 Dependiendo
+ del contexto de aplicaci^^Son, la baja tasa de detecci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--410
+
+ []
+
+
+
+[7 <./assets/mejorModelo.png>]
+<./assets/confusionMatrix.png, id=241, 655.44875pt x 411.5375pt>
+File: ./assets/confusionMatrix.png Graphic file (type png)
+<use ./assets/confusionMatrix.png>
+Package pdftex.def Info: ./assets/confusionMatrix.png  used on input line 418.
+(pdftex.def)             Requested size: 226.48395pt x 142.20038pt.
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (肻expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 ...ealizar predicciones y calcular m茅tricas
+                                                  
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "A9.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 ...ealizar predicciones y calcular m茅tricas
+                                                  
+? 
+<./assets/modelFinalResultados.png, id=243, 1002.74625pt x 472.76625pt>
+File: ./assets/modelFinalResultados.png Graphic file (type png)
+<use ./assets/modelFinalResultados.png>
+Package pdftex.def Info: ./assets/modelFinalResultados.png  used on input line 
+465.
+(pdftex.def)             Requested size: 362.37569pt x 170.85217pt.
+
+
+[8 <./assets/confusionMatrix.png>]
+<./assets/comparacionTestValidation.png, id=269, 1033.8625pt x 271.0125pt>
+File: ./assets/comparacionTestValidation.png Graphic file (type png)
+<use ./assets/comparacionTestValidation.png>
+Package pdftex.def Info: ./assets/comparacionTestValidation.png  used on input 
+line 477.
+(pdftex.def)             Requested size: 362.37569pt x 94.99225pt.
+
+
+[9 <./assets/modelFinalResultados.png> <./assets/comparacionTestValidation.png>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 492--495
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--509
+
+ []
+
+
+Overfull \hbox (4.30142pt too wide) in paragraph at lines 510--515
+[]\OT1/lmr/bx/n/10.95 Trabajo futuro: \OT1/lmr/m/n/10.95 Para mejorar el rendim
+iento en la clase minoritaria, ser^^S^^Pa necesario explorar:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--515
+
+ []
+
+
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 520--521
+
+ []
+
+
+Overfull \hbox (3.98341pt too wide) in paragraph at lines 525--526
+[]\OT1/lmr/m/n/10.95 Implementaci^^Son de m^^Setricas de evaluaci^^Son (Multicl
+assMetrics, BinaryClassificationMetrics) 
+ []
+
+
+
+[11] (main.bbl)
+
+[12] (main.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 Package cleveref Info: loaded `spanish' language definitions on input line 11.
@@ -897,28 +1282,35 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: F789C0387ABE2B413AB95DB5074378BD;2676
-(rerunfilecheck)             After:  1217B06FA3403E9E71E438A19237CE6E;3897.
+(rerunfilecheck)             Before: 94C9F106CBFAD9088E2E77FD2BC1321C;5795
+(rerunfilecheck)             After:  B7559771EE505C795D16AF92F7E15449;5620.
  ) 
 Here is how much of TeX's memory you used:
- 17736 strings out of 470017
- 298025 string characters out of 5477706
- 1103277 words of memory out of 5000000
- 45877 multiletter control sequences out of 15000+600000
- 667489 words of font info for 62 fonts, out of 8000000 for 9000
+ 18600 strings out of 470017
+ 311235 string characters out of 5477706
+ 1441654 words of memory out of 5000000
+ 46640 multiletter control sequences out of 15000+600000
+ 672014 words of font info for 64 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 75i,9n,117p,1009b,2075s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmbx10.pfb></home/
-nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmbx12.pfb></home/nataly/.m
-iktex/texmfs/install/fonts/type1/public/lm/lmr10.pfb></home/nataly/.miktex/texm
-fs/install/fonts/type1/public/lm/lmr12.pfb></home/nataly/.miktex/texmfs/install
-/fonts/type1/public/lm/lmr17.pfb></home/nataly/.miktex/texmfs/install/fonts/typ
-e1/public/lm/lmr6.pfb></home/nataly/.miktex/texmfs/install/fonts/type1/public/l
-m/lmri10.pfb></home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmtt10.
-pfb></home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (8 pages, 413569 bytes).
+ 75i,9n,117p,1009b,2118s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subsection.2.7} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmbx10.pfb></home/na
+taly/.miktex/texmfs/install/fonts/type1/public/lm/lmbx12.pfb></home/nataly/.mik
+tex/texmfs/install/fonts/type1/public/lm/lmmi10.pfb></home/nataly/.miktex/texmf
+s/install/fonts/type1/public/lm/lmr10.pfb></home/nataly/.miktex/texmfs/install/
+fonts/type1/public/lm/lmr12.pfb></home/nataly/.miktex/texmfs/install/fonts/type
+1/public/lm/lmr17.pfb></home/nataly/.miktex/texmfs/install/fonts/type1/public/l
+m/lmr6.pfb></home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmri10.pf
+b></home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmri8.pfb></home/n
+ataly/.miktex/texmfs/install/fonts/type1/public/lm/lmsy10.pfb></home/nataly/.mi
+ktex/texmfs/install/fonts/type1/public/lm/lmtt10.pfb></home/nataly/.miktex/texm
+fs/install/fonts/type1/public/lm/lmtt9.pfb>
+Output written on main.pdf (13 pages, 666062 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
