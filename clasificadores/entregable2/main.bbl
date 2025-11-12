@@ -1,0 +1,37 @@
+\begin{thebibliography}{}
+
+\bibitem[Dua et~al., 2017]{machineLearningSpark}
+Dua, R., Ghotra, M.~S., and Pentreath, N. (2017 - 2017).
+\newblock {\em Machine learning with spark : develop intelligent machine
+  learning systems with spark 2.x}.
+\newblock Packt, Birmingham, England ;, second edition. edition.
+
+\bibitem[Project, 2025a]{SparkBinaryClassificationMetrics}
+Project, A.~S. (2025a).
+\newblock Binaryclassificationmetrics (pyspark mllib) — spark 4.0.1
+  documentation.
+\newblock
+  \url{https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.mllib.evaluation.BinaryClassificationMetrics.html#pyspark.mllib.evaluation.BinaryClassificationMetrics.areaUnderPR}.
+\newblock Accessed: 2025-11-02.
+
+\bibitem[Project, 2025b]{SparkMulticlassMetrics}
+Project, A.~S. (2025b).
+\newblock Multiclassmetrics (pyspark mllib) — spark 4.0.1 documentation.
+\newblock
+  \url{https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.mllib.evaluation.MulticlassMetrics.html}.
+\newblock Accessed: 2025-11-02.
+
+\bibitem[Project, 2025c]{SparkStandardScaler}
+Project, A.~S. (2025c).
+\newblock Standardscaler (spark ml) — spark 4.0.1 scaladoc.
+\newblock
+  \url{https://spark.apache.org/docs/latest/api/scala/org/apache/spark/ml/feature/StandardScaler.html}.
+\newblock Accessed: 2025-11-02.
+
+\bibitem[Quy et~al., 2022]{le2022survey}
+Quy, T.~L., Roy, A., Iosifidis, V., Zhang, W., and Ntoutsi, E. (2022).
+\newblock A survey on datasets for fairness-aware machine learning.
+\newblock {\em Wiley Interdisciplinary Reviews: Data Mining and Knowledge
+  Discovery}, 12(3):e1452.
+
+\end{thebibliography}

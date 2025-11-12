@@ -1,0 +1,162 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Burriel%
+}{%
+Burriel%
+}{%
+{\protect \APACyear {2025}}%
+}]{%
+preguntas}
+\APACinsertmetastar {%
+preguntas}%
+\begin{APACrefauthors}%
+Burriel, D\BPBI T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{}{}.
+\newblock
+\APACrefbtitle {Evita las preguntas dirigidas para obtener mejores resultados
+  de tus usuarios.} {Evita las preguntas dirigidas para obtener mejores
+  resultados de tus usuarios.}
+\newblock
+\begin{APACrefURL} \url{https://torresburriel.com/weblog/preguntas-dirigidas/}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Acceso: 26 octubre 2025}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Design Council UK}%
+}{%
+{Design Council UK}%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+diamante}
+\APACinsertmetastar {%
+diamante}%
+\begin{APACrefauthors}%
+{Design Council UK}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+\APACrefbtitle {Framework for Innovation.} {Framework for innovation.}
+\newblock
+\begin{APACrefURL}
+  \url{https://www.designcouncil.org.uk/our-resources/framework-for-innovation/}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Acceso: 26 octubre 2025}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moran%
+}{%
+Moran%
+}{%
+{\protect \APACyear {2023}}%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
+invContext}
+\APACinsertmetastar {%
+invContext}%
+\begin{APACrefauthors}%
+Moran, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023{\protect \BCnt {1}}}{}{}.
+\newblock
+\APACrefbtitle {Contextual Inquiry: Inspire Design by Observing and
+  Interviewing Users in Their Context.} {Contextual inquiry: Inspire design by
+  observing and interviewing users in their context.}
+\newblock
+\begin{APACrefURL} \url{https://www.nngroup.com/articles/contextual-inquiry/}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Acceso: 26 octubre 2025}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moran%
+}{%
+Moran%
+}{%
+{\protect \APACyear {2023}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+thematic}
+\APACinsertmetastar {%
+thematic}%
+\begin{APACrefauthors}%
+Moran, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023{\protect \BCnt {2}}}{}{}.
+\newblock
+\APACrefbtitle {How to Analyze Qualitative Data from UX Research.} {How to
+  analyze qualitative data from ux research.}
+\newblock
+\begin{APACrefURL} \url{https://www.nngroup.com/articles/thematic-analysis/}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Acceso: 26 octubre 2025}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nielsen%
+}{%
+Nielsen%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+focusGroup}
+\APACinsertmetastar {%
+focusGroup}%
+\begin{APACrefauthors}%
+Nielsen, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+\APACrefbtitle {Focus Groups in UX Research.} {Focus groups in ux research.}
+\newblock
+\begin{APACrefURL} \url{https://www.nngroup.com/articles/focus-groups/}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Acceso: 26 octubre 2025}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sharp%
+, Preece%
+\BCBL {}\ \BBA {} Rogers%
+}{%
+Sharp%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+interactionD}
+\APACinsertmetastar {%
+interactionD}%
+\begin{APACrefauthors}%
+Sharp, H.%
+, Preece, J.%
+\BCBL {}\ \BBA {} Rogers, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2019}.
+\newblock
+\APACrefbtitle {Interaction Design: Beyond Human-Computer Interaction}
+  {Interaction design: Beyond human-computer interaction}\ (\PrintOrdinal{5}\
+  \BEd).
+\newblock
+\APACaddressPublisher{Chichester, UK}{John Wiley & Sons}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
