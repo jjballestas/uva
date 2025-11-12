@@ -19,13 +19,15 @@
 \usepackage{float}
 \usepackage[normalem]{ulem}
 \usepackage[spanish]{babel}
-\usepackage{datetime} % Para usar \newdate
+\usepackage{datetime}
 \usepackage{tcolorbox}
+\usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{ragged2e}
-\usepackage{graphicx}
 \usepackage{etoolbox}
 \usepackage{caption}
+\usepackage[spanish]{cleveref}
+\usepackage{graphicx}
 \usetikzlibrary{shapes.geometric, positioning}
 \selectlanguage{spanish}
 \useunder{\uline}{\ul}{}
@@ -85,18 +87,18 @@
 
         \includegraphics[width=0.2\textwidth]{./assets/uva-logo}\\[3cm]
 
-        {\Huge Diseño del sistema de interacción avanzada SmartSound }\\[1.5ex]
+        {\Huge Diseño del sistema de interacción avanzada SmartSound}\\[1.5ex]
         {\LARGE Memoria del proceso}\\[3cm]
 
         {\Large John Ballestas}\\
         {\Large Nataly Rocha}\\[3cm]
 
-        \textbf{{\Large Escuela de Ingeniería Informática, Universidad de Valladolid }\\[0.5cm]}
-        \textbf{{\Large Diseño de sistemas de interacción avanzada }\\[0.5cm]}
+        {\Large\bfseries Escuela de Ingeniería Informática, Universidad de Valladolid}\\[0.5cm]
+        {\Large\bfseries Diseño de sistemas de interacción avanzada}\\[0.5cm]
 
         \newdate{hoy}{\the\day}{\the\month}{\the\year}
         \newcommand{\nextyear}{\the\numexpr\the\year+1\relax}
-        \textbf{{\Large \the\year{} - \nextyear }\\[0.5cm]}
+        {\Large\bfseries\the\year{} -- \nextyear}\\[0.5cm]
 
     \end{titlepage}
 
@@ -119,10 +121,16 @@
     \vspace*{\fill}
     \section{Introducción}
 
+    El presente trabajo expone el proceso de diseño del sistema de interacción avanzada SmartSound, desarrollado
+    como proyecto final de la asignatura \textit{Diseño de Sistemas de Interacción Avanzada} del Máster en
+    Ingeniería Informática.
+    En él se detalla el conjunto de etapas seguidas durante el proceso de diseño, empleando la metodología del doble
+    diamante como marco de referencia.
+
     Los músicos independientes y conferencistas enfrentan desafíos técnicos que afectan directamente la calidad de
-    su actuación cuando hacen  presentaciones en vivo, especialmente en espacios pequeños como bares y salas sin
+    su actuación cuando hacen presentaciones en vivo, especialmente en espacios pequeños como bares y salas sin
     tratamiento acústico.
-    La ausencia de personal especializado en sonido, la necesidad de autogestión del audio generan situaciones
+    La ausencia de personal especializado en sonido y la necesidad de autogestión del audio generan situaciones
     de estrés, pérdida de tiempo y malas experiencias tanto para los artistas como para el público.
 
     Este documento presenta el proceso de diseño de SmartSound, un sistema de interacción avanzada orientado a mejorar
@@ -145,12 +153,14 @@
     \section{Problema}
 
     \subsection{Problema inicialmente abordado}
-    Usuarios que dependen de amplificación para su trabajo como pequeños grupos musicales, dúos, solistas o
+    Usuarios que dependen de amplificación sonora para su trabajo como pequeños grupos musicales, dúos, solistas o
     conferencistas independientes que se presentan en bares, casas o salas se enfrentan a problemas de sonido antes
-    y durante sus presentaciones, como feedback, niveles mal calibrados, saturación u otro debido a la falta de un
+    y durante sus presentaciones, como feedback
+    \footnote{Retroalimentación acústica no deseada que produce un sonido agudo o zumbido cuando el micrófono capta el
+    sonido amplificado de los altavoces.}, niveles mal calibrados, saturación u otro debido a la falta de un
     técnico de sonido por razones de presupuesto, tiempo o falta de personal técnico.
     En la mayoría de los casos, deben llevar su propio equipo básico de amplificación y una consola para ajustar
-    volúmenes y ecualización, haciéndose responsables de todo el montaje y control del audio.\\
+    volúmenes y ecualización, haciéndose responsables de todo el montaje y control del audio.
 
     El procedimiento habitual consiste en realizar una prueba de sonido antes del evento, ajustando manualmente los
     niveles de cada instrumento en un espacio vacío.
@@ -158,70 +168,46 @@
     drásticamente debido a la presencia del público: el sonido se modifica, aparecen problemas de feedback,
     variaciones de volumen y falta de claridad entre instrumentos.
     Al no escuchar lo mismo que percibe la audiencia, muchas veces desconocen estos problemas,
-    que son notados principalmente por el público.\\
+    que son notados principalmente por el público.
 
     La situación se complica porque, una vez iniciado el show, no pueden detenerse fácilmente a corregir el sonido;
     en algunos casos, uno de ellos debe dejar de tocar para hacer ajustes, lo cual afecta la presentación.
     Además, cada canción puede requerir configuraciones distintas. Por ejemplo, una balada suave frente a un tema de
     rock es muy diferente.
     Lo que impacta directamente en la calidad de la experiencia del público y la profesionalización de sus
-    presentaciones.\\
+    presentaciones.
+
+    En concreto el problema consiste en la autogestión ineficiente de la calidad del sonido en presentaciones en vivo
+    por parte de usuarios que depende amplificación sonara como músicos y conferencistas independientes, debido a la
+    falta de un técnico de sonido especializado y a las complicaciones logísticas que implica atender
+    simultáneamente la interpretación y la gestión del audio durante el evento.
 
     \vspace*{\fill}
     \newpage
 
 
     \subsection{Suposiciones}
-    Para plantear el problema de manera inicial se han identificado las siguientes suposiciones tanto de usuarios
-    como del problema.
-    \subsubsection{Suposiciones sobre usuarios}
-    \paragraph{Bandas independientes, dúos y solistas}
-    Formaciones pequeñas (hasta 5) que se autofinancian y tocan en bares, salas y eventos.
-    Suelen operar sin técnico de sonido dedicado y con equipo propio básico (consola sencilla, amplificación y micros).
-    \begin{itemize}
-        \item \textbf{Deseos}: Sonar profesional y consistente para crecer en audiencia e ingresos.
-        Poder concentrarse en tocar sin “vigilar” el audio o como el público lo percibe.
-        \item \textbf{Miedos}: Feedback inesperado, voz enterrada o poco clara, mezcla desbalanceada.
-        Cambios acústicos cuando entra el público y poca capacidad de corrección en tiempo real sin cortar el show.
-        Perder fans y audiencia debido a presentaciones pobres de calidad.
-        \item \textbf{Criterios de éxito}: Montaje plug \& play en 15 a 20 min; mezcla estable que se adapte por
-        canción; buen
-        feedback del público; recontratación.
-        \item \textbf{Contexto y Comentarios}: Tocan entre dos y seis veces al mes en diferentes espacios de 50\-200
-        personas
-        sin tratamiento acústico, con repertorios de diez a veinte canciones que varían en dinámica.
-        Sus conocimientos van desde lo básico hasta intermedio, pero sin tiempo para ajustes finos durante el show.
-        Su presupuesto es ajustado y necesitan compatibilidad con su equipo actual, portabilidad y robustez.
-    \end{itemize}
+    Para plantear el problema de manera inicial se han identificado las siguientes suposiciones:
 
-    \paragraph{Conferencistas y actos hablados}
-    Speakers corporativos, stand-up, open mic.
-    No son técnicos; solo quieren que la voz se entienda en toda la sala.
     \begin{itemize}
-        \item \textbf{Deseos}: Enfoque total en el contenido y la conexión con la audiencia.
-        \item \textbf{Miedos}: Feedback vergonzoso, baja inteligibilidad, interfaces confusas, pérdida de credibilidad por fallos.
-        \item \textbf{Criterios de éxito}: Presentación sin incidentes de audio; comentarios sobre el contenido, no sobre el sonido.
-        \item \textbf{Contexto y Comentarios}: Dan entre una y cuatro presentaciones al mes en salas y auditorios pequeños
-        con acústica muy variable, cada una de treinta a noventa minutos.
-        No tienen conocimientos de audio y requieren una solución completamente automática en menos de cinco minutos
-        y sin interacción durante la charla.
-    \end{itemize}
-
-    \subsubsection{Suposiciones sobre el problema}
-    \begin{itemize}
+        \item Los músicos como grupos, dúos, solistas y conferencistas son usuarios a los cuales les preocupa mucho
+        la calidad sonora.
+        \item Los usuarios se autogestionan el sonido durante sus presentaciones.
         \item Los usuarios tendrán al menos conocimientos básicos sobre el uso de equipos tecnológicos y de sonido.
-        \item Las bandas, dúos o solistas tendrán material de audio aceptable (grabaciones o pistas) que sirva como
-        referencia para configurar el sistema.
-        \item El orden de las canciones será predecible o planificado con antelación, facilitando los ajustes
-        automáticos del sistema.
-        \item Los grupos preferirán tener retroalimentación sobre cómo se percibe el sonido en el público, en lugar de
-        sentirse presionados o distraídos por ello.
-        \item Los músicos estarán dispuestos a ceder parte del control de la mezcla a un sistema automático o semiautomático.
-        \item Los espacios donde se realizan las presentaciones permitirán la instalación y conexión rápida del sistema
+        \item Uno de los principales miedos de los usuarios es enfrentar problemas como feedback inesperado, voz
+        enterrada o poco clara y mezclas desbalanceadas en sus presentaciones.
+        \item Para los usuarios es complicado controlar los cambios acústicos cuando entra el público a la locación.
+        \item La logística de realizar correcciones durante el show es complicado y frustrante para los usuarios.
+        \item Las bandas, dúos o solistas tendrán instrumentos de audio aceptable.
+        \item Los músicos estarán dispuestos a ceder el control de la mezcla a un tercero o automatizarlo.
+        \item Los espacios donde se realizan las presentaciones permiten la instalación y conexión rápida de equipos
         sin demasiadas trabas técnicas.
         \item Los bares, salones o lugares pequeños no contarán con un sonidista profesional ni con un sistema de sonido
         propio, lo que obliga a los músicos a manejar el audio por sí mismos.
+        \item Los usuarios se presentan con regularidad en sitios distintos y es complicado para ellos realizar la
+        autogestión del sonido para cada presentación.
     \end{itemize}
+
 
     \newpage
     \section{Fase de descubrimiento}
@@ -245,7 +231,21 @@
         requerimientos reales y no a suposiciones iniciales.
     \end{itemize}
 
-    \paragraph{Técnicas de recogida de datos}
+    \subsubsection{Participantes más adecuados para adquirir conocimiento:}
+    Los participantes que pueden aportar información más valiosa son aquellos para quienes la amplificación resulta
+    esencial en su trabajo y que actualmente ofrecen presentaciones o charlas en vivo.
+    Aquí algunos ejemplos:
+
+    \begin{itemize}
+        \item Bandas independientes
+        \item Músicos bajo contrato para eventos sociales
+        \item Solistas
+        \item Dúos que se presenten en varios lugares
+        \item Dueños de los bares en los que se hacen presentaciones
+        \item Conferencistas independientes
+    \end{itemize}
+
+    \subsubsection{Técnicas de recogida de datos}
     \myparagraph{Investigación Contextual}
     Esta técnica permitirá observar directamente a los usuarios en su entorno natural, facilitando la eliminación de
     suposiciones sobre sus comportamientos, necesidades y dificultades reales \cite{invContext}.
@@ -267,7 +267,7 @@
     miedos de adopción tecnológica, uso de lenguaje común y expectativas.
     Sirve para priorizar necesidades antes de prototipar.\\[1cm]
 
-    \paragraph{Secuenciación}
+    \subsubsection{Secuenciación}
     Iniciaremos con la investigación contextual especialmente para cubrir el objetivo de descartar grupos de
     usuarios que no se alineen con el problema propuesto.
     Mediante la observación y entrevistas se recopilarán transcripciones, notas de observación y registro
@@ -302,21 +302,7 @@
         \item Identificar miedos y retos de adoptar nuevas tecnologías para solucionar sus problemas.
     \end{itemize}
 
-    \paragraph{Participantes más adecuados para adquirir conocimiento:}
-    Los participantes que pueden aportar información más valiosa son aquellos para quienes la amplificación resulta
-    esencial en su trabajo y que actualmente ofrecen presentaciones o charlas en vivo.
-    Aquí algunos ejemplos:
-
-    \begin{itemize}
-        \item Bandas independientes
-        \item Músicos bajo contrato para eventos sociales
-        \item Solistas
-        \item Dúos que se presenten en varios lugares
-        \item Dueños de los bares en los que se hacen presentaciones
-        \item Conferencistas independientes
-    \end{itemize}
-
-    \subsubsection{Evento de investigación}
+    \subsection{Evento de investigación}
     Hemos seleccionado la investigación contextual por las ventajas que nos va a brindar y la facilidad para
     realizarla en el corto tiempo de investigación.
 
@@ -327,14 +313,25 @@
     Al coordinar la investigación únicamente se les indicó a los grupos de usuario que se trataba de un estudio
     que estamos realizando para un sistema de diseño interactivo y que nuestro propósito era tratar de conocerlos más.
     Lo que queríamos lograr era tratar de sesgar lo menos posible al usuario, para que tuviéramos respuestas mucho
-    más certeras \cite{preguntas}.
+    más certeras~\cite{preguntas}.
+
+    El objetivo principal de las entrevistas era entender detalladamente las metas, retos y necesidades
+    técnicas y
+    emocionales de los músicos durante presentaciones en vivo, con un enfoque especial en la gestión del sonido.
+
+    Se buscaba identificar responsabilidades, experiencias previas, grado de control y estrés, y cómo interactúan con
+    el equipo y el público para descartar usuarios y recabar información útil para el diseño. Para esto se
+    definieron fases de la entrevista como (1) contexto y objetivos, (2) retos y responsabilidades, (3) habilidades
+    Técnicas, (4) automatización y (5) perspectivas futuras y cierre.
 
     Las entrevistas fueron grabadas para procesarlas posteriormente y en el caso de llamada telefónica se realizó la
     recopilación de datos en el guion de preguntas que preparamos para cumplir con los objetivos.
 
+    Las transcripciones de las entrevistas se pueden encontrar en el apéndice~\ref{app:transcripciones}.
+
     Se describe a continuación el evento de investigación y recogida de datos para cada grupo de usuario:
 
-    \paragraph{Grupo de covers bajo contrato con 5 integrantes}
+    \subsubsection{Grupo de covers bajo contrato con 5 integrantes}
 
     \begin{figure}[ht]
         \centering
@@ -343,7 +340,7 @@
         \label{fig:caimanes}
     \end{figure}
 
-    Para este grupo de usuarios se coordinó la investigación con el grupo “Los Caimanes del Esgueva”\ref{fig:caimanes},
+    Para este grupo de usuarios se coordinó la investigación con el grupo ``Los Caimanes del Esgueva'' (Figura~\ref{fig:caimanes}),
     se realizó la coordinación de la entrevista mediante un mensaje privado en Instagram, en donde fueron muy
     amables de aceptarla.
 
@@ -369,7 +366,7 @@
     el control del volumen se vuelve esencial en estos espacios.
 
 
-    \paragraph{Grupo profesional de 4 integrantes}
+    \subsubsection{Grupo profesional de 4 integrantes}
 
     \begin{figure}[ht]
         \centering
@@ -378,7 +375,7 @@
         \label{fig:canoneros}
     \end{figure}
 
-    Para este grupo de usuarios se coordinó la investigación con el grupo “Cañoneros”\ref{fig:canoneros}, se realizó la
+    Para este grupo de usuarios se coordinó la investigación con el grupo ``Cañoneros'' (Figura~\ref{fig:canoneros}), se realizó la
     coordinación de
     la entrevista mediante un mensaje privado en Instagram, en donde fueron muy amables de aceptarla.
 
@@ -397,7 +394,7 @@
     problemas.
     Ellos no tuvieron que parar el show en ningún momento.
 
-    \paragraph{Grupo de música independiente autofinanciado de 3 integrantes}
+    \subsubsection{Grupo de música independiente autofinanciado de 3 integrantes}
 
     \begin{figure}[ht]
         \centering
@@ -406,7 +403,7 @@
         \label{fig:arowana}
     \end{figure}
 
-    Para este grupo de usuarios se coordinó la investigación con el grupo “AROWANA”\ref{fig:arowana}, se realizó la
+    Para este grupo de usuarios se coordinó la investigación con el grupo ``AROWANA'' (Figura~\ref{fig:arowana}), se realizó la
     coordinación de
     la entrevista mediante un mensaje privado en Instagram, en donde fueron muy amables de aceptarla.
     El lugar en donde se realizó la observación fue en el bar Bicoca en Valladolid, y tuvimos la oportunidad de
@@ -420,7 +417,7 @@
     parte de la experiencia.
 
 
-    \paragraph{Dueño del bar y dependientes}
+    \subsubsection{Dueño del bar y dependientes}
 
     \begin{figure}[ht]
         \centering
@@ -434,7 +431,7 @@
     podríamos obtener mejor contexto.
     No se coordinaron entrevistas, únicamente se procedió a solicitar un tiempo breve de entrevista mientras
     realizamos la observación de los grupos.
-    Se entrevistó al dueño del bar Radial y a la dependienta del bar Zvmo\ref{fig:duenos}.
+    Se entrevistó al dueño del bar Radial y a la dependienta del bar Zvmo (Figura~\ref{fig:duenos}).
     \myparagraph{Observaciones realizadas:}
     Los resultados fueron menos concluyentes.
     Muchos dueños no se encuentran presentes durante las presentaciones y los empleados suelen rotar con frecuencia,
@@ -445,7 +442,7 @@
     Se requiere más investigación específica para comprender mejor las necesidades de este perfil.
 
 
-    \paragraph{Dúo musical bajo contrato de covers y originales}
+    \subsubsection{Dúo musical bajo contrato de covers y originales}
     Se coordinó la entrevista mediante Instagram y fue realizada a través de llamada telefónica.
     Diego A, el entrevistado, es uno de los integrantes de un dúo musical en Ecuador.
     Se han presentado en bares pequeños y medianos hasta en tarimas mucho más grandes en coliseos y plazas.
@@ -456,7 +453,7 @@
     Ha tenido malas experiencias, incluso con técnicos de sonido, por la falta de referencia de sus temas; por eso,
     prefiere automatizar tareas técnicas en lugar de delegarlas.
 
-    \paragraph{Conferencista independiente}
+    \subsubsection{Conferencista independiente}
     Se coordinó la entrevista mediante Instagram y fue realizada a través de llamada telefónica.
     Fernanda A. es una conferencista Ecuatoriana ubicada en Madrid, España.
     Trata  temas tecnológicos especialmente en el ámbito del desarrollo de software, ha realizado ya más de 15
@@ -469,132 +466,96 @@
     por hecho en las conferencias.
     No tiene conocimientos básicos técnicos de sonido
 
-    \subsubsection{Objetivo y Fases de las entrevistas}
-    El objetivo principal de las entrevistas\ref{fig:guia-entrevista} era entender detalladamente las metas, retos y necesidades
-    técnicas y
-    emocionales de los músicos durante presentaciones en vivo, con un enfoque especial en la gestión del sonido.
-
-    Se buscaba identificar responsabilidades, experiencias previas, grado de control y estrés, y cómo interactúan con
-    el equipo y el público para descartar usuarios y recabar información útil para el diseño
-
-    \paragraph{Fases de la entrevista}
-    \begin{figure}[H]
-        \centering
-        \begin{tcolorbox}[
-            width=0.8\textwidth,
-            colback=white,
-            colframe=black,
-            title={Fases de la entrevista},
-            fonttitle=\bfseries\large,
-            center title
-        ]
-            \textbf{1. Contexto y Objetivos}\\
-            \quad - Metas\\
-            \quad - Lugares y frecuencia\\
-            \quad - Éxito\\[0.1cm]
-            \textbf{2. Retos y Responsabilidades}\\
-            \quad - Dificultades y estrés\\
-            \quad - Control sonido\\[0.1cm]
-            \textbf{3. Habilidades Técnicas}\\
-            \quad - Experiencia equipos\\
-            \quad - Herramientas\\[0.1cm]
-            \textbf{4. Automatización y Feedback}\\
-            \quad - Aspectos a automatizar\\
-            \quad - Retroalimentación\\
-            \quad - Resolución\\[0.1cm]
-            \textbf{5. Cierre y Mejoras}\\
-            \quad - Sugerencias\\
-            \quad - Perspectivas futuras
-        \end{tcolorbox}
-        \caption{Fases de entrevista para grupos de usuarios}
-        \label{fig:guia-entrevista}
-    \end{figure}
-
-    Las transcripciones de las entrevistas se pueden encontrar en el apéndice \ref{app:transcripciones}.
-
     \subsection{Análisis de recogida de datos}
-    El análisis se realizó con la metodología de Análisis Temático (Thematic Analysis), en el cual se
-    analizaron los datos extrayendo las partes más relevantes de las transcripciones, clasificándolas posteriormente
+    Los datos recogidos de la investigación contextual fueron de tipo cualitativo por lo que elegimos la metodología
+    de Análisis Temático (Thematic analysis) para su análisis.
+    Se extrajeron las partes más relevantes de las transcripciones, clasificándolas posteriormente
     a través de códigos, agregando las temáticas más relevantes \cite{interactionD} y
     finalmente definiendo las conclusiones para la
     investigación de usuarios \cite{thematic}.
 
     \subsubsection{Tablero del análisis temático}
-    En el siguiente enlace se puede visualizar el tablero con todo el trabajo realizado para el análisis de datos:
-    \href{https://miro.com/app/board/uXjVJAPP6xA=/?moveToWidget=3458764645785384622\&cot=14}{[Tablero Miro]}
+    En el siguiente enlace se puede visualizar el tablero con todo el trabajo realizado para el análisis de datos
+    \href{https://miro.com/app/board/uXjVJAPP6xA=/?moveToWidget=3458764645785384622\&cot=14}{[Tablero Miro]} y de
+    igual manera en (Figura~\ref{fig:tematico}) se puede visualizar los temas y códigos recopilados.
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.8\textwidth]{./assets/analisisTematico}
+        \caption{Análisis temático - temas y códigos}
+        \label{fig:tematico}
+    \end{figure}
 
     \subsubsection{Conclusión del análisis de datos}
-    La investigación permitió contrastar las suposiciones iniciales sobre los perfiles de usuario y profundizar en
-    la comprensión de sus metas, necesidades y contextos de uso.
-    Las entrevistas y observaciones redefinieron las oportunidades de diseño del sistema, aportando una visión más
-    precisa sobre qué grupos son realmente relevantes.
 
-    En primer lugar, se confirmó que los conferencistas no priorizan el sonido en su trabajo, lo que lleva a
-    descartarlos como usuarios pertinentes.
-    En el caso de los músicos independientes, emergió una dimensión social
-    en la que prioriza el apoyo a la música antes que lo técnico.
-    Por ello, se decidió excluir a este grupo de usuarios, así como a los conjuntos profesionales con técnicos de
-    audio dedicados, ya que cuentan con recursos y conocimientos avanzados.
-
-    Los resultados validan que la mayoría de los músicos posee solo conocimientos técnicos básicos.
-    Sin embargo, esta limitación se traduce en dificultades concretas al manejar equipos profesionales, ocasionando
-    errores de configuración y pérdidas de tiempo en las pruebas de sonido.
-    Este hallazgo refuerza la necesidad de un sistema que simplifique el proceso de calibración y brinde
-    retroalimentación guiada, reduciendo la dependencia de la experiencia técnica.
-
-    Respecto a las bandas de covers y grupos bajo contrato, se comprobó que el sonido es un factor crítico para su
-    desempeño y reputación.
-    A diferencia de las bandas pequeñas o independientes, estas dependen directamente de la calidad sonora para
-    sostener su profesionalismo y obtener futuras contrataciones.
-    El número de instrumentos no resulta determinante; lo que realmente diferencia a los grupos es su nivel de
-    profesionalización y autogestión.
-
-    Por otra parte, los datos sobre dueños y empleados de bares fueron menos concluyentes, debido a la limitada
-    muestra y a la alta rotación del personal.
-    Aun así, se observó que en locales pequeños suele no haber sonidista, por lo que los músicos asumen la gestión
-    del audio.
-    Este patrón confirma la relevancia del sistema en entornos con recursos técnicos limitados.
-
-    Finalmente, se identificó una preocupación compartida por músicos y dueños de locales respecto al cumplimiento
-    de los límites de decibelios.
-    Esta evidencia abre una oportunidad de diseño para incorporar funciones de monitoreo y control automático del
-    volumen dentro del sistema.
-
-    \paragraph{Grupo ideal de usuarios a partir de análisis realizado:}
-
-    Se puede definir que el grupo de usuarios más adecuado para continuar el desarrollo
-    del sistema son los grupos bajo contrato de 3 a 5 integrantes que realizan presentaciones en bares o venues
-    medianos, sin contar con técnico de sonido fijo.
-    Tiene una muy buena motivación por tener un buen momento en su presentación, brindar un show de calidad al
-    público y cuentan con un sentido de profesionalismo y responsabilidad sobre el aspecto técnico de su show.
+    \begin{enumerate}
+        \item La investigación permitió contrastar las suposiciones iniciales sobre los perfiles de usuario y profundizar en
+        la comprensión de sus metas, necesidades y contextos de uso.
+        Las entrevistas y observaciones redefinieron las oportunidades de diseño del sistema, aportando una visión más
+        precisa sobre qué grupos son realmente relevantes.
+        \item En primer lugar, se confirmó que los conferencistas no priorizan el sonido en su trabajo, lo que lleva a
+        descartarlos como usuarios pertinentes.
+        En el caso de los músicos independientes, emergió una dimensión social
+        en la que prioriza el apoyo a la música antes que lo técnico.
+        Por ello, se decidió excluir a este grupo de usuarios, así como a los conjuntos profesionales con técnicos de
+        audio dedicados, ya que cuentan con recursos y conocimientos avanzados.
+        \item Se puede definir que el grupo de usuarios más adecuado para continuar el desarrollo
+        del sistema son los grupos bajo contrato de 3 a 5 integrantes que realizan presentaciones en bares o venues
+        medianos, sin contar con técnico de sonido fijo.
+        Tiene una muy buena motivación por tener un buen momento en su presentación, brindar un show de calidad al
+        público y cuentan con un sentido de profesionalismo y responsabilidad sobre el aspecto técnico de su show.
+        \item Los resultados validan que la mayoría de los músicos posee solo conocimientos técnicos básicos.
+        Sin embargo, esta limitación se traduce en dificultades concretas al manejar equipos profesionales, ocasionando
+        errores de configuración y pérdidas de tiempo en las pruebas de sonido.
+        Este hallazgo refuerza la necesidad de un sistema que simplifique el proceso de calibración y brinde
+        retroalimentación guiada, reduciendo la dependencia de la experiencia técnica.
+        \item Respecto a las bandas de covers y grupos bajo contrato, se comprobó que el sonido es un factor crítico para su
+        desempeño y reputación.
+        A diferencia de las bandas pequeñas o independientes, estas dependen directamente de la calidad sonora para
+        sostener su profesionalismo y obtener futuras contrataciones.
+        El número de instrumentos no resulta determinante; lo que realmente diferencia a los grupos es su nivel de
+        profesionalización y autogestión.
+        \item Por otra parte, los datos sobre dueños y empleados de bares fueron menos concluyentes, debido a la limitada
+        muestra y a la alta rotación del personal.
+        Aun así, se observó que en locales pequeños suele no haber sonidista, por lo que los músicos asumen la gestión
+        del audio.
+        Este patrón confirma la relevancia del sistema en entornos con recursos técnicos limitados.
+        \item Finalmente, se identificó una preocupación compartida por músicos y dueños de locales respecto al cumplimiento
+        de los límites de decibelios.
+        Esta evidencia abre una oportunidad de diseño para incorporar funciones de monitoreo y control automático del
+        volumen dentro del sistema.
+        \item
+    \end{enumerate}
 
     \subsection{Definición del espacio del problema}
     \subsubsection{Persona}
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=1\textwidth]{./assets/persona}
-        \caption{Eddie - Persona definida}
-        \label{fig:persona}
-    \end{figure}
-
-    Acorde al análisis de datos hemos definido a la persona Eddie\ref{fig:persona} para continuar con el diseño del
+    Acorde al análisis de datos hemos definido a la persona Eddie (Figura~\ref{fig:persona}) para continuar con el diseño del
     sistema propuesto.
     En este \href{https://miro.com/app/board/uXjVJAPP6xA=/?moveToWidget=3458764644105155139\&cot=14}{[Tablero Miro]} se
     puede navegar por la ficha de la persona a profundidad.
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{./assets/persona}
+        \caption{Eddie - Persona definida}
+        \label{fig:persona}
+    \end{figure}
+
     \subsubsection{Mapa de empatía}
 
-    \begin{figure}[ht]
+    El mapa de empatía de Eddie (Figura~\ref{fig:empatia}) permitió comprender a fondo cómo piensa, siente y actúa durante sus
+    presentaciones en
+    vivo.
+
+    \begin{figure}[H]
         \centering
         \includegraphics[width=1\textwidth]{./assets/empatia}
         \caption{Mapa de empatía}
         \label{fig:empatia}
     \end{figure}
 
-    El mapa de empatía de Eddie\ref{fig:empatia} permitió comprender a fondo cómo piensa, siente y actúa durante sus
-    presentaciones en
-    vivo.
+
     Revela que es un músico apasionado y comprometido, cuyo principal objetivo es conectar con el público y ofrecer
     un show impecable, aunque su conocimiento técnico limitado les genera ansiedad y pérdida de tiempo frente a
     problemas de sonido.
@@ -646,7 +607,7 @@
     momento de tensión rompió el ritmo de la actuación y afectó la experiencia tanto para ellos como para la audiencia.
 
     \subsubsection{Mapa de recorrido}
-    El mapa de recorrido a continuación\ref{fig:recorridoPresente} describe el comportamiento del usuario con base en su situación
+    El mapa de recorrido a continuación (Figura~\ref{fig:recorridoPresente}) describe el comportamiento del usuario con base en su situación
     actual.
     En este \href{https://miro.com/app/board/uXjVJAPP6xA=/?moveToWidget=3458764645681572626\&cot=14}{[Tablero Miro]} se
     puede navegar por el mapa de recorrido de usuario a profundidad.
@@ -654,12 +615,37 @@
     El escenario explorado en este mapa se basa en el escenario 1 descrito anteriormente, en el cual podemos notar
     los diferentes problemas por los que pasa el usuario y sus oportunidades.
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=1\textwidth]{./assets/recorrido-presente}
         \caption{Mapa de recorrido - Presente}
         \label{fig:recorridoPresente}
     \end{figure}
+
+    \subsubsection{Requisitos de usabilidad}
+
+    Tras la definición del problema, se obtuvo una comprensión más clara del usuario y de las dificultades que
+    enfrenta durante la instalación y prueba de sonido.
+    Se identificó que los usuarios experimentan incertidumbre al iniciar el proceso, especialmente al no contar con
+    una guía clara o con los conocimientos técnicos necesarios, lo que genera inseguridad sobre la calidad del
+    resultado final.
+    Esta situación evidencia la necesidad de herramientas que orienten y simplifiquen las tareas, brindando
+    confianza en cada etapa.
+
+    A partir de este análisis, los requisitos de usabilidad definidos son:
+
+    \begin{itemize}
+        \item Los usuarios deben ser capaces de realizar la calibración inicial en menos de 5 minutos.
+        \item Los usuarios deben ser capaces de sincronizar los implementos de sonido y de ayuda digital en menos de
+        3 minutos
+        \item El 90\% de los usuarios debe ser capaz de interpretar fácil y adecuadamente la información que le
+        brinde el sistema de sonido
+        \item Los indicadores visuales deben refrescarse al menos cada 3 segundos para mantener una percepción de
+        tiempo real.
+        \item El 80\% de las sesiones debe completarse sin interrupciones por fallos técnicos o de niveles.
+        \item La aplicación debe ser operable con una mano y requerir como máximo tres interacciones para acceder a
+        cualquier función clave (inicio de calibración, selección de preset, monitoreo).
+    \end{itemize}
 
     \newpage
     \section{Fase de ideación y evaluación}
@@ -686,35 +672,13 @@
     equilibrada y dentro de los niveles de decibelios permitidos.
     La banda realiza una breve prueba de sonido sin interrupciones ni incertidumbre sobre la calidad final.
 
-    \paragraph{Mapa de recorrido de usuario}
-    Este mapa de recorrido\ref{fig:recorridoFuturo} describe el comportamiento deseado de un usuario ante el sistema basado en esta
-    solución.
-    En este \href{https://miro.com/app/board/uXjVJAPP6xA=/?moveToWidget=3458764645640663142\&cot=14}{[Tablero Miro]} se
-    puede navegar por el mapa de recorrido de usuario futuro a profundidad.
-
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=1\textwidth]{./assets/recorrido-futuro}
-        \caption{Mapa de recorrido - Futuro}
-        \label{fig:recorridoFuturo}
-    \end{figure}
-
-    \paragraph{Escenario 2 (durante el show y monitoreo) para esta solucion:}
-
-    Durante la presentación, Eddie nota que el sonido empieza a saturarse cuando el público se acerca al escenario.
-    En la tablet aparece una alerta amarilla que indica exceso de graves en el canal del bajo.
-
-    Como la calibración automática está activa, el sistema ajusta los parámetros en tiempo real, estabilizando el
-    sonido sin que la banda deba detenerse.
-    El público apenas nota el cambio y la actuación continúa sin incidentes.
-
     \subsubsection{Solución 2}
     \textbf{Smart Sound como Sistema con Control mediante Wearables y Reconocimiento de Gestos}
 
     Permitir que los músicos administren la mezcla desde smartphones, tablets o wearables con controles gestuales
     sencillos (deslizar para subir/bajar volumen, toque para activar preset) elimina el temor a interfaces complejas.
-    Integrando un asistente de voz, el sistema puede recibir comandos básicos como \"Claridad de voz\", \"Más volumen al
-    teclado\" ayudando a los músicos a gestionar sus necesidades de sonido.
+    Integrando un asistente de voz, el sistema puede recibir comandos básicos como ``Claridad de voz'', ``Más volumen al
+    teclado'' ayudando a los músicos a gestionar sus necesidades de sonido.
 
     \paragraph{Escenario (durante prueba de sonido) para esta solución:}
 
@@ -723,7 +687,7 @@
     Eddie usa su smartwatch, la vocalista una tablet y el guitarrista su smartphone.
 
     Durante la prueba de sonido, realizan ajustes sencillos con gestos.
-    Eddie desliza el dedo para subir su guitarra, con comandos de voz la vocalista dice “más claridad en la voz”.
+    Eddie desliza el dedo para subir su guitarra, con comandos de voz la vocalista dice ``más claridad en la voz''.
     El sistema responde al instante, mostrando una confirmación visual y adaptando la mezcla automáticamente.
 
     \subsection{Solución seleccionada}
@@ -732,11 +696,17 @@
     garantizar mezclas equilibradas y consistentes.
     Su función principal es ofrecer seguridad, autonomía y estabilidad sonora a músicos sin técnico de sonido.
 
-    \begin{figure}[ht]
+    \paragraph{Mapa de recorrido de usuario}
+    Este mapa de recorrido (Figura~\ref{fig:recorridoFuturo}) describe el comportamiento deseado de un usuario ante
+    el sistema basado en esta solución.
+    En este \href{https://miro.com/app/board/uXjVJAPP6xA=/?moveToWidget=3458764645640663142\&cot=14}{[Tablero Miro]} se
+    puede navegar por el mapa de recorrido de usuario futuro a profundidad.
+
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\textwidth]{./assets/sistema}
-        \caption{Smart Sound componentes básicos}
-        \label{fig:sistema}
+        \includegraphics[width=1\textwidth]{./assets/recorrido-futuro}
+        \caption{Mapa de recorrido - Futuro}
+        \label{fig:recorridoFuturo}
     \end{figure}
 
     \subsubsection{Componentes principales del sistema}
@@ -745,11 +715,20 @@
         \item Receptores de audio distribuidos en la sala que capturan la mezcla desde la perspectiva del público.
         \item Consola central digital, donde se procesan los datos acústicos y se conectan los instrumentos.
         \item Aplicación móvil/tablet, que permite a los músicos controlar el sistema, recibir retroalimentación
-        visual, cargar presets y guardar calibraciones personalizadas\ref{fig:sistema}.
+        visual, cargar presets y guardar calibraciones personalizadas.
     \end{itemize}
 
+    Se representan los elementos mencionados en el mapa conceptual (Figura~\ref{fig:concepto})
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{./assets/mapaConcepto}
+        \caption{Mapa conceptual de SmartSound}
+        \label{fig:concepto}
+    \end{figure}
+
     El sistema puede conectarse mediante red inalámbrica o cableada a la consola principal, integrándose con el
-    equipo existente y ofreciendo una experiencia “plug \& play” para pequeños escenarios.
+    equipo existente y ofreciendo una experiencia ``plug \& play'' para pequeños escenarios.
 
     \subsection{Estrategia de evaluación}
     Se realizará una \textbf{evaluación controlada} \cite{interactionD} en etapas
@@ -782,7 +761,7 @@
     \myparagraph{Selección:} por conveniencia (usuarios representativos pero accesibles).
 
     \subsubsection{Producto a evaluar}
-    Prototipo “Mago de Oz” de SmartSound que simulará el comportamiento del sistema.
+    Prototipo ``Mago de Oz'' de SmartSound que simulará el comportamiento del sistema.
     La aplicación será creada con un mock interactivo de la app en Figma (modo prototipo).
     Utilizaremos consola digital real existente, receptores de audio simulados en cartón o impresión 3D e
     instrumentos y amplificación reales de la sala.
@@ -802,7 +781,7 @@
         \item Guardar la calibración realizada en la aplicación
     \end{itemize}
 
-    El observador registrará tiempos, errores, expresiones faciales y comentarios (“pensar en voz alta”).
+    El observador registrará tiempos, errores, expresiones faciales y comentarios (``pensar en voz alta'').
 
     \subsubsection{Aspectos concretos a consultar con los usuarios}
 
@@ -872,7 +851,7 @@
     En la fase de descubrimiento, se aplicaron técnicas cualitativas como investigación contextual que permitieron
     comprender el contexto real de los músicos y profesionales que gestionan su propio sonido.
     Este enfoque facilitó verificar suposiciones y profundizar en los factores emocionales, técnicos y sociales que
-    condicionan la interacción con los sistemas de audio, cumpliendo con el principio de “poner a las personas primero”.
+    condicionan la interacción con los sistemas de audio, cumpliendo con el principio de ``poner a las personas primero''.
 
     La fase de definición se basó en la síntesis de la investigación mediante personas, mapas de empatía y escenarios,
     que permitieron representar de forma empática y estructurada las metas y comportamientos del usuario principal,
@@ -896,11 +875,18 @@
 % Referencias
     \renewcommand\refname{\textbf{Referencias}}
 
+    \bibliographystyle{acm}
     \bibliography{refs}
-    \bibliographystyle{apa}
 
     \newpage
     \appendix
 
+    \section*{Apéndices}
+    \addcontentsline{toc}{section}{Apéndices}
+
+    % Aquí puedes agregar el contenido de los apéndices
+    % Por ejemplo:
+    % \subsection{Transcripciones de entrevistas}
+    % \subsection{Guías de entrevista}
 
 \end{document}
