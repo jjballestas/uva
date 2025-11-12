@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.31)  12 NOV 2025 09:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.31)  12 NOV 2025 10:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,6 +6,8 @@ entering extended mode
 (main.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
+(/home/nataly/.miktex/texmfs/install/tex/latex/apa7/apa7.cls
+Document Class: apa7 2022/07/25 v2.16 APA formatting (7th edition)
 (/home/nataly/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (/home/nataly/.miktex/texmfs/install/tex/latex/base/size11.clo
@@ -23,25 +25,99 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 )
-(/home/nataly/.miktex/texmfs/install/tex/latex/base/inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+(/home/nataly/.miktex/texmfs/install/tex/latex/apacite/apacite.sty
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count283
+\bibleftmargin=\skip51
+\bibindent=\skip52
+\bibparsep=\skip53
+\bibitemsep=\skip54
+\biblabelsep=\skip55
 )
-(/home/nataly/.miktex/texmfs/install/tex/latex/comment/comment.sty
-\CommentStream=\write3
+(/home/nataly/.miktex/texmfs/install/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip56
+\bibsep=\skip57
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count284
+)
+LaTeX Info: Redefining \BBA on input line 218.
+Class apa7 Info: The selected bibliography package, apacite and natbib, have be
+en loaded on input line 218.
 
-Excluding comment 'comment')
-(/home/nataly/.miktex/texmfs/install/tex/latex/marvosym/marvosym.sty
-Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+(/home/nataly/.miktex/texmfs/install/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(/home/nataly/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(/home/nataly/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+6.
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+(/home/nataly/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks19
+\KV@toks@=\toks17
 )
+(/home/nataly/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/home/nataly/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count285
+\Gm@cntv=\count286
+\c@Gm@tempcnt=\count287
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks18
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
+(/home/nataly/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/home/nataly/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
@@ -56,182 +132,50 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 (/home/nataly/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen149
-\Gin@req@width=\dimen150
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
 )
-(/home/nataly/.miktex/texmfs/install/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count283
-\float@exts=\toks20
-\float@box=\box53
-\@float@everytoks=\toks21
-\@floatcapt=\box54
+(/home/nataly/.miktex/texmfs/install/tex/latex/scalerel/scalerel.sty
+Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
+ng of objects, relative to a reference object or in absolute terms
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count288
+\calc@Bcount=\count289
+\calc@Adimen=\dimen159
+\calc@Bdimen=\dimen160
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count290
+\calc@Cskip=\skip60
 )
-(/home/nataly/.miktex/texmfs/install/tex/latex/ulem/ulem.sty
-\UL@box=\box55
-\UL@hyphenbox=\box56
-\UL@skip=\skip51
-\UL@hook=\toks22
-\UL@height=\dimen151
-\UL@pe=\count284
-\UL@pixel=\dimen152
-\ULC@box=\box57
-Package: ulem 2019/11/18
-\ULdepth=\dimen153
-)
-(/home/nataly/.miktex/texmfs/install/tex/generic/babel/babel.sty
-Package: babel 2025/10/22 v25.14 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
-\babel@savecnt=\count285
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2050.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2052.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2054.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2055.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2056.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2058.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2083.
-\U@D=\dimen154
-\l@unhyphenated=\language1
-
-(/home/nataly/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count286
-
-
-Package babel Warning: Configuration files are deprecated, as
-(babel)                they can break document portability.
-(babel)                Reported on input line 4172.
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(/home/nataly/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(/home/nataly/.miktex/texmfs/install/tex/generic/babel/locale/es/babel-spanish.
-tex)
-Package babel Info: Importing font and identification data for spanish
-(babel)             from babel-es.ini. Reported on input line 4295.
- (/home/nataly/.miktex/texmfs/install/tex/latex/babel-spanish/spanish.ldf
-Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'Spanish' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=0 instead on input line 51.
-
-\es@quottoks=\toks23
-\es@quotdepth=\count287
-Package babel Info: Making " an active character on input line 570.
-Package babel Info: Making . an active character on input line 675.
-Package babel Info: Making < an active character on input line 722.
-Package babel Info: Making > an active character on input line 722.
-))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
-on input line 22.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
- on input line 22.
- (/home/nataly/.miktex/texmfs/install/tex/latex/datetime/datetime.sty
-Package: datetime 2015/03/20 v2.60 Date Time Package
-
 (/home/nataly/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count288
+\etb@tempcnta=\count291
 )
-(/home/nataly/.miktex/texmfs/install/tex/latex/fmtcount/fmtcount.sty
-Package: fmtcount 2025/08/23 v3.11 Displaying the values of LaTeX counters (NT,
-VB,NE)
-
-(/home/nataly/.miktex/texmfs/install/tex/latex/base/ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+\thesrwidth=\skip61
+\thesrheight=\skip62
+\srblobheight=\skip63
+\srblobdepth=\skip64
+\mnxsrwidth=\skip65
+\LMex=\skip66
+\LMpt=\skip67
 )
-(/home/nataly/.miktex/texmfs/install/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-
-(/home/nataly/.miktex/texmfs/install/tex/generic/xkeyval/xkeyval.tex
-(/home/nataly/.miktex/texmfs/install/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
-)
-\XKV@depth=\count289
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(/home/nataly/.miktex/texmfs/install/tex/latex/fmtcount/fcprefix.sty
-Package: fcprefix 2012/09/28
-
-(/home/nataly/.miktex/texmfs/install/tex/latex/fmtcount/fcnumparser.sty
-Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count290
-))
-(/home/nataly/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks26
-\ex@=\dimen155
-)
-\c@padzeroesN=\count291
-\fc@tmpcatcode=\count292
-\@DT@modctr=\count293
-\@ordinalctr=\count294
-\@orgargctr=\count295
-\@strctr=\count296
-\@tmpstrctr=\count297
-\@DT@loopN=\count298
-\@DT@X=\count299
-)
-(/home/nataly/.miktex/texmfs/install/tex/latex/datetime/datetime-defaults.sty
-Package: datetime-defaults 2013/09/10
-)
-\@day=\count300
-\@month=\count301
-\@year=\count302
-\c@HOUR=\count303
-\c@HOURXII=\count304
-\c@MINUTE=\count305
-\c@TOHOUR=\count306
-\c@TOMINUTE=\count307
-\c@SECOND=\count308
-\currenthour=\count309
-\currentminute=\count310
-\currentsecond=\count311
-Package datetime Info: No datetime.cfg file found, using default settings on in
-put line 308.
-\@dtctr=\count312
-\dayofyear=\count313
-\dayofweek=\count314
-LaTeX Info: Redefining \today on input line 736.
-
-(/home/nataly/.miktex/texmfs/install/tex/latex/datetime/dt-spanish.def
-File: dt-spanish.def 2013/09/10
-LaTeX Info: Redefining \datespanish on input line 85.
-)
-\dt@a=\toks27
-\dt@b=\toks28
-)
-(/home/nataly/.miktex/texmfs/install/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
-
 (/home/nataly/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
 (/home/nataly/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
 (/home/nataly/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.t
 ex
-\pgfutil@everybye=\toks29
-\pgfutil@tempdima=\dimen156
-\pgfutil@tempdimb=\dimen157
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen161
+\pgfutil@tempdimb=\dimen162
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.de
 f
-\pgfutil@abb=\box58
+\pgfutil@abb=\box53
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
@@ -246,33 +190,33 @@ x
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks30
-\pgfkeys@temptoks=\toks31
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
 
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibraryfi
 ltered.code.tex
-\pgfkeys@tmptoks=\toks32
+\pgfkeys@tmptoks=\toks22
 ))
-\pgf@x=\dimen158
-\pgf@y=\dimen159
-\pgf@xa=\dimen160
-\pgf@ya=\dimen161
-\pgf@xb=\dimen162
-\pgf@yb=\dimen163
-\pgf@xc=\dimen164
-\pgf@yc=\dimen165
-\pgf@xd=\dimen166
-\pgf@yd=\dimen167
-\w@pgf@writea=\write4
-\r@pgf@reada=\read3
-\c@pgf@counta=\count315
-\c@pgf@countb=\count316
-\c@pgf@countc=\count317
-\c@pgf@countd=\count318
-\t@pgf@toka=\toks33
-\t@pgf@tokb=\toks34
-\t@pgf@tokc=\toks35
-\pgf@sys@id@count=\count319
+\pgf@x=\dimen163
+\pgf@y=\dimen164
+\pgf@xa=\dimen165
+\pgf@ya=\dimen166
+\pgf@xb=\dimen167
+\pgf@yb=\dimen168
+\pgf@xc=\dimen169
+\pgf@yc=\dimen170
+\pgf@xd=\dimen171
+\pgf@yd=\dimen172
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count292
+\c@pgf@countb=\count293
+\c@pgf@countc=\count294
+\c@pgf@countd=\count295
+\t@pgf@toka=\toks23
+\t@pgf@tokb=\toks24
+\t@pgf@tokc=\toks25
+\pgf@sys@id@count=\count296
 
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
@@ -290,8 +234,8 @@ File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath
 .code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count320
-\pgfsyssoftpath@bigbuffer@items=\count321
+\pgfsyssoftpath@smallbuffer@items=\count297
+\pgfsyssoftpath@bigbuffer@items=\count298
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol
 .code.tex
@@ -323,12 +267,12 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.te
 x
-\pgfmath@dimen=\dimen168
-\pgfmath@count=\count322
-\pgfmath@box=\box59
-\pgfmath@toks=\toks36
-\pgfmath@stack@operand=\toks37
-\pgfmath@stack@operation=\toks38
+\pgfmath@dimen=\dimen173
+\pgfmath@count=\count299
+\pgfmath@box=\box54
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code
 .tex)
@@ -351,57 +295,57 @@ gerarithmetics.code.tex)
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex)
 
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count323
+\c@pgfmathroundto@lastzeros=\count300
 )) (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex)
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.c
 ode.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen169
-\pgf@picmaxx=\dimen170
-\pgf@picminy=\dimen171
-\pgf@picmaxy=\dimen172
-\pgf@pathminx=\dimen173
-\pgf@pathmaxx=\dimen174
-\pgf@pathminy=\dimen175
-\pgf@pathmaxy=\dimen176
-\pgf@xx=\dimen177
-\pgf@xy=\dimen178
-\pgf@yx=\dimen179
-\pgf@yy=\dimen180
-\pgf@zx=\dimen181
-\pgf@zy=\dimen182
+\pgf@picminx=\dimen174
+\pgf@picmaxx=\dimen175
+\pgf@picminy=\dimen176
+\pgf@picmaxy=\dimen177
+\pgf@pathminx=\dimen178
+\pgf@pathmaxx=\dimen179
+\pgf@pathminy=\dimen180
+\pgf@pathmaxy=\dimen181
+\pgf@xx=\dimen182
+\pgf@xy=\dimen183
+\pgf@yx=\dimen184
+\pgf@yy=\dimen185
+\pgf@zx=\dimen186
+\pgf@zy=\dimen187
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathcons
 truct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen183
-\pgf@path@lasty=\dimen184
+\pgf@path@lastx=\dimen188
+\pgf@path@lasty=\dimen189
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusag
 e.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen185
-\pgf@shorten@start@additional=\dimen186
+\pgf@shorten@end@additional=\dimen190
+\pgf@shorten@start@additional=\dimen191
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.c
 ode.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box60
-\pgf@hbox=\box61
-\pgf@layerbox@main=\box62
-\pgf@picture@serial@count=\count324
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count301
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphics
 tate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen187
+\pgflinewidth=\dimen192
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransfor
 mations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen188
-\pgf@pt@y=\dimen189
-\pgf@pt@temp=\dimen190
+\pgf@pt@x=\dimen193
+\pgf@pt@y=\dimen194
+\pgf@pt@temp=\dimen195
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.co
 de.tex
@@ -418,14 +362,14 @@ File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.c
 ode.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen191
+\pgfarrowsep=\dimen196
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.co
 de.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen192
-\pgf@sys@shading@range@num=\count325
-\pgf@shadingcount=\count326
+\pgf@max=\dimen197
+\pgf@sys@shading@range@num=\count302
+\pgf@shadingcount=\count303
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.co
 de.tex
@@ -434,7 +378,7 @@ File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal
 .code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box63
+\pgfexternal@startupbox=\box58
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.c
 ode.tex
@@ -455,7 +399,7 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.co
 de.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box64
+\pgfnodeparttextbox=\box59
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code
 .tex
@@ -464,8 +408,8 @@ File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/home/nataly/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-versio
 n-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen193
-\pgf@nodesepend=\dimen194
+\pgf@nodesepstart=\dimen198
+\pgf@nodesepend=\dimen199
 )
 (/home/nataly/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-versio
 n-1-18.sty
@@ -478,10 +422,10 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex))
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen195
-\pgffor@skip=\dimen196
-\pgffor@stack=\toks39
-\pgffor@toks=\toks40
+\pgffor@iter=\dimen256
+\pgffor@skip=\dimen257
+\pgffor@stack=\toks29
+\pgffor@toks=\toks30
 ))
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.co
 de.tex
@@ -490,73 +434,42 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplotha
 ndlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count327
-\pgfplotmarksize=\dimen197
+\pgf@plot@mark@count=\count304
+\pgfplotmarksize=\dimen258
 )
-\tikz@lastx=\dimen198
-\tikz@lasty=\dimen199
-\tikz@lastxsaved=\dimen256
-\tikz@lastysaved=\dimen257
-\tikz@lastmovetox=\dimen258
-\tikz@lastmovetoy=\dimen259
-\tikzleveldistance=\dimen260
-\tikzsiblingdistance=\dimen261
-\tikz@figbox=\box65
-\tikz@figbox@bg=\box66
-\tikz@tempbox=\box67
-\tikz@tempbox@bg=\box68
-\tikztreelevel=\count328
-\tikznumberofchildren=\count329
-\tikznumberofcurrentchild=\count330
-\tikz@fig@count=\count331
+\tikz@lastx=\dimen259
+\tikz@lasty=\dimen260
+\tikz@lastxsaved=\dimen261
+\tikz@lastysaved=\dimen262
+\tikz@lastmovetox=\dimen263
+\tikz@lastmovetoy=\dimen264
+\tikzleveldistance=\dimen265
+\tikzsiblingdistance=\dimen266
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count305
+\tikznumberofchildren=\count306
+\tikznumberofcurrentchild=\count307
+\tikz@fig@count=\count308
 
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.co
 de.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count332
-\pgfmatrixcurrentcolumn=\count333
-\pgf@matrix@numberofcolumns=\count334
+\pgfmatrixcurrentrow=\count309
+\pgfmatrixcurrentcolumn=\count310
+\pgf@matrix@numberofcolumns=\count311
 )
-\tikz@expandcount=\count335
+\tikz@expandcount=\count312
 
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librari
 es/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(/home/nataly/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
-Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks41
-\verbatim@line=\toks42
-\verbatim@in@stream=\read4
-)
-(/home/nataly/.miktex/texmfs/install/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/home/nataly/.miktex/texmfs/install/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)
-\@envbody=\toks43
-)
-\tcb@titlebox=\box69
-\tcb@upperbox=\box70
-\tcb@lowerbox=\box71
-\tcb@phantombox=\box72
-\c@tcbbreakpart=\count336
-\c@tcblayer=\count337
-\c@tcolorbox@number=\count338
-\l__tcobox_tmpa_box=\box73
-\l__tcobox_tmpa_dim=\dimen262
-\tcb@temp=\box74
-\tcb@temp=\box75
-\tcb@temp=\box76
-\tcb@temp=\box77
-)
 (/home/nataly/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(/home/nataly/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-)
 (/home/nataly/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
@@ -594,15 +507,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/home/nataly/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count339
+\c@section@level=\count313
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen263
-\Hy@linkcounter=\count340
-\Hy@pagecounter=\count341
+\@linkdim=\dimen267
+\Hy@linkcounter=\count314
+\Hy@pagecounter=\count315
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
@@ -612,7 +525,7 @@ Now handling font encoding PD1 ...
 (/home/nataly/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count342
+\Hy@SavedSpaceFactor=\count316
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
@@ -626,14 +539,14 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count343
+\c@Hy@tempcnt=\count317
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen264
+\XeTeXLinkMargin=\dimen268
 
 (/home/nataly/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -642,9 +555,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count344
-\Field@Width=\dimen265
-\Fld@charsize=\dimen266
+\Fld@menulength=\count318
+\Field@Width=\dimen269
+\Fld@charsize=\dimen270
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -652,16 +565,16 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count345
-\c@Item=\count346
-\c@Hfootnote=\count347
+\Hy@abspage=\count319
+\c@Item=\count320
+\c@Hfootnote=\count321
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count348
-\c@bookmark@seq@number=\count349
+\Fld@listcount=\count322
+\c@bookmark@seq@number=\count323
 
 (/home/nataly/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.st
 y
@@ -674,23 +587,340 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip52
-) (/home/nataly/.miktex/texmfs/install/tex/latex/ragged2e/ragged2e.sty
+\Hy@SectionHShift=\skip68
+)
+(/home/nataly/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librari
+es/tikzlibrarysvg.path.code.tex
+File: tikzlibrarysvg.path.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/nataly/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibrarysvg.pa
+th.code.tex
+File: pgflibrarysvg.path.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/nataly/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleparser.co
+de.tex
+File: pgfmoduleparser.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfparserdef@arg@count=\count324
+)
+\pgf@lib@svg@last@x=\dimen271
+\pgf@lib@svg@last@y=\dimen272
+\pgf@lib@svg@last@c@x=\dimen273
+\pgf@lib@svg@last@c@y=\dimen274
+\pgf@lib@svg@count=\count325
+\pgf@lib@svg@max@num=\count326
+)) (/home/nataly/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen275
+\lightrulewidth=\dimen276
+\cmidrulewidth=\dimen277
+\belowrulesep=\dimen278
+\belowbottomsep=\dimen279
+\aboverulesep=\dimen280
+\abovetopsep=\dimen281
+\cmidrulesep=\dimen282
+\cmidrulekern=\dimen283
+\defaultaddspace=\dimen284
+\@cmidla=\count327
+\@cmidlb=\count328
+\@aboverulesep=\dimen285
+\@belowrulesep=\dimen286
+\@thisruleclass=\count329
+\@lastruleclass=\count330
+\@thisrulewidth=\dimen287
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/threeparttable/threeparttable.st
+y
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box64
+)
+\b@level@one@skip=\skip69
+\e@level@one@skip=\skip70
+\b@level@two@skip=\skip71
+\e@level@two@skip=\skip72
+\b@level@three@skip=\skip73
+\e@level@three@skip=\skip74
+\b@level@four@skip=\skip75
+\e@level@four@skip=\skip76
+\b@level@five@skip=\skip77
+\e@level@five@skip=\skip78
+ (/home/nataly/.miktex/texmfs/install/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen288
+\captionmargin=\dimen289
+\caption@leftmargin=\dimen290
+\caption@rightmargin=\dimen291
+\caption@width=\dimen292
+\caption@indent=\dimen293
+\caption@parindent=\dimen294
+\caption@hangindent=\dimen295
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count331
+\c@continuedfloat=\count332
+Package caption Info: hyperref package is loaded.
+Package caption Info: threeparttable package is loaded.
+)
+\c@APAenum=\count333
+\@text@par@indent=\skip79
+\gr@box=\box65
+\gr@boxwidth=\skip80
+\gr@boxheight=\skip81
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/tools/bm.sty
+Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+Package bm Info: No bold for \OMX/lmex/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+\c@appendix=\count334
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip82
+\f@nch@offset@elh=\skip83
+\f@nch@offset@erh=\skip84
+\f@nch@offset@olh=\skip85
+\f@nch@offset@orh=\skip86
+\f@nch@offset@elf=\skip87
+\f@nch@offset@erf=\skip88
+\f@nch@offset@olf=\skip89
+\f@nch@offset@orf=\skip90
+\f@nch@height=\skip91
+\f@nch@footalignment=\skip92
+\f@nch@widthL=\skip93
+\f@nch@widthC=\skip94
+\f@nch@widthR=\skip95
+\@temptokenb=\toks31
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/endfloat/endfloat.sty
+Package: endfloat 2019/04/15 v2.7 LaTeX2e package puts figures and tables at en
+d (jdm)
+\c@posttable=\count335
+\efloat@postttt=\write4
+\@ef@tttopen=\count336
+\c@postfigure=\count337
+\efloat@postfff=\write5
+\@ef@fffopen=\count338
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count339
+\float@exts=\toks32
+\float@box=\box66
+\@float@everytoks=\toks33
+\@floatcapt=\box67
+))
+(/home/nataly/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks34
+\inpenc@posthook=\toks35
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/comment/comment.sty
+\CommentStream=\write6
+
+Excluding comment 'comment')
+(/home/nataly/.miktex/texmfs/install/tex/latex/marvosym/marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/ulem/ulem.sty
+\UL@box=\box68
+\UL@hyphenbox=\box69
+\UL@skip=\skip96
+\UL@hook=\toks36
+\UL@height=\dimen296
+\UL@pe=\count340
+\UL@pixel=\dimen297
+\ULC@box=\box70
+Package: ulem 2019/11/18
+\ULdepth=\dimen298
+)
+(/home/nataly/.miktex/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2025/10/22 v25.14 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count341
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2050.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2052.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2054.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2055.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2056.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2058.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2083.
+\U@D=\dimen299
+\l@unhyphenated=\language1
+
+(/home/nataly/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count342
+
+
+Package babel Warning: Configuration files are deprecated, as
+(babel)                they can break document portability.
+(babel)                Reported on input line 4172.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/home/nataly/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(/home/nataly/.miktex/texmfs/install/tex/generic/babel/locale/es/babel-spanish.
+tex)
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 4295.
+ (/home/nataly/.miktex/texmfs/install/tex/latex/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Spanish' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 51.
+
+\es@quottoks=\toks37
+\es@quotdepth=\count343
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
+on input line 22.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
+ on input line 22.
+ (/home/nataly/.miktex/texmfs/install/tex/latex/datetime/datetime.sty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/fmtcount/fmtcount.sty
+Package: fmtcount 2025/08/23 v3.11 Displaying the values of LaTeX counters (NT,
+VB,NE)
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/home/nataly/.miktex/texmfs/install/tex/generic/xkeyval/xkeyval.tex
+(/home/nataly/.miktex/texmfs/install/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks38
+\XKV@tempa@toks=\toks39
+)
+\XKV@depth=\count344
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/home/nataly/.miktex/texmfs/install/tex/latex/fmtcount/fcprefix.sty
+Package: fcprefix 2012/09/28
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/fmtcount/fcnumparser.sty
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count345
+))
+(/home/nataly/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks40
+\ex@=\dimen300
+)
+\c@padzeroesN=\count346
+\fc@tmpcatcode=\count347
+\@DT@modctr=\count348
+\@ordinalctr=\count349
+\@orgargctr=\count350
+\@strctr=\count351
+\@tmpstrctr=\count352
+\@DT@loopN=\count353
+\@DT@X=\count354
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/datetime/datetime-defaults.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count355
+\@month=\count356
+\@year=\count357
+\c@HOUR=\count358
+\c@HOURXII=\count359
+\c@MINUTE=\count360
+\c@TOHOUR=\count361
+\c@TOMINUTE=\count362
+\c@SECOND=\count363
+\currenthour=\count364
+\currentminute=\count365
+\currentsecond=\count366
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count367
+\dayofyear=\count368
+\dayofweek=\count369
+LaTeX Info: Redefining \today on input line 736.
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/datetime/dt-spanish.def
+File: dt-spanish.def 2013/09/10
+LaTeX Info: Redefining \datespanish on input line 85.
+)
+\dt@a=\toks41
+\dt@b=\toks42
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks43
+\verbatim@line=\toks44
+\verbatim@in@stream=\read4
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks45
+)
+\tcb@titlebox=\box71
+\tcb@upperbox=\box72
+\tcb@lowerbox=\box73
+\tcb@phantombox=\box74
+\c@tcbbreakpart=\count370
+\c@tcblayer=\count371
+\c@tcolorbox@number=\count372
+\l__tcobox_tmpa_box=\box75
+\l__tcobox_tmpa_dim=\dimen301
+\tcb@temp=\box76
+\tcb@temp=\box77
+\tcb@temp=\box78
+\tcb@temp=\box79
+)
+(/home/nataly/.miktex/texmfs/install/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip53
-\RaggedLeftLeftskip=\skip54
-\RaggedRightLeftskip=\skip55
-\CenteringRightskip=\skip56
-\RaggedLeftRightskip=\skip57
-\RaggedRightRightskip=\skip58
-\CenteringParfillskip=\skip59
-\RaggedLeftParfillskip=\skip60
-\RaggedRightParfillskip=\skip61
-\JustifyingParfillskip=\skip62
-\CenteringParindent=\skip63
-\RaggedLeftParindent=\skip64
-\RaggedRightParindent=\skip65
-\JustifyingParindent=\skip66
+\CenteringLeftskip=\skip97
+\RaggedLeftLeftskip=\skip98
+\RaggedRightLeftskip=\skip99
+\CenteringRightskip=\skip100
+\RaggedLeftRightskip=\skip101
+\RaggedRightRightskip=\skip102
+\CenteringParfillskip=\skip103
+\RaggedLeftParfillskip=\skip104
+\RaggedRightParfillskip=\skip105
+\JustifyingParfillskip=\skip106
+\CenteringParindent=\skip107
+\RaggedLeftParindent=\skip108
+\RaggedRightParindent=\skip109
+\JustifyingParindent=\skip110
 )
 (/home/nataly/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librari
 es/tikzlibraryshapes.geometric.code.tex
@@ -704,35 +934,22 @@ File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 es/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 28.
-Package hyperref Info: Option `colorlinks' set `true' on input line 37.
-\c@apafig=\count350
-\c@apatable=\count351
+(babel)             Reported on input line 30.
+Package hyperref Info: Option `colorlinks' set `true' on input line 39.
+\c@NumberOfAuthors=\count373
+\c@NumberOfSuperscripts=\count374
 
-! Undefined control sequence.
-l.61 \shorttitle
-                {DiseÃ±o del sistema de interacciÃ³n avanzada SmartSound}
-? 
 
-! LaTeX Error: Missing \begin{document}.
+Class apa7 Warning: Deprecated: see documentation for \authorsaffiliations on i
+nput line 50.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 \shorttitle{D
-                  iseÃ±o del sistema de interacciÃ³n avanzada SmartSound}
-? 
-! Undefined control sequence.
-l.63 \affiliation
-                 {Universidad de Valladolid}
-? 
+\c@NumberOfAffiliations=\count375
 (/home/nataly/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count352
+\l__color_backend_stack_int=\count376
 )
 (main.aux
 LaTeX Info: Redefining \. on input line 12.
@@ -742,38 +959,77 @@ LaTeX Info: Redefining \% on input line 13.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+\c@maskedRefs=\count377
+ (/home/nataly/.miktex/texmfs/install/tex/latex/apacite/spanish.apc
+File: spanish.apc 2013/07/21 v6.03 apacite language file
+LaTeX Info: Redefining \BPBI on input line 138.
+LaTeX Info: Redefining \BHBI on input line 139.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=15.2pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (/home/nataly/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count353
-\scratchdimen=\dimen267
-\scratchbox=\box78
-\nofMPsegments=\count354
-\nofMParguments=\count355
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count356
-\MPscratchDim=\dimen268
-\MPnumerator=\count357
-\makeMPintoPDFobject=\count358
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count378
+\scratchdimen=\dimen302
+\scratchbox=\box80
+\nofMPsegments=\count379
+\nofMParguments=\count380
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count381
+\MPscratchDim=\dimen303
+\MPnumerator=\count382
+\makeMPintoPDFobject=\count383
+\everyMPtoPDFconversion=\toks47
 ) (/home/nataly/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -781,48 +1037,71 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (/home/nataly/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \. on input line 65.
-LaTeX Info: Redefining \% on input line 65.
-Package hyperref Info: Link coloring ON on input line 65.
+Package hyperref Info: Link coloring ON on input line 79.
 
 (main.out) (main.out)
-\@outlinefile=\write5
-\openout5 = `main.out'.
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/apa7/config/APA7spanish.txt
+File: APA7spanish.txt 2021/08/08 v1.00 apa7 configuration for Spanish
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+<./assets/uva-logo.png, id=70, 349.305pt x 349.305pt>
+File: ./assets/uva-logo.png Graphic file (type png)
+<use ./assets/uva-logo.png>
+Package pdftex.def Info: ./assets/uva-logo.png  used on input line 86.
+(pdftex.def)             Requested size: 93.94957pt x 93.95117pt.
 
 
 [1
 
-{/home/nataly/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
-<./assets/uva-logo.png, id=76, 349.305pt x 349.305pt>
-File: ./assets/uva-logo.png Graphic file (type png)
-<use ./assets/uva-logo.png>
-Package pdftex.def Info: ./assets/uva-logo.png  used on input line 72.
-(pdftex.def)             Requested size: 71.9989pt x 71.99707pt.
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.87     \end{titlepage}
-                         [1 <./assets/uva-logo.png>] (main.toc
+{/home/nataly/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}{/home/nataly/.mi
+ktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc} <./assets/uva-logo.png>]
+(main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+.
+ (/home/nataly/.miktex/texmfs/install/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+.
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+5.
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+5.
+
+(/home/nataly/.miktex/texmfs/install/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
+LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
+LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 5.
 
 
 [1])
-\tf@toc=\write6
-\openout6 = `main.toc'.
+\tf@toc=\write8
+\openout8 = `main.toc'.
 
 
 
@@ -832,33 +1111,21 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 )
-\tf@lof=\write7
-\openout7 = `main.lof'.
+\tf@lof=\write9
+\openout9 = `main.lof'.
 
 
 
 [3]
-Overfull \hbox (9.34996pt too wide) in paragraph at lines 108--113
-[]\OT1/cmr/m/n/10.95 Los m^^Susicos independientes y conferencistas enfrentan d
-esaf^^S^^Pos t^^Secnicos
+Overfull \hbox (19.46689pt too wide) in paragraph at lines 122--127
+[]\T1/lmr/m/n/10.95 Los músicos independientes y conferencistas enfrentan desaf
+íos técnicos que afectan directamente
  []
 
 
-Overfull \hbox (16.80208pt too wide) in paragraph at lines 108--113
-\OT1/cmr/m/n/10.95 que afectan directamente la calidad de su actuaci^^Son cuand
-o hacen presentaciones
- []
-
-
-Overfull \hbox (7.6783pt too wide) in paragraph at lines 108--113
-\OT1/cmr/m/n/10.95 en vivo, especialmente en espacios peque~nos como bares y sa
-las sin tratamiento
- []
-
-
-Overfull \hbox (28.69629pt too wide) in paragraph at lines 114--120
-\OT1/cmr/m/n/10.95 centradas en la simplificaci^^Son t^^Secnica, la retroalimen
-taci^^Son visual y el cumplimiento
+Overfull \hbox (26.85857pt too wide) in paragraph at lines 135--139
+[]\T1/lmr/m/n/10.95 El enfoque metodológico combina técnicas de observación dir
+ecta, análisis temático y herramientas
  []
 
 
@@ -868,1302 +1135,216 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128     \newpage
+l.142     \newpage
                    [1]
-Overfull \hbox (10.44495pt too wide) in paragraph at lines 134--140
-[]\OT1/cmr/m/n/10.95 Usuarios que dependen de amplificaci^^Son para su trabajo 
-como peque~nos
- []
-
-
-Overfull \hbox (15.25323pt too wide) in paragraph at lines 134--140
-\OT1/cmr/m/n/10.95 grupos musicales, d^^Suos, solistas o conferencistas indepen
-dientes que se presentan
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--140
-
- []
-
-
-Overfull \hbox (2.08884pt too wide) in paragraph at lines 141--148
-\OT1/cmr/m/n/10.95 entre instrumentos. Al no escuchar lo mismo que percibe la a
-udiencia, muchas
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--148
-
- []
-
-
-Overfull \hbox (2.41504pt too wide) in paragraph at lines 149--155
-\OT1/cmr/m/n/10.95 directamente en la calidad de la experiencia del p^^Sublico 
-y la profesionalizaci^^Son
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--155
-
- []
-
-
 
 [2]
-Overfull \hbox (21.40231pt too wide) in paragraph at lines 170--173
-\OT1/cmr/m/n/10.95 desbalanceada. Cambios ac^^Susticos cuando entra el p^^Subli
-co y poca capacidad
+Overfull \hbox (30.95216pt too wide) in paragraph at lines 179--181
+ []\T1/lmr/bx/n/10.95 Bandas independientes, dúos y solistas.[] \T1/lmr/m/n/10.
+95 Formaciones pequeñas (hasta 5) que se autofinancian
  []
 
 
-Overfull \hbox (25.29327pt too wide) in paragraph at lines 173--176
-\OT1/cmr/m/n/10.95 estable que se adapte por canci^^Son; buen feedback del p^^S
-ublico; recontrataci^^Son. 
+Overfull \hbox (2.82729pt too wide) in paragraph at lines 182--184
+[]\T1/lmr/bx/n/10.95 Deseos\T1/lmr/m/n/10.95 : Sonar profesional y consistente 
+para crecer en audiencia e ingresos. Poder concentrarse
  []
 
 
-Overfull \hbox (10.81729pt too wide) in paragraph at lines 176--181
-\OT1/cmr/m/n/10.95 para ajustes finos durante el show. Su presupuesto es ajusta
-do y necesitan
+Overfull \hbox (1.25612pt too wide) in paragraph at lines 202--203
+[]\T1/lmr/bx/n/10.95 Miedos\T1/lmr/m/n/10.95 : Feedback vergonzoso, baja inteli
+gibilidad, interfaces confusas, pérdida de credibilidad
  []
 
 
-Overfull \hbox (0.68848pt too wide) in paragraph at lines 184--186
- []\OT1/cmr/bx/n/10.95 Conferencistas y actos hablados[] \OT1/cmr/m/n/10.95 Spe
-akers corporativos, stand-up, open
- []
-
-
-Overfull \hbox (0.84065pt too wide) in paragraph at lines 188--189
-[]\OT1/cmr/bx/n/10.95 Miedos\OT1/cmr/m/n/10.95 : Feedback vergonzoso, baja inte
-ligibilidad, interfaces confusas,
+Overfull \hbox (2.08904pt too wide) in paragraph at lines 204--208
+[]\T1/lmr/bx/n/10.95 Contexto y Comentarios\T1/lmr/m/n/10.95 : Dan entre una y 
+cuatro presentaciones al mes en salas y auditorios
  []
 
 
 
 [3]
-Overfull \hbox (25.13757pt too wide) in paragraph at lines 199--201
-[]\OT1/cmr/m/n/10.95 Las bandas, d^^Suos o solistas tendr^^San material de audi
-o aceptable (grabaciones
- []
-
-
-Overfull \hbox (11.23587pt too wide) in paragraph at lines 206--208
-[]\OT1/cmr/m/n/10.95 Los espacios donde se realizan las presentaciones permitir
-^^San la instalaci^^Son
- []
-
-
 
 [4]
-Overfull \hbox (6.24757pt too wide) in paragraph at lines 218--223
-[]\OT1/cmr/m/n/10.95 Definir con claridad el grupo de usuarios principal del si
-stema propuesto,
+Overfull \hbox (7.75526pt too wide) in paragraph at lines 240--243
+\T1/lmr/m/n/10.95 problema que el sistema pretende abordar e identificando los 
+productos de sonido y herramientas
  []
 
-
-Overfull \hbox (22.1567pt too wide) in paragraph at lines 218--223
-\OT1/cmr/m/n/10.95 Para ello se pretende contrastar y verificar los perfiles ex
-istentes, eliminando
- []
-
-
-Overfull \hbox (0.55959pt too wide) in paragraph at lines 218--223
-\OT1/cmr/m/n/10.95 mejor los contextos y espacios en los que estos usuarios se 
-desenvuelven. 
- []
-
-
-Overfull \hbox (5.91298pt too wide) in paragraph at lines 223--226
-\OT1/cmr/m/n/10.95 t^^Secnica y la complejidad que estar^^S^^Pan dispuestos a a
-ceptar en la adopci^^Son
- []
-
-! Undefined control sequence.
-<argument> {3}{{\APACyear 
-                          {2023}}{\APACexlab {{\BCnt {1}}}}}{{Moran}}{{Moran}}
-l.237 ...s y dificultades reales \cite{invContext}
-                                                  .
-? 
-! Undefined control sequence.
-<argument> {3}{{\APACyear {2023}}{\APACexlab 
-                                             {{\BCnt {1}}}}}{{Moran}}{{Moran}}
-l.237 ...s y dificultades reales \cite{invContext}
-                                                  .
-? 
-! Undefined control sequence.
-<argument> ...APACyear {2023}}{\APACexlab {{\BCnt 
-                                                  {1}}}}}{{Moran}}{{Moran}}
-l.237 ...s y dificultades reales \cite{invContext}
-                                                  .
-? 
-
-Overfull \hbox (4.3021pt too wide) in paragraph at lines 235--238
-\OT1/cmr/m/n/10.95 natural, facilitando la eliminaci^^Son de suposiciones sobre
- sus comportamientos,
- []
-
-! Undefined control sequence.
-<argument> {5}{{\APACyear 
-                          {2023}}}{{Nielsen}}{{Nielsen}}
-l.247     comÃºn \cite{focusGroup}
-                                  .
-? 
 
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 252--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
-
+Overfull \hbox (7.23833pt too wide) in paragraph at lines 288--290
+[]\T1/lmr/m/n/10.95 Recabar información mediante preguntas del perfil de usuari
+o, eliminar suposiciones e identificar
  []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
-
- []
-
-
-Overfull \hbox (1.50255pt too wide) in paragraph at lines 288--289
-[]\OT1/cmr/m/n/10.95 Identificar miedos y retos de adoptar nuevas tecnolog^^S^^
-Pas para solucionar
- []
-
-
-Overfull \hbox (40.02744pt too wide) in paragraph at lines 292--295
- []\OT1/cmr/bx/n/10.95 Participantes m^^Sas adecuados para adquirir conocimient
-o:[] \OT1/cmr/m/n/10.95 Los participantes
- []
-
-
-Overfull \hbox (35.2346pt too wide) in paragraph at lines 292--295
-\OT1/cmr/m/n/10.95 amplificaci^^Son resulta esencial en su trabajo y que actual
-mente ofrecen presentaciones
- []
-
-
-Overfull \hbox (12.90881pt too wide) in paragraph at lines 306--308
-\OT1/cmr/m/n/10.95 nos va a brindar y la facilidad para realizarla en el corto 
-tiempo de investigaci^^Son. 
- []
-
-! Undefined control sequence.
-<argument> {1}{{\APACyear 
-                          {2025}}}{{Burriel}}{{Burriel}}
-l.316     mÃ¡s certeras \cite{preguntas}
-                                        .
-? 
-
 
 [7]
-<./assets/caimanes.png, id=232, 1187.18532pt x 766.36313pt>
+<./assets/caimanes.png, id=227, 1187.18532pt x 766.36313pt>
 File: ./assets/caimanes.png Graphic file (type png)
 <use ./assets/caimanes.png>
-Package pdftex.def Info: ./assets/caimanes.png  used on input line 327.
-(pdftex.def)             Requested size: 251.9989pt x 162.67168pt.
+Package pdftex.def Info: ./assets/caimanes.png  used on input line 341.
+(pdftex.def)             Requested size: 328.82707pt x 212.26485pt.
 
 
 [8 <./assets/caimanes.png>]
-<./assets/canoneros.png, id=242, 840.13875pt x 502.87875pt>
+<./assets/canoneros.png, id=237, 840.13875pt x 502.87875pt>
 File: ./assets/canoneros.png Graphic file (type png)
 <use ./assets/canoneros.png>
-Package pdftex.def Info: ./assets/canoneros.png  used on input line 362.
-(pdftex.def)             Requested size: 251.9989pt x 150.83409pt.
+Package pdftex.def Info: ./assets/canoneros.png  used on input line 376.
+(pdftex.def)             Requested size: 328.82707pt x 196.82019pt.
 
-Overfull \hbox (5.94455pt too wide) in paragraph at lines 367--370
-\OT1/cmr/m/n/10.95 coordin^^So la investigaci^^Son con el grupo \Ca~noneros"[][
-]2[][], se realiz^^So la coordinaci^^Son
- []
-
-
-Overfull \hbox (11.33437pt too wide) in paragraph at lines 375--379
-\OT1/cmr/m/n/10.95 profesional y sobre todo con un t^^Secnico de sonido. El sho
-w estaba perfectamente
+Overfull \hbox (19.40918pt too wide) in paragraph at lines 381--384
+ []\T1/lmr/bx/n/10.95 Grupo profesional de 4 integrantes.[] \T1/lmr/m/n/10.95 P
+ara este grupo de usuarios se coordinó la investigación
  []
 
 
 
 [9 <./assets/canoneros.png>]
-Overfull \hbox (0.80284pt too wide) in paragraph at lines 380--385
-[]\OT1/cmr/m/n/10.95 Cuentan ya con mayor presupuesto y el escenario donde se p
-resentaba
- []
-
-
-Overfull \hbox (0.80414pt too wide) in paragraph at lines 380--385
-\OT1/cmr/m/n/10.95 problemas de sonido un par de veces, enseguida el t^^Secnico
- procedi^^So a ayudarlo
- []
-
-<./assets/arowana.png, id=251, 827.34094pt x 749.80125pt>
+<./assets/arowana.png, id=247, 827.34094pt x 749.80125pt>
 File: ./assets/arowana.png Graphic file (type png)
 <use ./assets/arowana.png>
-Package pdftex.def Info: ./assets/arowana.png  used on input line 390.
-(pdftex.def)             Requested size: 251.9989pt x 228.37442pt.
-
-Overfull \hbox (38.00249pt too wide) in paragraph at lines 395--400
-\OT1/cmr/m/n/10.95 Para este grupo de usuarios se coordin^^So la investigaci^^S
-on con el grupo \AROWANA"[][]3[][],
- []
-
+Package pdftex.def Info: ./assets/arowana.png  used on input line 404.
+(pdftex.def)             Requested size: 328.82707pt x 298.01598pt.
 
 
 [10 <./assets/arowana.png>]
-<./assets/duenos-bar.png, id=261, 823.57687pt x 773.13844pt>
+<./assets/duenos-bar.png, id=256, 823.57687pt x 773.13844pt>
 File: ./assets/duenos-bar.png Graphic file (type png)
 <use ./assets/duenos-bar.png>
-Package pdftex.def Info: ./assets/duenos-bar.png  used on input line 413.
-(pdftex.def)             Requested size: 251.9989pt x 236.5678pt.
-
-Overfull \hbox (14.4904pt too wide) in paragraph at lines 424--428
-\OT1/cmr/m/n/10.95 presentes durante las presentaciones y los empleados suelen 
-rotar con frecuencia,
- []
-
+Package pdftex.def Info: ./assets/duenos-bar.png  used on input line 427.
+(pdftex.def)             Requested size: 328.82707pt x 308.68364pt.
 
 
 [11 <./assets/duenos-bar.png>]
-Overfull \hbox (17.34999pt too wide) in paragraph at lines 446--450
- []\OT1/cmr/bx/n/10.95 Conferencista independiente[] \OT1/cmr/m/n/10.95 Se coor
-din^^So la entrevista mediante Instagram
- []
-
-
-Overfull \hbox (7.59312pt too wide) in paragraph at lines 446--450
-\OT1/cmr/m/n/10.95 y fue realizada a trav^^Ses de llamada telef^^Sonica. Fernan
-da A. es una conferencista
- []
-
-
-Overfull \hbox (19.031pt too wide) in paragraph at lines 446--450
-\OT1/cmr/m/n/10.95 Ecuatoriana ubicada en Madrid, Espa~na. Trata temas tecnol^^
-Sogicos especialmente
- []
-
-
-Overfull \hbox (0.8345pt too wide) in paragraph at lines 446--450
-\OT1/cmr/m/n/10.95 en el ^^Sambito del desarrollo de software, ha realizado ya 
-m^^Sas de 15 conferencias
- []
-
-
-Overfull \hbox (2.63522pt too wide) in paragraph at lines 450--457
-\OT1/cmr/m/n/10.95 No considera el sonido como un aspecto prioritario. Su princ
-ipal preocupaci^^Son
+Overfull \hbox (11.74345pt too wide) in paragraph at lines 460--464
+ []\T1/lmr/bx/n/10.95 Conferencista independiente.[] \T1/lmr/m/n/10.95 Se coord
+inó la entrevista mediante Instagram y fue realizada
  []
 
 
 
 [12]
 
-LaTeX Warning: Reference `app:transcripciones' on page 13 undefined on input li
-ne 499.
-
-! Undefined control sequence.
-<argument> {6}{{\APACyear 
-                          {2019}}}{{Sharp\ \BOthers {.}}}{{Sharp, Preece,{}\...
-l.504 ...ticas mÃ¡s relevantes \cite{interactionD}
-                                                   y
-? 
-! Undefined control sequence.
-<argument> ...\APACyear {2019}}}{{Sharp\ \BOthers 
-                                                  {.}}}{{Sharp, Preece,{}\ \...
-l.504 ...ticas mÃ¡s relevantes \cite{interactionD}
-                                                   y
-? 
-! Undefined control sequence.
-<argument> ...thers {.}}}{{Sharp, Preece,{}\ \BBA 
-                                                  {} Rogers}}
-l.504 ...ticas mÃ¡s relevantes \cite{interactionD}
-                                                   y
-? 
-! Undefined control sequence.
-<argument> {4}{{\APACyear 
-                          {2023}}{\APACexlab {{\BCnt {2}}}}}{{Moran}}{{Moran}}
-l.506 ...nvestigaciÃ³n de usuarios \cite{thematic}
-                                                  .
-? 
-! Undefined control sequence.
-<argument> {4}{{\APACyear {2023}}{\APACexlab 
-                                             {{\BCnt {2}}}}}{{Moran}}{{Moran}}
-l.506 ...nvestigaciÃ³n de usuarios \cite{thematic}
-                                                  .
-? 
-! Undefined control sequence.
-<argument> ...APACyear {2023}}{\APACexlab {{\BCnt 
-                                                  {2}}}}}{{Moran}}{{Moran}}
-l.506 ...nvestigaciÃ³n de usuarios \cite{thematic}
-                                                  .
-? 
-
-Overfull \hbox (11.50954pt too wide) in paragraph at lines 502--507
-[]\OT1/cmr/m/n/10.95 El an^^Salisis se realiz^^So con la metodolog^^S^^Pa de An
-^^Salisis Tem^^Satico (Thematic
- []
-
-
-Overfull \hbox (42.35332pt too wide) in paragraph at lines 502--507
-\OT1/cmr/m/n/10.95 c^^Sodigos, agregando las tem^^Saticas m^^Sas relevantes [[]
-]
- []
-
-
-
 [13]
-Overfull \hbox (13.30542pt too wide) in paragraph at lines 513--517
-\OT1/cmr/m/n/10.95 los perfiles de usuario y profundizar en la comprensi^^Son d
-e sus metas, necesidades
- []
 
-
-Overfull \hbox (19.8511pt too wide) in paragraph at lines 513--517
-\OT1/cmr/m/n/10.95 y contextos de uso. Las entrevistas y observaciones redefini
-eron las oportunidades
- []
-
-
-Overfull \hbox (8.49962pt too wide) in paragraph at lines 525--530
-\OT1/cmr/m/n/10.95 y brinde retroalimentaci^^Son guiada, reduciendo la dependen
-cia de la experiencia
- []
-
-
-Overfull \hbox (2.96858pt too wide) in paragraph at lines 531--537
-\OT1/cmr/m/n/10.95 que el sonido es un factor cr^^S^^Ptico para su desempe~no y
- reputaci^^Son. A diferencia
- []
-
-
-Overfull \hbox (17.86673pt too wide) in paragraph at lines 531--537
-\OT1/cmr/m/n/10.95 calidad sonora para sostener su profesionalismo y obtener fu
-turas contrataciones.
- []
-
-
-Overfull \hbox (11.29912pt too wide) in paragraph at lines 531--537
-\OT1/cmr/m/n/10.95 El n^^Sumero de instrumentos no resulta determinante; lo que
- realmente diferencia
- []
-
-
-Overfull \hbox (3.82263pt too wide) in paragraph at lines 538--543
-\OT1/cmr/m/n/10.95 personal. Aun as^^S^^P, se observ^^So que en locales peque~n
-os suele no haber sonidista,
- []
+LaTeX Warning: Reference `app:transcripciones' on page 14 undefined on input li
+ne 513.
 
 
 
 [14]
-<./assets/persona.jpg, id=300, 1946.27126pt x 2068.72874pt>
+
+[15]
+<./assets/persona.jpg, id=296, 1946.27126pt x 2068.72874pt>
 File: ./assets/persona.jpg Graphic file (type jpg)
 <use ./assets/persona.jpg>
-Package pdftex.def Info: ./assets/persona.jpg  used on input line 562.
-(pdftex.def)             Requested size: 251.9989pt x 267.83936pt.
-<./assets/empatia.jpg, id=303, 1948.27875pt x 2067.725pt>
+Package pdftex.def Info: ./assets/persona.jpg  used on input line 576.
+(pdftex.def)             Requested size: 328.82707pt x 349.50117pt.
+<./assets/empatia.jpg, id=299, 1948.27875pt x 2067.725pt>
 File: ./assets/empatia.jpg Graphic file (type jpg)
 <use ./assets/empatia.jpg>
-Package pdftex.def Info: ./assets/empatia.jpg  used on input line 576.
-(pdftex.def)             Requested size: 251.9989pt x 267.42545pt.
+Package pdftex.def Info: ./assets/empatia.jpg  used on input line 590.
+(pdftex.def)             Requested size: 328.82707pt x 348.98453pt.
 
 
-[15 <./assets/persona.jpg>]
-Overfull \hbox (40.93105pt too wide) in paragraph at lines 581--594
-\OT1/cmr/m/n/10.95 sonido. Valoran la calidad m^^Sas que el volumen, buscan est
-abilidad y retroalimentaci^^Son
- []
+[16]
 
+[17 <./assets/persona.jpg>]
 
-
-[16 <./assets/empatia.jpg>]
-Overfull \hbox (2.0816pt too wide) in paragraph at lines 630--633
-[]\OT1/cmr/m/n/10.95 Despu^^Ses de varios intentos, Eddie logra estabilizar el 
-sonido y eliminar
- []
-
-
-
-[17]
-<./assets/recorrido-presente.jpg, id=328, 2390.9325pt x 1684.2925pt>
+[18 <./assets/empatia.jpg>]
+<./assets/recorrido-presente.jpg, id=317, 2390.9325pt x 1684.2925pt>
 File: ./assets/recorrido-presente.jpg Graphic file (type jpg)
 <use ./assets/recorrido-presente.jpg>
-Package pdftex.def Info: ./assets/recorrido-presente.jpg  used on input line 64
-5.
-(pdftex.def)             Requested size: 251.9989pt x 177.51129pt.
+Package pdftex.def Info: ./assets/recorrido-presente.jpg  used on input line 65
+9.
+(pdftex.def)             Requested size: 328.82707pt x 231.63591pt.
 
 
-[18 <./assets/recorrido-presente.jpg>]
-Overfull \hbox (4.38496pt too wide) in paragraph at lines 654--662
-[]\OT1/cmr/bx/n/10.95 Smart Sound como Mezclador Digital Inteligente con Preset
-s
- []
-
-
-Overfull \hbox (25.17397pt too wide) in paragraph at lines 654--662
-\OT1/cmr/m/n/10.95 simplificar la configuraci^^Son inicial. Mediante reconocimi
-ento de pistas referenciales
- []
-
-
-Overfull \hbox (11.1154pt too wide) in paragraph at lines 654--662
-\OT1/cmr/m/n/10.95 y pre-ajustes, el sistema reacciona a la interacci^^Son del 
-grupo y sus instrumentos,
- []
-
-
-Overfull \hbox (7.61626pt too wide) in paragraph at lines 676--680
-\OT1/cmr/m/n/10.95 comportamiento deseado de un usuario ante el sistema basado 
-en esta soluci^^Son.
- []
-
-<./assets/recorrido-futuro.jpg, id=336, 2390.9325pt x 1684.2925pt>
+[19 <./assets/recorrido-presente.jpg>]
+<./assets/recorrido-futuro.jpg, id=324, 2390.9325pt x 1684.2925pt>
 File: ./assets/recorrido-futuro.jpg Graphic file (type jpg)
 <use ./assets/recorrido-futuro.jpg>
-Package pdftex.def Info: ./assets/recorrido-futuro.jpg  used on input line 683.
+Package pdftex.def Info: ./assets/recorrido-futuro.jpg  used on input line 697.
 
-(pdftex.def)             Requested size: 251.9989pt x 177.51129pt.
+(pdftex.def)             Requested size: 328.82707pt x 231.63591pt.
 
-
-[19]
-Overfull \hbox (2.52191pt too wide) in paragraph at lines 698--699
-[]\OT1/cmr/bx/n/10.95 Smart Sound como Sistema con Control mediante Wearables
- []
-
-
-Overfull \hbox (2.38455pt too wide) in paragraph at lines 700--704
-\OT1/cmr/m/n/10.95 tablets o wearables con controles gestuales sencillos (desli
-zar para subir/bajar
+Overfull \hbox (15.86653pt too wide) in paragraph at lines 704--706
+ []\T1/lmr/bx/n/10.95 Escenario 2 (durante el show y monitoreo) para esta soluc
+ion:[] \T1/lmr/m/n/10.95 Durante la presentación,
  []
 
 
 
-[20 <./assets/recorrido-futuro.jpg>]
-Overfull \hbox (8.5373pt too wide) in paragraph at lines 717--720
-\OT1/cmr/m/n/10.95 consistentes. Su funci^^Son principal es ofrecer seguridad, 
-autonom^^S^^Pa y estabilidad
- []
+[20]
 
-<./assets/sistema.png, id=355, 1144.275pt x 450.18187pt>
+[21 <./assets/recorrido-futuro.jpg>]
+<./assets/sistema.png, id=338, 1144.275pt x 450.18187pt>
 File: ./assets/sistema.png Graphic file (type png)
 <use ./assets/sistema.png>
-Package pdftex.def Info: ./assets/sistema.png  used on input line 723.
-(pdftex.def)             Requested size: 251.9989pt x 99.13647pt.
+Package pdftex.def Info: ./assets/sistema.png  used on input line 737.
+(pdftex.def)             Requested size: 328.82707pt x 129.36789pt.
 
-Overfull \hbox (0.83461pt too wide) in paragraph at lines 733--735
-[]\OT1/cmr/m/n/10.95 Aplicaci^^Son m^^Sovil/tablet, que permite a los m^^Susico
-s controlar el sistema,
- []
-
-! Undefined control sequence.
-<argument> {6}{{\APACyear 
-                          {2019}}}{{Sharp\ \BOthers {.}}}{{Sharp, Preece,{}\...
-l.741 ...aluaciÃ³n controlada} \cite{interactionD}
-                                                   en etapas
-? 
-! Undefined control sequence.
-<argument> ...\APACyear {2019}}}{{Sharp\ \BOthers 
-                                                  {.}}}{{Sharp, Preece,{}\ \...
-l.741 ...aluaciÃ³n controlada} \cite{interactionD}
-                                                   en etapas
-? 
-! Undefined control sequence.
-<argument> ...thers {.}}}{{Sharp, Preece,{}\ \BBA 
-                                                  {} Rogers}}
-l.741 ...aluaciÃ³n controlada} \cite{interactionD}
-                                                   en etapas
-? 
-
-Overfull \hbox (49.47623pt too wide) in paragraph at lines 741--744
-[]\OT1/cmr/m/n/10.95 Se realizar^^Sa una \OT1/cmr/bx/n/10.95 evaluaci^^Son cont
-rolada \OT1/cmr/m/n/10.95 [[]]
- []
-
-
-Overfull \hbox (17.07587pt too wide) in paragraph at lines 746--748
-\OT1/cmr/m/n/10.95 proceso de calibraci^^Son y comprobar si los usuarios entien
-den la retroalimentaci^^Son
+Overfull \hbox (9.52193pt too wide) in paragraph at lines 747--749
+[]\T1/lmr/m/n/10.95 Aplicación móvil/tablet, que permite a los músicos controla
+r el sistema, recibir retroalimentación
  []
 
 
 
-[21 <./assets/sistema.png>]
-Overfull \hbox (20.23926pt too wide) in paragraph at lines 754--755
-[]\OT1/cmr/m/n/10.95 Evaluar la percepci^^Son de confianza del usuario en la ca
-libraci^^Son autom^^Satica. 
- []
-
-
-Overfull \hbox (18.96169pt too wide) in paragraph at lines 771--775
-[]\OT1/cmr/m/n/10.95 Prototipo \Mago de Oz" de SmartSound que simular^^Sa el co
-mportamiento
- []
-
-
-Overfull \hbox (8.59816pt too wide) in paragraph at lines 771--775
-\OT1/cmr/m/n/10.95 Figma (modo prototipo). Utilizaremos consola digital real ex
-istente, receptores
- []
-
-
-
-[22]
-Overfull \hbox (2.26291pt too wide) in paragraph at lines 778--779
-[]\OT1/cmr/m/n/10.95 Seguiremos el mapa de recorrido del usuario para prueba y 
-calibraci^^Son
- []
-
-
-Overfull \hbox (7.64793pt too wide) in paragraph at lines 782--783
-[]\OT1/cmr/m/n/10.95 Instalaci^^Son de los instrumentos, conexiones y colocaci^
-^Son de los receptores 
- []
-
-
-Overfull \hbox (30.52246pt too wide) in paragraph at lines 791--792
-[]\OT1/cmr/m/n/10.95 El observador registrar^^Sa tiempos, errores, expresiones 
-faciales y comentarios
- []
-
-
-Overfull \hbox (3.44919pt too wide) in paragraph at lines 802--803
-[]\OT1/cmr/m/n/10.95 C^^Somo perciben ellos que realmente una auto calibraci^^S
-on est^^Sa sucediendo 
- []
-
-
-Overfull \hbox (11.23698pt too wide) in paragraph at lines 808--810
-[]\OT1/cmr/m/n/10.95 La prueba se realizar^^Sa en una sala de ensayo controlada
-, con condiciones
- []
-
-
-Overfull \hbox (0.68973pt too wide) in paragraph at lines 808--810
-\OT1/cmr/m/n/10.95 ac^^Susticas realistas pero manejables. Idealmente, los part
-icipantes no deber^^S^^Pan
- []
-
-
+[22 <./assets/sistema.png>]
 
 [23]
-Overfull \hbox (18.66481pt too wide) in paragraph at lines 812--817
-\OT1/cmr/m/n/10.95 proceso de evaluaci^^Son. Creando estad^^S^^Psticas de los t
-ipos de problemas detectados,
- []
-
-
-Overfull \hbox (1.0171pt too wide) in paragraph at lines 812--817
-\OT1/cmr/m/n/10.95 entrevista post-prueba para recoger percepciones, sugerencia
-s y expectativas. 
- []
-
-
 
 [24]
-Overfull \hbox (12.6046pt too wide) in paragraph at lines 827--830
-[]\OT1/cmr/m/n/10.95 Si bien la investigaci^^Son y el dise~no desarrollados han
- permitido delimitar
- []
-
-
-Overfull \hbox (1.77745pt too wide) in paragraph at lines 831--838
-\OT1/cmr/m/n/10.95 de la interfaz, pero no sobre su comportamiento frente a var
-iables ambientales
- []
-
-
-Overfull \hbox (9.50934pt too wide) in paragraph at lines 839--842
-\OT1/cmr/m/n/10.95 existentes en el mercado. Es necesario continuar investigand
-o la compatibilidad
- []
-
-
-Overfull \hbox (9.16873pt too wide) in paragraph at lines 843--848
-\OT1/cmr/m/n/10.95 m^^Susico durante la actuaci^^Son, as^^S^^P como el equilibr
-io entre autonom^^S^^Pa tecnol^^Sogica
- []
-
-
-Overfull \hbox (16.34706pt too wide) in paragraph at lines 849--851
-\OT1/cmr/m/n/10.95 sistema a otros perfiles de usuario, como t^^Secnicos de son
-ido noveles o productores
- []
-
-
 
 [25]
-! Undefined control sequence.
-<argument> {2}{{\APACyear 
-                          {2022}}}{{{Design Council UK}}}{{{Design Council U...
-l.855     diamante \cite{diamante}
-                                  , alternando fases de divergencia y conver...
 
-? 
-
-Overfull \hbox (110.57678pt too wide) in paragraph at lines 854--857
-\OT1/cmr/m/n/10.95 interactivos basados en el modelo del doble diamante [[]],
- []
-
-
-Overfull \hbox (1.50249pt too wide) in paragraph at lines 854--857
-\OT1/cmr/m/n/10.95 centrado en las personas y orientado a crear una experiencia
- de uso coherente,
- []
-
-
-Overfull \hbox (0.34657pt too wide) in paragraph at lines 863--866
-[]\OT1/cmr/m/n/10.95 La fase de definici^^Son se bas^^So en la s^^S^^Pntesis de
- la investigaci^^Son mediante
- []
-
-
-Overfull \hbox (18.38507pt too wide) in paragraph at lines 863--866
-\OT1/cmr/m/n/10.95 principal, favoreciendo una visi^^Son compartida del problem
-a y evitando soluciones
- []
-
-! Undefined control sequence.
-<argument> {6}{{\APACyear 
-                          {2019}}}{{Sharp\ \BOthers {.}}}{{Sharp, Preece,{}\...
-l.868     Thinking \cite{interactionD}
-                                      , priorizando la simplicidad, la adapt...
-
-? 
-! Undefined control sequence.
-<argument> ...\APACyear {2019}}}{{Sharp\ \BOthers 
-                                                  {.}}}{{Sharp, Preece,{}\ \...
-l.868     Thinking \cite{interactionD}
-                                      , priorizando la simplicidad, la adapt...
-
-? 
-! Undefined control sequence.
-<argument> ...thers {.}}}{{Sharp, Preece,{}\ \BBA 
-                                                  {} Rogers}}
-l.868     Thinking \cite{interactionD}
-                                      , priorizando la simplicidad, la adapt...
-
-? 
-
-Overfull \hbox (23.19083pt too wide) in paragraph at lines 867--871
-[]\OT1/cmr/m/n/10.95 Durante la fase de ideaci^^Son, se generaron y evaluaron d
-istintas alternativas
- []
-
-
-Overfull \hbox (28.96878pt too wide) in paragraph at lines 867--871
-\OT1/cmr/m/n/10.95 aplicando los principios del Design Thinking [[]],
- []
-
-
-Overfull \hbox (12.09003pt too wide) in paragraph at lines 872--876
-\OT1/cmr/m/n/10.95 Mago de Oz, materializa la naturaleza iterativa del doble di
-amante, concibiendo
- []
-
-
-Overfull \hbox (4.06479pt too wide) in paragraph at lines 872--876
-\OT1/cmr/m/n/10.95 el dise~no como un proceso en constante validaci^^Son. Las m
-^^Setricas de usabilidad,
- []
-
-
-Overfull \hbox (1.35046pt too wide) in paragraph at lines 872--876
-\OT1/cmr/m/n/10.95 confianza y comprensi^^Son de la retroalimentaci^^Son permit
-ir^^San refinar la interfaz
+[26]
+Overfull \hbox (0.70099pt too wide) in paragraph at lines 872--876
+[]\T1/lmr/m/n/10.95 En la fase de descubrimiento, se aplicaron técnicas cualita
+tivas como investigación contextual
  []
 
 
 
-[26] (main.bbl
-! Undefined control sequence.
-<argument> \protect \citeauthoryear 
-                                    {Burriel}{Burriel}{{\protect \APACyear {...
-l.10 preguntas}
-               
-? 
-! Undefined control sequence.
-<argument> ...rriel}{Burriel}{{\protect \APACyear 
-                                                  {2025}}}
-l.10 preguntas}
-               
-? 
-! Undefined control sequence.
-l.11 \APACinsertmetastar
-                         {%
-? 
-
-! LaTeX Error: Environment APACrefauthors undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \begin{APACrefauthors}
-                           %
-? 
-! Undefined control sequence.
-l.14 Burriel, D\BPBI
-                     T.%
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefaut
-hors}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \end{APACrefauthors}
-                         %
-? 
-! Undefined control sequence.
-l.18 \APACrefYearMonthDay
-                         {2025}{}{}.
-? 
-! Undefined control sequence.
-l.20 \APACrefbtitle
-                    {Evita las preguntas dirigidas para obtener mejores resu...
-
-? 
-
-! LaTeX Error: Environment APACrefURL undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \begin{APACrefURL}
-                        \url{https://torresburriel.com/weblog/preguntas-diri...
-
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefURL
-}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25   \end{APACrefURL}
-                       
-? 
-! Undefined control sequence.
-l.27 \APACrefnote
-                 {Acceso: 26 octubre 2025}
-? 
-! Undefined control sequence.
-l.28 \PrintBackRefs
-                   {\CurrentBib}
-? 
-! Undefined control sequence.
-l.28 \PrintBackRefs{\CurrentBib
-                               }
-? 
-! Undefined control sequence.
-<argument> \protect \citeauthoryear 
-                                    {{Design Council UK}}{{Design Council UK...
-l.37 diamante}
-              
-? 
-! Undefined control sequence.
-<argument> ...gn Council UK}}{{\protect \APACyear 
-                                                  {2022}}}
-l.37 diamante}
-              
-? 
-! Undefined control sequence.
-l.38 \APACinsertmetastar
-                         {%
-? 
-
-! LaTeX Error: Environment APACrefauthors undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 \begin{APACrefauthors}
-                           %
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefaut
-hors}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 \end{APACrefauthors}
-                         %
-? 
-! Undefined control sequence.
-l.45 \APACrefYearMonthDay
-                         {2022}{}{}.
-? 
-! Undefined control sequence.
-l.47 \APACrefbtitle
-                    {Framework for Innovation.} {Framework for innovation.}
-? 
-
-! LaTeX Error: Environment APACrefURL undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 \begin{APACrefURL}
-                       
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefURL
-}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51   \end{APACrefURL}
-                       
-? 
-! Undefined control sequence.
-l.53 \APACrefnote
-                 {Acceso: 26 octubre 2025}
-? 
-! Undefined control sequence.
-l.54 \PrintBackRefs
-                   {\CurrentBib}
-? 
-! Undefined control sequence.
-l.54 \PrintBackRefs{\CurrentBib
-                               }
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--55
-[]\OT1/cmr/m/n/10.95 diamanteDesign Council
+[27] (main.bbl
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+4.
+ (/home/nataly/.miktex/texmfs/install/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 2521) in paragraph at lines 41--55
+[]\T1/lmr/m/n/10.95 Design Council UK.  (2022).  \T1/lmr/m/it/10.95 Framework f
+or innovation.  \T1/lmr/m/n/10.95 Descargado de [][]$\T1/lmtt/m/n/10.95 https :
+//
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--55
-\OT1/cmr/m/n/10.95 UK.  2022.  Framework for Innovation. Framework for
- []
-
-
-Underfull \hbox (badness 1132) in paragraph at lines 39--55
-\OT1/cmr/m/n/10.95 innovation.   [][]$\OT1/cmtt/m/n/10.95 https : / / www . des
-igncouncil . org . uk / our-[]resources /
- []
-
-! Undefined control sequence.
-<argument> \protect \citeauthoryear 
-                                    {Moran}{Moran}{{\protect \APACyear {2023...
-l.63 invContext}
-                
-? 
-! Undefined control sequence.
-<argument> ... {Moran}{Moran}{{\protect \APACyear 
-                                                  {2023}}{\protect \APACexla...
-l.63 invContext}
-                
-? 
-! Undefined control sequence.
-<argument> ...PACyear {2023}}{\protect \APACexlab 
-                                                  {{\protect \BCnt {1}}}}}
-l.63 invContext}
-                
-? 
-! Undefined control sequence.
-<argument> ...protect \APACexlab {{\protect \BCnt 
-                                                  {1}}}}}
-l.63 invContext}
-                
-? 
-! Undefined control sequence.
-l.64 \APACinsertmetastar
-                         {%
-? 
-
-! LaTeX Error: Environment APACrefauthors undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.66 \begin{APACrefauthors}
-                           %
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefaut
-hors}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 \end{APACrefauthors}
-                         %
-? 
-! Undefined control sequence.
-l.71 \APACrefYearMonthDay
-                         {2023{\protect \BCnt {1}}}{}{}.
-? 
-! Undefined control sequence.
-l.71 \APACrefYearMonthDay{2023{\protect \BCnt
-                                              {1}}}{}{}.
-? 
-! Undefined control sequence.
-l.73 \APACrefbtitle
-                    {Contextual Inquiry: Inspire Design by Observing and
-? 
-
-! LaTeX Error: Environment APACrefURL undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \begin{APACrefURL}
-                        \url{https://www.nngroup.com/articles/contextual-inq...
-
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefURL
-}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.78   \end{APACrefURL}
-                       
-? 
-! Undefined control sequence.
-l.80 \APACrefnote
-                 {Acceso: 26 octubre 2025}
-? 
-! Undefined control sequence.
-l.81 \PrintBackRefs
-                   {\CurrentBib}
-? 
-! Undefined control sequence.
-l.81 \PrintBackRefs{\CurrentBib
-                               }
-? 
-
-Underfull \hbox (badness 2478) in paragraph at lines 65--82
-\OT1/cmr/m/n/10.95 Contextual inquiry: Inspire design by observing and intervie
-wing
- []
-
-
-Underfull \hbox (badness 4518) in paragraph at lines 65--82
-\OT1/cmr/m/n/10.95 users in their context.   [][]$\OT1/cmtt/m/n/10.95 https : /
- / www . nngroup . com / articles /
- []
-
-! Undefined control sequence.
-<argument> \protect \citeauthoryear 
-                                    {Moran}{Moran}{{\protect \APACyear {2023...
-l.90 thematic}
-              
-? 
-! Undefined control sequence.
-<argument> ... {Moran}{Moran}{{\protect \APACyear 
-                                                  {2023}}{\protect \APACexla...
-l.90 thematic}
-              
-? 
-! Undefined control sequence.
-<argument> ...PACyear {2023}}{\protect \APACexlab 
-                                                  {{\protect \BCnt {2}}}}}
-l.90 thematic}
-              
-? 
-! Undefined control sequence.
-<argument> ...protect \APACexlab {{\protect \BCnt 
-                                                  {2}}}}}
-l.90 thematic}
-              
-? 
-! Undefined control sequence.
-l.91 \APACinsertmetastar
-                         {%
-? 
-
-! LaTeX Error: Environment APACrefauthors undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.93 \begin{APACrefauthors}
-                           %
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefaut
-hors}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.95 \end{APACrefauthors}
-                         %
-? 
-! Undefined control sequence.
-l.98 \APACrefYearMonthDay
-                         {2023{\protect \BCnt {2}}}{}{}.
-? 
-! Undefined control sequence.
-l.98 \APACrefYearMonthDay{2023{\protect \BCnt
-                                              {2}}}{}{}.
-? 
-! Undefined control sequence.
-l.100 \APACrefbtitle
-                     {How to Analyze Qualitative Data from UX Research.} {Ho...
-
-? 
-
-! LaTeX Error: Environment APACrefURL undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \begin{APACrefURL}
-                         \url{https://www.nngroup.com/articles/thematic-anal...
-
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefURL
-}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104   \end{APACrefURL}
-                        
-? 
-! Undefined control sequence.
-l.106 \APACrefnote
-                  {Acceso: 26 octubre 2025}
-? 
-! Undefined control sequence.
-l.107 \PrintBackRefs
-                    {\CurrentBib}
-? 
-! Undefined control sequence.
-l.107 \PrintBackRefs{\CurrentBib
-                                }
-? 
-! Undefined control sequence.
-<argument> \protect \citeauthoryear 
-                                    {Nielsen}{Nielsen}{{\protect \APACyear {...
-l.116 focusGroup}
-                 
-? 
-! Undefined control sequence.
-<argument> ...elsen}{Nielsen}{{\protect \APACyear 
-                                                  {2023}}}
-l.116 focusGroup}
-                 
-? 
-! Undefined control sequence.
-l.117 \APACinsertmetastar
-                          {%
-? 
-
-! LaTeX Error: Environment APACrefauthors undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.119 \begin{APACrefauthors}
-                            %
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefaut
-hors}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.121 \end{APACrefauthors}
-                          %
-? 
-! Undefined control sequence.
-l.124 \APACrefYearMonthDay
-                          {2023}{}{}.
-? 
-! Undefined control sequence.
-l.126 \APACrefbtitle
-                     {Focus Groups in UX Research.} {Focus groups in ux rese...
-
-? 
-
-! LaTeX Error: Environment APACrefURL undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.128 \begin{APACrefURL}
-                         \url{https://www.nngroup.com/articles/focus-groups/}
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefURL
-}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.129   \end{APACrefURL}
-                        
-? 
-! Undefined control sequence.
-l.131 \APACrefnote
-                  {Acceso: 26 octubre 2025}
-? 
-! Undefined control sequence.
-l.132 \PrintBackRefs
-                    {\CurrentBib}
-? 
-! Undefined control sequence.
-l.132 \PrintBackRefs{\CurrentBib
-                                }
-? 
-! Undefined control sequence.
-<argument> \protect \citeauthoryear 
-                                    {Sharp, Preece\BCBL {}\ \BBA {} Rogers}{...
-l.143 interactionD}
-                   
-? 
-! Undefined control sequence.
-<argument> ...\citeauthoryear {Sharp, Preece\BCBL 
-                                                  {}\ \BBA {} Rogers}{Sharp\...
-l.143 interactionD}
-                   
-? 
-! Undefined control sequence.
-<argument> ...oryear {Sharp, Preece\BCBL {}\ \BBA 
-                                                  {} Rogers}{Sharp\ \protect...
-l.143 interactionD}
-                   
-? 
-! Undefined control sequence.
-<argument> ...{} Rogers}{Sharp\ \protect \BOthers 
-                                                  {.}}{{\protect \APACyear {...
-l.143 interactionD}
-                   
-? 
-! Undefined control sequence.
-<argument> ...t \BOthers {.}}{{\protect \APACyear 
-                                                  {2019}}}
-l.143 interactionD}
-                   
-? 
-! Undefined control sequence.
-<write> ...ct \citeauthoryear {Sharp, Preece\BCBL 
-                                                  {}\ \BBA {} Rogers}{Sharp\...
-l.143 interactionD}
-                   
-? 
-! Undefined control sequence.
-<write> ...uthoryear {Sharp, Preece\BCBL {}\ \BBA 
-                                                  {} Rogers}{Sharp\ \protect...
-l.143 interactionD}
-                   
-? 
-! Undefined control sequence.
-l.144 \APACinsertmetastar
-                          {%
-? 
-
-! LaTeX Error: Environment APACrefauthors undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.146 \begin{APACrefauthors}
-                            %
-? 
-! Undefined control sequence.
-l.149 \BCBL
-            {}\ \BBA {} Rogers, Y.%
-? 
-! Undefined control sequence.
-l.149 \BCBL {}\ \BBA
-                     {} Rogers, Y.%
-? 
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefaut
-hors}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.150 \end{APACrefauthors}
-                          %
-? 
-! Undefined control sequence.
-l.153 \APACrefYear
-                  {2019}.
-? 
-! Undefined control sequence.
-l.155 \APACrefbtitle
-                     {Interaction Design: Beyond Human-Computer Interaction}
-? 
-! Undefined control sequence.
-l.156 ...man-computer interaction}\ (\PrintOrdinal
-                                                  {5}\
-? 
-! Undefined control sequence.
-l.157   \BEd
-            ).
-? 
-! Undefined control sequence.
-l.159 \APACaddressPublisher
-                           {Chichester, UK}{John Wiley & Sons}.
-? 
 ! Misplaced alignment tab character &.
-l.159 ...essPublisher{Chichester, UK}{John Wiley &
-                                                   Sons}.
+<argument> John Wiley &
+                        Sons
+l.159 ...lisher{Chichester, UK}{John Wiley & Sons}
+                                                  .
 ? 
-! Undefined control sequence.
-l.160 \PrintBackRefs
-                    {\CurrentBib}
-? 
-! Undefined control sequence.
-l.160 \PrintBackRefs{\CurrentBib
-                                }
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--161
-[]\OT1/cmr/m/n/10.95 interactionDSharp, H., Preece, J.
- []
-
-
-Underfull \hbox (badness 1264) in paragraph at lines 145--161
-\OT1/cmr/m/n/10.95 Rogers, Y.  2019.  Interaction Design: Beyond Human-Computer
-
- []
-
 )
 
-[27] (main.aux
-LaTeX Info: Redefining \. on input line 11.
-LaTeX Info: Redefining \% on input line 11.
+Class apa7 Warning: \bibliographystyle command ignored on input line 900.
+
+
+
+[28
+
+] AED endfloat: Processing end Figures and Tables (main.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
 )
  ***********
 LaTeX2e <2025-06-01> patch level 1
@@ -2173,198 +1354,28 @@ L3 programming layer <2025-10-09>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 710AE81A9E31723B48F06540B3E35D6C;2732
-(rerunfilecheck)             After:  E085D97671BC6A53A94016493134FD5E;2634.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 49420EBFD700E85734D49D366420820C;2733.
  ) 
 Here is how much of TeX's memory you used:
- 24881 strings out of 470017
- 481137 string characters out of 5477706
- 887954 words of memory out of 5000000
- 52762 multiletter control sequences out of 15000+600000
- 633151 words of font info for 59 fonts, out of 8000000 for 9000
+ 29417 strings out of 470017
+ 561669 string characters out of 5477706
+ 969461 words of memory out of 5000000
+ 57229 multiletter control sequences out of 15000+600000
+ 684328 words of font info for 73 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 98i,7n,105p,1040b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{figure.caption.63} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.58} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.52} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.49} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.47} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.40} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.32} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.29} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.26} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.23} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.79} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.78} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.77} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.76} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.75} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.74} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.70} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.68} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.67} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.66} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.64} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.60} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.55} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.51} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.50} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.48} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.46} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.43} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.42} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.38} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.82} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.81} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.80} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.69} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.65} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.62} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.54} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.53} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.45} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.41} has been referenced but does not exist
-, replaced by a fixed one
-
- </home/nataly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi657/cmtt10.pk> 
-</home/nataly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi657/cmcsc10.pk> 
-</home/nataly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi657/cmbx10.pk> <
-/home/nataly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmbx12.pk> </
-home/nataly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi720/cmbx12.pk> </h
-ome/nataly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi720/cmr12.pk> </hom
-e/nataly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmr17.pk> </home/
-nataly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi864/cmr17.pk> </home/na
-taly/.miktex/texmfs/data/fonts/pk/ljfour/public/cm/dpi657/cmr10.pk>
-Output written on main.pdf (32 pages, 12700286 bytes).
+ 99i,13n,105p,1040b,832s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmbx10.pfb></home/
+nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmbx12.pfb></home/nataly/.m
+iktex/texmfs/install/fonts/type1/public/lm/lmcsc10.pfb></home/nataly/.miktex/te
+xmfs/install/fonts/type1/public/lm/lmr10.pfb></home/nataly/.miktex/texmfs/insta
+ll/fonts/type1/public/lm/lmr12.pfb></home/nataly/.miktex/texmfs/install/fonts/t
+ype1/public/lm/lmr17.pfb></home/nataly/.miktex/texmfs/install/fonts/type1/publi
+c/lm/lmr8.pfb></home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmri10
+.pfb></home/nataly/.miktex/texmfs/install/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (32 pages, 12831349 bytes).
 PDF statistics:
- 774 PDF objects out of 1000 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
  191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

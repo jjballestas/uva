@@ -24,6 +24,8 @@
 \usepackage{hyperref}
 \usepackage{ragged2e}
 \usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{caption}
 \usetikzlibrary{shapes.geometric, positioning}
 \selectlanguage{spanish}
 \useunder{\uline}{\ul}{}
@@ -46,6 +48,33 @@
 \shorttitle{Diseño del sistema de interacción avanzada SmartSound}
 \author{John Ballestas, Nataly Rocha}
 \affiliation{Universidad de Valladolid}
+
+% Desactivar mayúsculas automáticas en el encabezado
+\makeatletter
+\let\MakeUppercase\relax
+\patchcmd{\ps@titlepage}{\MakeUppercase}{}{}{}
+\patchcmd{\ps@otherpage}{\MakeUppercase}{}{}{}
+\makeatother
+
+% Configurar captions de figuras centrados con espacio
+\captionsetup[figure]{justification=centering, belowskip=4pt}
+
+% Activar numeración de secciones y alinear a la izquierda
+\setcounter{secnumdepth}{3}  % Numerar hasta subsubsection
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+    {-3.5ex \@plus -1ex \@minus -.2ex}%
+    {2.3ex \@plus.2ex}%
+    {\raggedright\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\raggedright\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\raggedright\normalfont\normalsize\bfseries}}
+\makeatother
 
 \begin{document}
 
@@ -88,7 +117,7 @@
     \pagenumbering{arabic}
 
     \vspace*{\fill}
-    \section{\large Introducción}
+    \section{Introducción}
 
     Los músicos independientes y conferencistas enfrentan desafíos técnicos que afectan directamente la calidad de
     su actuación cuando hacen  presentaciones en vivo, especialmente en espacios pequeños como bares y salas sin
@@ -113,7 +142,7 @@
     \newpage
 
     \vspace*{\fill}
-    \section{\large Problema}
+    \section{Problema}
 
     \subsection{Problema inicialmente abordado}
     Usuarios que dependen de amplificación para su trabajo como pequeños grupos musicales, dúos, solistas o
@@ -195,7 +224,7 @@
     \end{itemize}
 
     \newpage
-    \section{\large Fase de descubrimiento}
+    \section{Fase de descubrimiento}
     \subsection{Plan de investigación}
     \subsubsection{Objetivos}
 
@@ -544,7 +573,7 @@
 
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.7\textwidth]{./assets/persona}
+        \includegraphics[width=1\textwidth]{./assets/persona}
         \caption{Eddie - Persona definida}
         \label{fig:persona}
     \end{figure}
@@ -558,7 +587,7 @@
 
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.7\textwidth]{./assets/empatia}
+        \includegraphics[width=1\textwidth]{./assets/empatia}
         \caption{Mapa de empatía}
         \label{fig:empatia}
     \end{figure}
@@ -627,13 +656,13 @@
 
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.7\textwidth]{./assets/recorrido-presente}
+        \includegraphics[width=1\textwidth]{./assets/recorrido-presente}
         \caption{Mapa de recorrido - Presente}
         \label{fig:recorridoPresente}
     \end{figure}
 
     \newpage
-    \section{\large Fase de ideación y evaluación}
+    \section{Fase de ideación y evaluación}
     \subsection{Soluciones planteadas}
     \subsubsection{Solución 1}
     \textbf{Smart Sound como Mezclador Digital Inteligente con Presets Adaptativos}
@@ -665,7 +694,7 @@
 
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.7\textwidth]{./assets/recorrido-futuro}
+        \includegraphics[width=1\textwidth]{./assets/recorrido-futuro}
         \caption{Mapa de recorrido - Futuro}
         \label{fig:recorridoFuturo}
     \end{figure}
@@ -807,7 +836,7 @@
 
 
     \newpage
-    \section{\large Aspectos no tratados, cuestiones a seguir investigando}
+    \section{Aspectos no tratados, cuestiones a seguir investigando}
 
     Si bien la investigación y el diseño desarrollados han permitido delimitar con precisión el grupo de usuarios y
     las principales oportunidades de mejora en la experiencia con el problema, existen aún líneas de exploración que
@@ -835,7 +864,7 @@
     técnicos de sonido noveles o productores audiovisuales, para explorar su aplicabilidad en entornos más amplios.
 
     \newpage
-    \section{\large Conclusiones}
+    \section{Conclusiones}
     El proyecto SmartSound siguió los principios del diseño de sistemas interactivos basados en el modelo del doble
     diamante \cite{diamante}, alternando fases de divergencia y convergencia para garantizar un proceso centrado en
     las personas y orientado a crear una experiencia de uso coherente, útil y significativa.
@@ -865,7 +894,7 @@
 
     \newpage
 % Referencias
-    \renewcommand\refname{\large\textbf{Referencias}}
+    \renewcommand\refname{\textbf{Referencias}}
 
     \bibliography{refs}
     \bibliographystyle{apa}
