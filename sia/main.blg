@@ -1,69 +1,59 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-Reallocating 'name_of_file' (item size: 1) to 8 items.
-The style file: apacite.bst
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+The style file: acm.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
-Reallocating 'glb_str_end' (item size: 4) to 20 items.
-Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
-Reallocating 'global_strs' (item size: 1) to 4000000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 9000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: refs.bib
 Warning--entry type for "invContext" isn't style-file defined
---line 4 of file refs.bib
+--line 7 of file refs.bib
 Warning--entry type for "focusGroup" isn't style-file defined
---line 13 of file refs.bib
+--line 25 of file refs.bib
 Warning--entry type for "preguntas" isn't style-file defined
---line 22 of file refs.bib
+--line 43 of file refs.bib
 Warning--entry type for "thematic" isn't style-file defined
---line 31 of file refs.bib
+--line 61 of file refs.bib
 Warning--entry type for "diamante" isn't style-file defined
---line 49 of file refs.bib
-apacite.bst [2013/07/21 v6.03 APA bibliography style]
+--line 97 of file refs.bib
 You've used 6 entries,
-            6951 wiz_defined-function locations,
-            1303 strings with 11557 characters,
-and the built_in function-call counts, 11077 in all, are:
-= -- 1581
-> -- 70
-< -- 438
-+ -- 406
-- -- 15
-* -- 593
-:= -- 1766
-add.period$ -- 24
+            2253 wiz_defined-function locations,
+            558 strings with 4518 characters,
+and the built_in function-call counts, 1377 in all, are:
+= -- 122
+> -- 52
+< -- 0
++ -- 22
+- -- 16
+* -- 63
+:= -- 231
+add.period$ -- 18
 call.type$ -- 6
-change.case$ -- 118
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 222
-empty$ -- 437
-format.name$ -- 102
-if$ -- 2286
+cite$ -- 6
+duplicate$ -- 53
+empty$ -- 139
+format.name$ -- 16
+if$ -- 292
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 0
-newline$ -- 149
-num.names$ -- 48
-pop$ -- 141
+int.to.str$ -- 6
+missing$ -- 2
+newline$ -- 33
+num.names$ -- 12
+pop$ -- 53
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 20
 quote$ -- 0
-skip$ -- 1002
+skip$ -- 41
 stack$ -- 0
-substring$ -- 438
-swap$ -- 118
-text.length$ -- 13
+substring$ -- 30
+swap$ -- 12
+text.length$ -- 0
 text.prefix$ -- 0
-top$ -- 1
-type$ -- 840
+top$ -- 0
+type$ -- 22
 warning$ -- 0
-while$ -- 37
-width$ -- 0
-write$ -- 167
+while$ -- 12
+width$ -- 7
+write$ -- 64
 (There were 5 warnings)
